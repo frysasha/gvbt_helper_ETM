@@ -83,11 +83,6 @@ def napominanie():
 
         if (time.strftime("Sun:22:35:00")) == nowdatetime:
             napominanie_msg(bot)
-
-        #if (time.strftime("Mon:15:24:00")) == nowdatetime:
-        #    testcount += 1
-        #    logging.info('№' + str(testcount) + ' проверка лога! в ' + strnowtime)
-
         sleep(1)
 
 def start_to_update():
@@ -108,6 +103,13 @@ def start_to_update():
             zoom_update()
         time.sleep(1)
 
+def wms_report():
+    while True:
+        data, addr = uServSock.recvfrom(BUFSIZE)
+        loc_data = data.decode('cp1251')
+        if loc_data == 'Wms Day Report complete':
+            print('Wms Day Report complete')
+            wms_day_report_message(bot)
 
 
 thread1 = threading.Timer(1, proverka)

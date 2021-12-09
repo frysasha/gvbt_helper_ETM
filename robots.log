@@ -33414,3 +33414,30 @@ Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connecti
 №108 Ошибка примного робота в 05.12.2021 21:44:26
 №109 Ошибка примного робота в 05.12.2021 21:48:51
 №110 Ошибка примного робота в 05.12.2021 21:49:13
+№111 Ошибка примного робота в 06.12.2021 10:12:11
+№112 Ошибка примного робота в 06.12.2021 10:19:00
+№17 Ошибка желтого робота в 06.12.2021 11:01:28
+№113 Ошибка примного робота в 07.12.2021 10:00:00
+№114 Ошибка примного робота в 07.12.2021 10:37:12
+Error while getting Updates: Bad Gateway
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 254, in _request_wrapper
+    raise NetworkError('Bad Gateway')
+telegram.error.NetworkError: Bad Gateway
+№18 Ошибка желтого робота в 07.12.2021 17:08:34
+№19 Ошибка желтого робота в 08.12.2021 14:33:44
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x048F7FA0>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+№20 Ошибка желтого робота в 09.12.2021 13:49:12
+№21 Ошибка желтого робота в 09.12.2021 14:40:32

@@ -62,6 +62,13 @@ def napominanie_msg(bot):
     bot.send_message(ask_channel_id, ('Будет запущен АСК и включен телик на складе после еженедельной перезагрузки!'))
     bot.send_photo(ask_channel_id, photo=open(photopath + 'perezagruzka.png', 'rb'))  # отправка скрина
 
+def wms_day_report_message(bot):
+    today = time.strftime("%d.%m.%Y")
+    reportpath = ('C:\\python\\WMS_Day_Report\\finaldayreport ' + today + '.txt')
+    bot.send_message(testchannelid, ('Сформирован ежедневный отчет WMS. Необходимо проверить данные!'))
+    wmsreport = open(reportpath, 'rb')
+    bot.send_docunebt(testchannelid, wmsreport)
+
 def laps_start(bot, update):
     bot.message.reply_text('Веедите имя компьютера')
     return "user_name" #возвращает тому, кто прислал сообщение
