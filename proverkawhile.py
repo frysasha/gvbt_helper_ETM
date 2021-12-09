@@ -17,6 +17,12 @@ priemcount = 0
 bluecount = 0
 yellowcount = 0
 testcount = 0
+HOST = ''
+PORT = 3000
+BUFSIZE = 1024
+SOCKADDR = (HOST,PORT)
+uServSock = socket(AF_INET,SOCK_DGRAM)
+uServSock.bind(SOCKADDR)
 
 def start(loginfo):
     logging.info(loginfo)
@@ -115,6 +121,7 @@ def wms_report():
 thread1 = threading.Timer(1, proverka)
 thread2 = threading.Timer(1, napominanie)
 thread3 = threading.Timer(1, start_to_update)
+thread4 = threading.Timer(1, wms_report)
 
 try:
     thread1.start()
@@ -130,6 +137,11 @@ try:
     thread3.start()
 except Exception:
     print('ошибка thread3')
+
+try:
+    thread4.start()
+except Exception:
+    print("ошибка thread4")
 
 
 

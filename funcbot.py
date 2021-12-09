@@ -67,7 +67,8 @@ def wms_day_report_message(bot):
     reportpath = ('C:\\python\\WMS_Day_Report\\finaldayreport ' + today + '.txt')
     bot.send_message(testchannelid, ('Сформирован ежедневный отчет WMS. Необходимо проверить данные!'))
     wmsreport = open(reportpath, 'rb')
-    bot.send_docunebt(testchannelid, wmsreport)
+    bot.send_document(testchannelid, wmsreport)
+    wmsreport.close()
 
 def laps_start(bot, update):
     bot.message.reply_text('Веедите имя компьютера')

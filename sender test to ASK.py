@@ -3,7 +3,7 @@ from socket import *
 import sys
 
 
-HOST = '172.29.2.125'
+HOST = '172.29.30.63'
 HOST2 = '172.29.50.200'
 PORT = 3000
 BUFSIZE = 1024
@@ -12,7 +12,7 @@ SOCKADDR2 = (HOST2,PORT)
 
 def send():
     uCliSock = socket(AF_INET,SOCK_DGRAM)
-    uCliSock.sendto(bytes('restart_televizor', 'cp1251'), SOCKADDR2)
+    uCliSock.sendto(bytes('Wms Day Report complete', 'cp1251'), SOCKADDR)
     data, addr = uCliSock.recvfrom(BUFSIZE)
     uCliSock.close()
 

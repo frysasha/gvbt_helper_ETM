@@ -33441,3 +33441,6 @@ telegram.error.NetworkError: Bad Gateway
 Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x048F7FA0>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
 №20 Ошибка желтого робота в 09.12.2021 13:49:12
 №21 Ошибка желтого робота в 09.12.2021 14:40:32
+Старт бота был в 09.12.2021 21:55:59
+Старт бота был в 09.12.2021 21:59:10
+Старт бота был в 09.12.2021 22:00:28
