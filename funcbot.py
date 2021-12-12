@@ -71,8 +71,8 @@ def wms_day_report_message(bot):
     wmsreport.close()
 
 def wms_day_report_error_message(bot, message):
-    bot.send_message(frychannelid, message)
-    
+    bot.send_message(testchannelid, message)
+
 def laps_start(bot, update):
     bot.message.reply_text('Веедите имя компьютера')
     return "user_name" #возвращает тому, кто прислал сообщение
