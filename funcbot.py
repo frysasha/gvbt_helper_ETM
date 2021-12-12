@@ -66,7 +66,7 @@ def wms_day_report_message(bot):
     today = time.strftime("%d.%m.%Y")
     reportpath = ('C:\\python\\WMS_Day_Report\\finaldayreport ' + today + '.txt')
     bot.send_message(testchannelid, ('Сформирован ежедневный отчет WMS. Необходимо проверить данные!'))
-    wmsreport = open(reportpath, 'rb')
+    wmsreport = open(reportpath, 'rb', encoding='utf-16')
     bot.send_document(testchannelid, wmsreport)
     wmsreport.close()
 

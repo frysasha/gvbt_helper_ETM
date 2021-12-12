@@ -33444,3 +33444,22 @@ Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connecti
 Старт бота был в 09.12.2021 21:55:59
 Старт бота был в 09.12.2021 21:59:10
 Старт бота был в 09.12.2021 22:00:28
+№1 Ошибка желтого робота в 09.12.2021 23:53:10
+Error while getting Updates: Bad Gateway
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 254, in _request_wrapper
+    raise NetworkError('Bad Gateway')
+telegram.error.NetworkError: Bad Gateway
+№1 Ошибка примного робота в 11.12.2021 18:37:51
