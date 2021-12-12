@@ -116,6 +116,8 @@ def wms_report():
         if loc_data == 'Wms Day Report complete':
             print('Wms Day Report complete')
             wms_day_report_message(bot)
+        else:
+            wms_day_report_error_message(bot, loc_data)
 
 
 thread1 = threading.Timer(1, proverka)
