@@ -93,21 +93,25 @@ def laps_zapros(bot, update):
     rex = re.compile("^[0-9]{4}-[0-9]{3}[A-z]{2}$") #формат текста [тип текста] , {кол-во символов} , ^ начало , $ конец
     if rex.match(textmes):
         writetofile(bot.message.text)
-        sleep(5)
-        read_text = open('C:\\python\\pass.txt', 'r')
+        sleep(4)
+        cleantext2 = []
+        for i in open('C:\\python\\pass.txt', 'r', encoding='utf-16').readlines():
+            cleantext2.append(i)
+        cleantext2 = cleantext2[-3][-13:].strip()
+        print(f'Запрашиваемый пароль: {cleantext2}')
+        #read_text = open('C:\\python\\pass.txt', 'r')#, encoding='utf-16')
         if os.stat('C:\\python\\pass.txt').st_size == 0:
             net_parolya()
-        else:
-            rtext = read_text.read()
-            print(rtext)
+        laps_send_msg(f'пароль: {cleantext2}')
+        return ConversationHandler.END  # закрывает диалог
+        # else:
+        #     rtext = read_text.read()
+        #     #print(rtext)
+        #if len(rtext) > 460: #убирает первые 460 символов
+            #cleantext = ('пароль: ' + rtext[460:].lstrip())
+            #print(type(cleantext))
+            #print(cleantext)
 
-            if len(rtext) > 460: #убирает первые 460 символов
-
-                cleantext = ('пароль: ' + rtext[460:].lstrip())
-                print(type(cleantext))
-                print(cleantext)
-                laps_send_msg(cleantext)
-                return ConversationHandler.END #закрывает диалог
     else:
         laps_format_msg()
 
