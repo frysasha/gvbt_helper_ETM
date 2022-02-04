@@ -12,7 +12,7 @@ SOCKADDR2 = (HOST2,PORT)
 
 def send():
     uCliSock = socket(AF_INET,SOCK_DGRAM)
-    uCliSock.sendto(bytes('Wms Day Report complete', 'cp1251'), SOCKADDR)
+    uCliSock.sendto(bytes('Сформирован ежедневный отчет WMS. Необходимо проверить данные!', 'cp1251'), SOCKADDR)
     data, addr = uCliSock.recvfrom(BUFSIZE)
     uCliSock.close()
 

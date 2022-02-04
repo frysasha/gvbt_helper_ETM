@@ -33,8 +33,14 @@ def main():
     my_bot.dispatcher.add_handler(CallbackQueryHandler(inline_button_pressed)) #реакция на нажатую кнопку "поправил"
 
 
-    my_bot.start_polling()
-    my_bot.idle()
+    try:
+        my_bot.start_polling()
+        my_bot.idle()
+    except Exception as e:
+        print('e')
+        sleep(10)
+        my_bot.start_polling()
+        my_bot.idle()
 
 
 if __name__ == "__main__":

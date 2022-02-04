@@ -111,13 +111,17 @@ def start_to_update():
 
 def wms_report():
     while True:
-        data, addr = uServSock.recvfrom(BUFSIZE)
-        loc_data = data.decode('cp1251')
-        if loc_data == 'Wms Day Report complete':
-            print('Wms Day Report complete')
-            wms_day_report_message(bot)
-        else:
-            wms_day_report_error_message(bot, loc_data)
+        try:
+            data, addr = uServSock.recvfrom(BUFSIZE)
+            loc_data = data.decode('cp1251')
+            if loc_data == 'Сформирован ежедневный отчет WMS. Необходимо проверить данные!':
+                print('Сформирован ежедневный отчет WMS. Необходимо проверить данные!')
+                wms_day_report_message(bot)
+            else:
+                wms_day_report_error_message(bot, loc_data)
+        except Exception as e:
+            print('ошибка отправки результата wms report')
+            print(e)
 
 
 thread1 = threading.Timer(1, proverka)

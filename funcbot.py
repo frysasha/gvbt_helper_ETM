@@ -30,7 +30,7 @@ def priem_msg(bot, time):
     bot.send_message(ask_channel_id, ('Приемный робот ошибка в ' + str(time)), reply_markup=inl_keyboard)  # пишет ошибку, время и добавляет кнопку
     uCliSock.sendto(bytes('Приемный робот ошибка', 'cp1251'), SOCKADDR) #отправка текста на сервер спикера
     uCliSock.sendto(bytes('priem', 'cp1251'), SOCKADDR2)  # отправка на сервер АСК
-    sleep(3)
+    sleep(4)
     bot.send_photo(ask_channel_id, photo=open(photopath + 'priem.png', 'rb')) #отправка скрина
 
     #data, addr = uCliSock.recvfrom(BUFSIZE)
@@ -41,7 +41,7 @@ def blue_msg(bot, time):
     bot.send_message(ask_channel_id, ('Голубой робот ошибка в ' + str(time)), reply_markup=inl_keyboard)  # пишет ошибку, время и добавляет кнопку
     uCliSock.sendto(bytes('Синий робот ошибка', 'cp1251'), SOCKADDR) #отправка текста на сервер спикера
     uCliSock.sendto(bytes('blue', 'cp1251'), SOCKADDR2)  # отправка на сервер АСК
-    sleep(3)
+    sleep(4)
     bot.send_photo(ask_channel_id, photo=open(photopath + 'blue.png', 'rb')) #отправка скрина
     #data, addr = uCliSock.recvfrom(BUFSIZE)
 
@@ -51,7 +51,7 @@ def yellow_msg(bot, time):
     bot.send_message(ask_channel_id, ('Желтый робот ошибка в ' + str(time)), reply_markup=inl_keyboard)  # пишет ошибку, время и добавляет кнопку
     uCliSock.sendto(bytes('Желтый робот ошибка', 'cp1251'), SOCKADDR) #отправка текста на сервер спикера
     uCliSock.sendto(bytes('yellow', 'cp1251'), SOCKADDR2) #отправка на сервер АСК
-    sleep(3)
+    sleep(5)
     bot.send_photo(ask_channel_id, photo=open(photopath + 'yellow.png', 'rb')) #отправка скрина
     #data, addr = uCliSock.recvfrom(BUFSIZE)
 
@@ -66,7 +66,7 @@ def wms_day_report_message(bot):
     today = time.strftime("%d.%m.%Y")
     reportpath = ('C:\\python\\WMS_Day_Report\\finaldayreport ' + today + '.txt')
     bot.send_message(testchannelid, ('Сформирован ежедневный отчет WMS. Необходимо проверить данные!'))
-    wmsreport = open(reportpath, 'rb', encoding='utf-16')
+    wmsreport = open(reportpath, 'r', encoding='cp1251')
     bot.send_document(testchannelid, wmsreport)
     wmsreport.close()
 
@@ -94,14 +94,18 @@ def laps_zapros(bot, update):
     if rex.match(textmes):
         writetofile(bot.message.text)
         sleep(5)
-        read_text = open('C:\\python\\pass.txt')
+        read_text = open('C:\\python\\pass.txt', 'r')
         if os.stat('C:\\python\\pass.txt').st_size == 0:
             net_parolya()
         else:
             rtext = read_text.read()
+            print(rtext)
 
             if len(rtext) > 460: #убирает первые 460 символов
-                cleantext = ('пароль: ' + rtext[460:])
+
+                cleantext = ('пароль: ' + rtext[460:].lstrip())
+                print(type(cleantext))
+                print(cleantext)
                 laps_send_msg(cleantext)
                 return ConversationHandler.END #закрывает диалог
     else:

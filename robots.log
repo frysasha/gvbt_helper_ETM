@@ -33463,3 +33463,1012 @@ Traceback (most recent call last):
     raise NetworkError('Bad Gateway')
 telegram.error.NetworkError: Bad Gateway
 №1 Ошибка примного робота в 11.12.2021 18:37:51
+Старт бота был в 12.12.2021 17:01:02
+Старт бота был в 13.12.2021 08:58:09
+Старт бота был в 13.12.2021 09:00:40
+Старт бота был в 13.12.2021 09:03:27
+№1 Ошибка желтого робота в 13.12.2021 09:29:59
+№2 Ошибка желтого робота в 13.12.2021 09:31:36
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0485C8F8>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Старт бота был в 14.12.2021 08:36:38
+Старт бота был в 14.12.2021 08:40:01
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04503868>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Старт бота был в 14.12.2021 13:11:16
+№1 Ошибка голубого робота в 14.12.2021 20:05:55
+№2 Ошибка голубого робота в 14.12.2021 20:12:18
+№3 Ошибка голубого робота в 14.12.2021 20:12:54
+Старт бота был в 17.12.2021 08:38:46
+Старт бота был в 17.12.2021 08:41:17
+Старт бота был в 17.12.2021 11:42:43
+Старт бота был в 17.12.2021 11:43:07
+Старт бота был в 17.12.2021 11:43:45
+Старт бота был в 17.12.2021 11:44:49
+Старт бота был в 17.12.2021 11:45:27
+Старт бота был в 17.12.2021 11:46:41
+Старт бота был в 17.12.2021 11:47:00
+Старт бота был в 17.12.2021 11:56:17
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x046CF1A8>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x046CF280>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x046B1EB0>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x046CF9E8>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Старт бота был в 20.12.2021 08:57:49
+№1 Ошибка желтого робота в 20.12.2021 10:46:23
+№2 Ошибка желтого робота в 20.12.2021 11:30:48
+№3 Ошибка желтого робота в 20.12.2021 15:03:30
+№1 Ошибка голубого робота в 20.12.2021 19:03:34
+№4 Ошибка желтого робота в 21.12.2021 10:38:40
+№5 Ошибка желтого робота в 21.12.2021 13:28:11
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04479088>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+№6 Ошибка желтого робота в 21.12.2021 21:22:31
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04479D90>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connectionpool.HTTPSConnectionPool object at 0x0442C868>, 'Connect timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connectionpool.HTTPSConnectionPool object at 0x0442C868>, 'Connect timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04479EC8>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)'))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 144, in _new_conn
+    raise ConnectTimeoutError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ConnectTimeoutError: (<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04479EC8>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04479EC8>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04479EC8>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)'))
+№7 Ошибка желтого робота в 26.12.2021 10:22:24
+№8 Ошибка желтого робота в 26.12.2021 17:21:24
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x048AC130>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x048AC7A8>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connectionpool.HTTPSConnectionPool object at 0x0442C868>, 'Connect timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Старт бота был в 27.12.2021 07:07:21
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x044C1E68>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+№1 Ошибка желтого робота в 28.12.2021 09:25:43
+Error while getting Updates: Bad Gateway
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 254, in _request_wrapper
+    raise NetworkError('Bad Gateway')
+telegram.error.NetworkError: Bad Gateway
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x044E0D48>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x044E01A8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x044E09D0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x044E08E0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x044E08E0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x044E08E0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x044E08E0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x044E0F40>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Старт бота был в 01.01.2022 11:08:04
+Error while getting Updates: Bad Gateway
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 254, in _request_wrapper
+    raise NetworkError('Bad Gateway')
+telegram.error.NetworkError: Bad Gateway
+№1 Ошибка голубого робота в 03.01.2022 21:43:22
+№2 Ошибка голубого робота в 03.01.2022 22:00:00
+№3 Ошибка голубого робота в 03.01.2022 22:30:01
+№1 Ошибка желтого робота в 04.01.2022 01:07:40
+№2 Ошибка желтого робота в 04.01.2022 06:50:53
+№1 Ошибка примного робота в 04.01.2022 12:51:19
+№2 Ошибка примного робота в 04.01.2022 14:40:29
+№3 Ошибка примного робота в 04.01.2022 16:49:06
+№4 Ошибка примного робота в 04.01.2022 17:08:21
+№5 Ошибка примного робота в 04.01.2022 17:14:46
+№6 Ошибка примного робота в 04.01.2022 17:25:12
+№7 Ошибка примного робота в 04.01.2022 17:25:37
+№8 Ошибка примного робота в 04.01.2022 17:35:14
+№9 Ошибка примного робота в 04.01.2022 17:40:27
+№10 Ошибка примного робота в 04.01.2022 17:54:15
+№11 Ошибка примного робота в 04.01.2022 17:57:04
+№12 Ошибка примного робота в 04.01.2022 18:35:54
+№13 Ошибка примного робота в 04.01.2022 18:36:29
+№14 Ошибка примного робота в 04.01.2022 18:36:53
+№15 Ошибка примного робота в 04.01.2022 18:37:29
+№16 Ошибка примного робота в 04.01.2022 18:37:42
+№17 Ошибка примного робота в 04.01.2022 18:38:07
+№18 Ошибка примного робота в 04.01.2022 18:38:20
+№19 Ошибка примного робота в 04.01.2022 18:38:55
+№20 Ошибка примного робота в 04.01.2022 19:55:40
+№21 Ошибка примного робота в 04.01.2022 20:03:39
+№22 Ошибка примного робота в 04.01.2022 20:35:18
+№23 Ошибка примного робота в 04.01.2022 20:52:06
+№24 Ошибка примного робота в 04.01.2022 21:42:46
+№25 Ошибка примного робота в 04.01.2022 22:18:02
+№26 Ошибка примного робота в 04.01.2022 23:33:12
+№27 Ошибка примного робота в 04.01.2022 23:45:50
+№28 Ошибка примного робота в 04.01.2022 23:47:51
+№29 Ошибка примного робота в 04.01.2022 23:49:16
+№30 Ошибка примного робота в 04.01.2022 23:51:04
+№31 Ошибка примного робота в 04.01.2022 23:51:53
+№32 Ошибка примного робота в 04.01.2022 23:52:54
+№33 Ошибка примного робота в 04.01.2022 23:54:18
+№34 Ошибка примного робота в 04.01.2022 23:57:55
+№35 Ошибка примного робота в 04.01.2022 23:58:20
+№36 Ошибка примного робота в 04.01.2022 23:58:44
+№37 Ошибка примного робота в 04.01.2022 23:58:57
+№38 Ошибка примного робота в 04.01.2022 23:59:33
+№39 Ошибка примного робота в 05.01.2022 00:05:35
+№40 Ошибка примного робота в 05.01.2022 00:09:12
+№41 Ошибка примного робота в 05.01.2022 00:17:25
+№42 Ошибка примного робота в 05.01.2022 00:25:50
+№43 Ошибка примного робота в 05.01.2022 00:26:27
+№44 Ошибка примного робота в 05.01.2022 00:31:28
+№45 Ошибка примного робота в 05.01.2022 00:38:17
+№46 Ошибка примного робота в 05.01.2022 00:41:06
+№47 Ошибка примного робота в 05.01.2022 00:45:18
+№48 Ошибка примного робота в 05.01.2022 00:46:31
+№49 Ошибка примного робота в 05.01.2022 00:47:55
+№50 Ошибка примного робота в 05.01.2022 00:51:20
+№51 Ошибка примного робота в 05.01.2022 00:51:45
+№52 Ошибка примного робота в 05.01.2022 00:54:46
+№53 Ошибка примного робота в 05.01.2022 00:56:10
+№54 Ошибка примного робота в 05.01.2022 00:56:59
+№55 Ошибка примного робота в 05.01.2022 00:58:23
+№56 Ошибка примного робота в 05.01.2022 01:00:12
+№57 Ошибка примного робота в 05.01.2022 01:04:01
+№58 Ошибка примного робота в 05.01.2022 01:10:50
+№59 Ошибка примного робота в 05.01.2022 01:11:39
+№60 Ошибка примного робота в 05.01.2022 01:13:16
+№61 Ошибка примного робота в 05.01.2022 01:15:04
+№62 Ошибка примного робота в 05.01.2022 01:21:53
+№63 Ошибка примного робота в 05.01.2022 01:23:06
+№64 Ошибка примного робота в 05.01.2022 01:27:07
+№65 Ошибка примного робота в 05.01.2022 01:31:32
+№66 Ошибка примного робота в 05.01.2022 01:32:33
+№67 Ошибка примного робота в 05.01.2022 01:33:45
+№68 Ошибка примного робота в 05.01.2022 01:35:58
+№69 Ошибка примного робота в 05.01.2022 02:02:49
+№70 Ошибка примного робота в 05.01.2022 02:07:11
+№71 Ошибка примного робота в 05.01.2022 02:21:23
+№72 Ошибка примного робота в 05.01.2022 02:23:12
+№73 Ошибка примного робота в 05.01.2022 02:29:01
+№74 Ошибка примного робота в 05.01.2022 02:31:37
+№75 Ошибка примного робота в 05.01.2022 02:33:02
+№76 Ошибка примного робота в 05.01.2022 02:35:03
+№77 Ошибка примного робота в 05.01.2022 02:36:04
+№78 Ошибка примного робота в 05.01.2022 02:40:04
+№79 Ошибка примного робота в 05.01.2022 02:45:06
+№80 Ошибка примного робота в 05.01.2022 02:51:07
+№81 Ошибка примного робота в 05.01.2022 02:51:55
+№82 Ошибка примного робота в 05.01.2022 02:52:44
+№83 Ошибка примного робота в 05.01.2022 02:54:08
+№84 Ошибка примного робота в 05.01.2022 02:57:09
+№85 Ошибка примного робота в 05.01.2022 03:00:58
+№86 Ошибка примного робота в 05.01.2022 03:03:46
+№87 Ошибка примного робота в 05.01.2022 03:05:59
+№88 Ошибка примного робота в 05.01.2022 03:06:47
+№89 Ошибка примного робота в 05.01.2022 03:15:37
+№90 Ошибка примного робота в 05.01.2022 03:20:02
+№91 Ошибка примного робота в 05.01.2022 03:27:39
+№92 Ошибка примного робота в 05.01.2022 03:30:28
+№93 Ошибка примного робота в 05.01.2022 03:33:17
+№94 Ошибка примного робота в 05.01.2022 03:34:17
+№95 Ошибка примного робота в 05.01.2022 03:37:30
+№96 Ошибка примного робота в 05.01.2022 03:40:31
+№97 Ошибка примного робота в 05.01.2022 03:41:31
+№98 Ошибка примного робота в 05.01.2022 03:43:08
+№99 Ошибка примного робота в 05.01.2022 03:45:21
+№100 Ошибка примного робота в 05.01.2022 03:47:10
+№101 Ошибка примного робота в 05.01.2022 03:49:10
+№102 Ошибка примного робота в 05.01.2022 03:50:47
+№103 Ошибка примного робота в 05.01.2022 03:53:36
+№104 Ошибка примного робота в 05.01.2022 03:54:01
+№105 Ошибка примного робота в 05.01.2022 03:54:37
+№106 Ошибка примного робота в 05.01.2022 03:54:50
+№107 Ошибка примного робота в 05.01.2022 03:59:27
+№108 Ошибка примного робота в 05.01.2022 03:59:51
+№109 Ошибка примного робота в 05.01.2022 04:00:52
+№110 Ошибка примного робота в 05.01.2022 04:05:29
+№111 Ошибка примного робота в 05.01.2022 04:10:18
+№112 Ошибка примного робота в 05.01.2022 04:12:18
+№113 Ошибка примного робота в 05.01.2022 04:14:07
+№114 Ошибка примного робота в 05.01.2022 04:15:32
+№115 Ошибка примного робота в 05.01.2022 04:16:08
+№116 Ошибка примного робота в 05.01.2022 04:26:10
+№117 Ошибка примного робота в 05.01.2022 04:32:36
+№118 Ошибка примного робота в 05.01.2022 04:33:48
+№119 Ошибка примного робота в 05.01.2022 04:35:13
+№120 Ошибка примного робота в 05.01.2022 04:38:13
+№121 Ошибка примного робота в 05.01.2022 04:40:02
+№122 Ошибка примного робота в 05.01.2022 04:41:27
+№123 Ошибка примного робота в 05.01.2022 04:44:03
+№124 Ошибка примного робота в 05.01.2022 04:45:04
+№125 Ошибка примного робота в 05.01.2022 04:45:52
+№126 Ошибка примного робота в 05.01.2022 04:47:05
+№127 Ошибка примного робота в 05.01.2022 04:47:29
+№128 Ошибка примного робота в 05.01.2022 04:48:30
+№129 Ошибка примного робота в 05.01.2022 04:49:43
+№130 Ошибка примного робота в 05.01.2022 04:50:55
+№131 Ошибка примного робота в 05.01.2022 04:51:31
+№132 Ошибка примного робота в 05.01.2022 04:52:44
+№133 Ошибка примного робота в 05.01.2022 04:58:45
+№134 Ошибка примного робота в 05.01.2022 05:00:46
+№135 Ошибка примного робота в 05.01.2022 05:01:34
+№136 Ошибка примного робота в 05.01.2022 05:02:47
+№137 Ошибка примного робота в 05.01.2022 05:04:12
+№138 Ошибка примного робота в 05.01.2022 05:05:00
+№139 Ошибка примного робота в 05.01.2022 05:07:37
+№140 Ошибка примного робота в 05.01.2022 05:09:01
+№141 Ошибка примного робота в 05.01.2022 05:10:50
+№142 Ошибка примного робота в 05.01.2022 05:11:14
+№143 Ошибка примного робота в 05.01.2022 05:16:39
+№144 Ошибка примного робота в 05.01.2022 05:20:40
+№145 Ошибка примного робота в 05.01.2022 05:22:05
+№146 Ошибка примного робота в 05.01.2022 05:27:18
+№147 Ошибка примного робота в 05.01.2022 05:29:42
+№148 Ошибка примного робота в 05.01.2022 05:30:07
+№149 Ошибка примного робота в 05.01.2022 05:30:43
+№150 Ошибка примного робота в 05.01.2022 05:30:56
+№151 Ошибка примного робота в 05.01.2022 05:31:08
+№152 Ошибка примного робота в 05.01.2022 05:35:09
+№153 Ошибка примного робота в 05.01.2022 05:36:58
+№154 Ошибка примного робота в 05.01.2022 05:37:46
+№155 Ошибка примного робота в 05.01.2022 05:38:35
+№156 Ошибка примного робота в 05.01.2022 05:39:59
+№157 Ошибка примного робота в 05.01.2022 05:41:24
+№158 Ошибка примного робота в 05.01.2022 05:43:01
+№159 Ошибка примного робота в 05.01.2022 05:43:49
+№160 Ошибка примного робота в 05.01.2022 05:45:38
+№161 Ошибка примного робота в 05.01.2022 05:46:26
+№162 Ошибка примного робота в 05.01.2022 05:47:15
+№163 Ошибка примного робота в 05.01.2022 05:48:39
+№164 Ошибка примного робота в 05.01.2022 05:51:04
+№165 Ошибка примного робота в 05.01.2022 05:51:52
+№166 Ошибка примного робота в 05.01.2022 05:53:17
+№167 Ошибка примного робота в 05.01.2022 05:55:17
+№168 Ошибка примного робота в 05.01.2022 05:56:18
+№169 Ошибка примного робота в 05.01.2022 05:57:18
+№170 Ошибка примного робота в 05.01.2022 05:58:07
+№171 Ошибка примного робота в 05.01.2022 06:01:08
+№172 Ошибка примного робота в 05.01.2022 06:02:20
+№173 Ошибка примного робота в 05.01.2022 06:03:33
+№174 Ошибка примного робота в 05.01.2022 06:04:58
+№175 Ошибка примного робота в 05.01.2022 06:05:46
+№176 Ошибка примного робота в 05.01.2022 06:07:35
+№177 Ошибка примного робота в 05.01.2022 06:08:59
+№178 Ошибка примного робота в 05.01.2022 06:09:48
+№179 Ошибка примного робота в 05.01.2022 06:12:24
+№180 Ошибка примного робота в 05.01.2022 06:13:49
+№181 Ошибка примного робота в 05.01.2022 06:14:37
+№182 Ошибка примного робота в 05.01.2022 06:16:14
+№183 Ошибка примного робота в 05.01.2022 06:17:39
+№184 Ошибка примного робота в 05.01.2022 06:18:27
+№185 Ошибка примного робота в 05.01.2022 06:19:28
+№186 Ошибка примного робота в 05.01.2022 06:20:16
+№187 Ошибка примного робота в 05.01.2022 06:20:53
+№188 Ошибка примного робота в 05.01.2022 06:21:41
+№189 Ошибка примного робота в 05.01.2022 06:23:18
+№190 Ошибка примного робота в 05.01.2022 06:24:19
+№191 Ошибка примного робота в 05.01.2022 06:24:31
+№192 Ошибка примного робота в 05.01.2022 06:25:07
+№193 Ошибка примного робота в 05.01.2022 06:25:56
+№194 Ошибка примного робота в 05.01.2022 06:27:57
+№195 Ошибка примного робота в 05.01.2022 06:28:45
+№196 Ошибка примного робота в 05.01.2022 06:29:22
+№197 Ошибка примного робота в 05.01.2022 06:29:34
+№198 Ошибка примного робота в 05.01.2022 06:29:59
+№199 Ошибка примного робота в 05.01.2022 06:30:47
+№200 Ошибка примного робота в 05.01.2022 06:34:00
+№201 Ошибка примного робота в 05.01.2022 06:35:25
+№202 Ошибка примного робота в 05.01.2022 06:43:14
+№203 Ошибка примного робота в 05.01.2022 06:47:03
+№204 Ошибка примного робота в 05.01.2022 06:52:28
+№205 Ошибка примного робота в 05.01.2022 06:53:41
+№206 Ошибка примного робота в 05.01.2022 06:55:30
+№207 Ошибка примного робота в 05.01.2022 06:59:07
+№208 Ошибка примного робота в 05.01.2022 07:00:19
+№209 Ошибка примного робота в 05.01.2022 07:00:44
+№210 Ошибка примного робота в 05.01.2022 07:01:44
+№211 Ошибка примного робота в 05.01.2022 07:01:57
+№212 Ошибка примного робота в 05.01.2022 07:02:22
+№213 Ошибка примного робота в 05.01.2022 07:03:23
+№214 Ошибка примного робота в 05.01.2022 07:03:47
+№215 Ошибка примного робота в 05.01.2022 07:30:50
+№216 Ошибка примного робота в 05.01.2022 07:31:27
+№217 Ошибка примного робота в 05.01.2022 07:35:52
+№218 Ошибка примного робота в 05.01.2022 07:37:05
+№219 Ошибка примного робота в 05.01.2022 07:38:17
+№220 Ошибка примного робота в 05.01.2022 07:41:42
+№221 Ошибка примного робота в 05.01.2022 07:42:55
+№222 Ошибка примного робота в 05.01.2022 07:43:32
+№223 Ошибка примного робота в 05.01.2022 07:44:20
+№224 Ошибка примного робота в 05.01.2022 07:45:45
+№225 Ошибка примного робота в 05.01.2022 07:47:58
+№226 Ошибка примного робота в 05.01.2022 07:48:46
+№227 Ошибка примного робота в 05.01.2022 07:49:35
+№228 Ошибка примного робота в 05.01.2022 07:50:23
+№229 Ошибка примного робота в 05.01.2022 07:51:00
+№230 Ошибка примного робота в 05.01.2022 07:55:50
+№231 Ошибка примного робота в 05.01.2022 08:00:39
+№232 Ошибка примного робота в 05.01.2022 08:02:40
+№233 Ошибка примного робота в 05.01.2022 08:04:04
+№234 Ошибка примного робота в 05.01.2022 08:09:42
+№235 Ошибка примного робота в 05.01.2022 08:10:42
+№236 Ошибка примного робота в 05.01.2022 08:17:20
+№237 Ошибка примного робота в 05.01.2022 08:20:09
+№238 Ошибка примного робота в 05.01.2022 08:34:59
+№239 Ошибка примного робота в 05.01.2022 08:35:11
+№240 Ошибка примного робота в 05.01.2022 08:35:24
+№241 Ошибка примного робота в 05.01.2022 08:36:24
+№242 Ошибка примного робота в 05.01.2022 08:37:37
+№243 Ошибка примного робота в 05.01.2022 08:38:13
+№244 Ошибка примного робота в 05.01.2022 08:39:02
+№245 Ошибка примного робота в 05.01.2022 08:40:03
+№246 Ошибка примного робота в 05.01.2022 08:40:39
+№247 Ошибка примного робота в 05.01.2022 09:26:21
+№248 Ошибка примного робота в 05.01.2022 09:30:22
+№249 Ошибка примного робота в 05.01.2022 09:39:12
+№250 Ошибка примного робота в 05.01.2022 09:40:36
+№251 Ошибка примного робота в 05.01.2022 09:44:01
+№252 Ошибка примного робота в 05.01.2022 09:50:03
+№253 Ошибка примного робота в 05.01.2022 09:51:51
+№254 Ошибка примного робота в 05.01.2022 09:59:05
+№255 Ошибка примного робота в 05.01.2022 10:06:06
+№256 Ошибка примного робота в 05.01.2022 10:08:07
+№257 Ошибка примного робота в 05.01.2022 10:12:32
+№258 Ошибка примного робота в 05.01.2022 10:20:46
+№259 Ошибка примного робота в 05.01.2022 10:21:23
+№260 Ошибка примного робота в 05.01.2022 10:22:35
+№261 Ошибка примного робота в 05.01.2022 10:23:12
+№262 Ошибка примного робота в 05.01.2022 10:33:38
+№263 Ошибка примного робота в 05.01.2022 10:35:26
+№264 Ошибка примного робота в 05.01.2022 10:37:27
+№265 Ошибка примного робота в 05.01.2022 10:41:28
+№266 Ошибка примного робота в 05.01.2022 10:44:17
+№267 Ошибка примного робота в 05.01.2022 10:51:07
+№268 Ошибка примного робота в 05.01.2022 10:53:19
+№269 Ошибка примного робота в 05.01.2022 10:55:44
+№270 Ошибка примного робота в 05.01.2022 11:09:23
+№271 Ошибка примного робота в 05.01.2022 11:11:00
+№272 Ошибка примного робота в 05.01.2022 11:20:49
+№273 Ошибка примного робота в 05.01.2022 11:23:26
+№274 Ошибка примного робота в 05.01.2022 11:25:15
+№275 Ошибка примного робота в 05.01.2022 11:26:52
+№276 Ошибка примного робота в 05.01.2022 11:33:29
+№277 Ошибка примного робота в 05.01.2022 11:36:30
+№278 Ошибка примного робота в 05.01.2022 11:38:43
+№279 Ошибка примного робота в 05.01.2022 11:41:44
+№280 Ошибка примного робота в 05.01.2022 11:45:09
+№281 Ошибка примного робота в 05.01.2022 11:46:46
+№282 Ошибка примного робота в 05.01.2022 11:51:11
+№283 Ошибка примного робота в 05.01.2022 12:40:53
+№284 Ошибка примного робота в 05.01.2022 12:43:06
+№285 Ошибка примного робота в 05.01.2022 12:44:06
+№286 Ошибка примного робота в 09.01.2022 15:15:27
+№287 Ошибка примного робота в 09.01.2022 16:09:34
+№288 Ошибка примного робота в 09.01.2022 16:12:35
+№289 Ошибка примного робота в 09.01.2022 17:09:45
+№290 Ошибка примного робота в 09.01.2022 17:10:19
+№291 Ошибка примного робота в 09.01.2022 18:58:48
+№3 Ошибка желтого робота в 10.01.2022 16:09:21
+№4 Ошибка желтого робота в 10.01.2022 17:23:06
+№5 Ошибка желтого робота в 10.01.2022 17:47:58
+№6 Ошибка желтого робота в 10.01.2022 18:55:19
+№292 Ошибка примного робота в 12.01.2022 10:16:25
+№293 Ошибка примного робота в 12.01.2022 10:31:03
+№294 Ошибка примного робота в 12.01.2022 10:53:19
+№295 Ошибка примного робота в 12.01.2022 10:54:32
+№296 Ошибка примного робота в 12.01.2022 10:54:57
+№297 Ошибка примного робота в 12.01.2022 12:36:34
+№298 Ошибка примного робота в 13.01.2022 09:12:14
+№299 Ошибка примного робота в 13.01.2022 09:15:39
+№300 Ошибка примного робота в 13.01.2022 09:21:04
+№301 Ошибка примного робота в 13.01.2022 09:23:53
+№302 Ошибка примного робота в 13.01.2022 09:24:29
+№303 Ошибка примного робота в 13.01.2022 09:39:44
+№304 Ошибка примного робота в 13.01.2022 09:41:21
+Старт бота был в 13.01.2022 09:57:01
+№1 Ошибка примного робота в 13.01.2022 13:12:12
+№2 Ошибка примного робота в 13.01.2022 13:13:47
+№3 Ошибка примного робота в 13.01.2022 13:14:34
+№4 Ошибка примного робота в 13.01.2022 13:15:21
+№5 Ошибка примного робота в 13.01.2022 15:59:39
+№6 Ошибка примного робота в 13.01.2022 16:01:14
+№7 Ошибка примного робота в 13.01.2022 16:04:49
+№8 Ошибка примного робота в 13.01.2022 16:07:00
+№9 Ошибка примного робота в 13.01.2022 19:01:48
+№10 Ошибка примного робота в 13.01.2022 19:28:53
+№11 Ошибка примного робота в 13.01.2022 19:45:16
+№12 Ошибка примного робота в 13.01.2022 19:47:17
+№13 Ошибка примного робота в 13.01.2022 19:50:24
+№14 Ошибка примного робота в 13.01.2022 19:52:24
+№15 Ошибка примного робота в 13.01.2022 19:56:37
+Старт бота был в 13.01.2022 19:59:24
+№1 Ошибка примного робота в 14.01.2022 08:31:43
+№2 Ошибка примного робота в 14.01.2022 08:32:06
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0430ECE8>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+№3 Ошибка примного робота в 14.01.2022 15:16:07
+№4 Ошибка примного робота в 15.01.2022 09:31:53
+№5 Ошибка примного робота в 15.01.2022 09:39:04
+№6 Ошибка примного робота в 15.01.2022 09:40:15
+№7 Ошибка примного робота в 15.01.2022 09:41:26
+№8 Ошибка примного робота в 15.01.2022 09:42:36
+№9 Ошибка примного робота в 15.01.2022 09:43:23
+№10 Ошибка примного робота в 15.01.2022 09:44:22
+№11 Ошибка примного робота в 15.01.2022 09:45:32
+№12 Ошибка примного робота в 15.01.2022 09:46:19
+№13 Ошибка примного робота в 15.01.2022 09:47:30
+№14 Ошибка примного робота в 15.01.2022 09:48:16
+№15 Ошибка примного робота в 15.01.2022 09:49:39
+№16 Ошибка примного робота в 15.01.2022 09:53:39
+№17 Ошибка примного робота в 15.01.2022 09:56:13
+№18 Ошибка примного робота в 15.01.2022 09:57:24
+№19 Ошибка примного робота в 15.01.2022 09:58:11
+№20 Ошибка примного робота в 15.01.2022 09:58:57
+№21 Ошибка примного робота в 15.01.2022 09:59:56
+№22 Ошибка примного робота в 15.01.2022 10:00:30
+№23 Ошибка примного робота в 15.01.2022 10:02:41
+№24 Ошибка примного робота в 15.01.2022 10:03:52
+№25 Ошибка примного робота в 15.01.2022 10:04:38
+№26 Ошибка примного робота в 15.01.2022 10:06:13
+№27 Ошибка примного робота в 15.01.2022 10:08:36
+№28 Ошибка примного робота в 15.01.2022 10:09:59
+№29 Ошибка примного робота в 15.01.2022 10:11:09
+№30 Ошибка примного робота в 15.01.2022 11:48:07
+№31 Ошибка примного робота в 15.01.2022 11:48:42
+№32 Ошибка примного робота в 15.01.2022 11:48:53
+№33 Ошибка примного робота в 15.01.2022 11:49:03
+№34 Ошибка примного робота в 15.01.2022 11:49:38
+№35 Ошибка примного робота в 15.01.2022 11:49:48
+№36 Ошибка примного робота в 15.01.2022 11:56:59
+№37 Ошибка примного робота в 15.01.2022 11:58:46
+№38 Ошибка примного робота в 15.01.2022 11:59:33
+№39 Ошибка примного робота в 15.01.2022 11:59:56
+№40 Ошибка примного робота в 15.01.2022 12:00:18
+№41 Ошибка примного робота в 15.01.2022 12:00:29
+№42 Ошибка примного робота в 15.01.2022 12:07:52
+№43 Ошибка примного робота в 15.01.2022 12:08:51
+№44 Ошибка примного робота в 15.01.2022 12:10:38
+№45 Ошибка примного робота в 15.01.2022 12:11:12
+№46 Ошибка примного робота в 15.01.2022 12:11:59
+№47 Ошибка примного робота в 15.01.2022 12:12:09
+№48 Ошибка примного робота в 15.01.2022 12:13:56
+№49 Ошибка примного робота в 15.01.2022 12:14:19
+№50 Ошибка примного робота в 15.01.2022 12:14:53
+№51 Ошибка примного робота в 15.01.2022 12:15:28
+№52 Ошибка примного робота в 15.01.2022 12:15:39
+№53 Ошибка примного робота в 15.01.2022 12:16:02
+№54 Ошибка примного робота в 15.01.2022 12:16:36
+№55 Ошибка примного робота в 15.01.2022 12:19:23
+№56 Ошибка примного робота в 15.01.2022 12:20:10
+№57 Ошибка примного робота в 15.01.2022 12:20:32
+№58 Ошибка примного робота в 15.01.2022 12:20:43
+№59 Ошибка примного робота в 15.01.2022 12:21:05
+№60 Ошибка примного робота в 15.01.2022 12:21:28
+№61 Ошибка примного робота в 15.01.2022 12:22:03
+№62 Ошибка примного робота в 15.01.2022 12:22:38
+№63 Ошибка примного робота в 15.01.2022 12:24:01
+№64 Ошибка примного робота в 15.01.2022 12:24:23
+№65 Ошибка примного робота в 15.01.2022 12:24:34
+№66 Ошибка примного робота в 15.01.2022 12:24:56
+№67 Ошибка примного робота в 15.01.2022 12:26:07
+№68 Ошибка примного робота в 15.01.2022 12:26:42
+№69 Ошибка примного робота в 15.01.2022 12:28:29
+№70 Ошибка примного робота в 15.01.2022 12:32:28
+№71 Ошибка примного робота в 15.01.2022 12:33:02
+№72 Ошибка примного робота в 15.01.2022 12:34:13
+№73 Ошибка примного робота в 15.01.2022 12:35:00
+№74 Ошибка примного робота в 15.01.2022 12:35:22
+№75 Ошибка примного робота в 15.01.2022 12:35:33
+№76 Ошибка примного робота в 15.01.2022 12:35:44
+№77 Ошибка примного робота в 15.01.2022 12:35:54
+№78 Ошибка примного робота в 15.01.2022 12:36:05
+№79 Ошибка примного робота в 15.01.2022 12:36:16
+№80 Ошибка примного робота в 15.01.2022 12:37:50
+№81 Ошибка примного робота в 15.01.2022 12:38:25
+№82 Ошибка примного робота в 15.01.2022 12:39:12
+№83 Ошибка примного робота в 15.01.2022 12:39:22
+№84 Ошибка примного робота в 15.01.2022 12:39:33
+№85 Ошибка примного робота в 15.01.2022 12:40:44
+№86 Ошибка примного робота в 15.01.2022 12:41:18
+№87 Ошибка примного робота в 15.01.2022 12:41:41
+№88 Ошибка примного робота в 15.01.2022 12:42:03
+№89 Ошибка примного робота в 15.01.2022 12:42:50
+№90 Ошибка примного робота в 15.01.2022 12:45:37
+№91 Ошибка примного робота в 15.01.2022 12:45:59
+№92 Ошибка примного робота в 15.01.2022 12:46:22
+№93 Ошибка примного робота в 15.01.2022 12:46:45
+№94 Ошибка примного робота в 15.01.2022 12:46:55
+№95 Ошибка примного робота в 15.01.2022 12:47:18
+№96 Ошибка примного робота в 15.01.2022 12:49:41
+№97 Ошибка примного робота в 15.01.2022 12:50:04
+№98 Ошибка примного робота в 15.01.2022 12:50:14
+№99 Ошибка примного робота в 15.01.2022 12:51:01
+№100 Ошибка примного робота в 15.01.2022 12:52:24
+№101 Ошибка примного робота в 15.01.2022 12:52:34
+№102 Ошибка примного робота в 15.01.2022 12:53:45
+№103 Ошибка примного робота в 15.01.2022 14:15:18
+№104 Ошибка примного робота в 15.01.2022 15:27:02
+№105 Ошибка примного робота в 15.01.2022 15:29:01
+№106 Ошибка примного робота в 15.01.2022 15:33:36
+№107 Ошибка примного робота в 15.01.2022 15:36:23
+№108 Ошибка примного робота в 15.01.2022 15:36:33
+№109 Ошибка примного робота в 15.01.2022 15:36:56
+№110 Ошибка примного робота в 15.01.2022 15:37:19
+№111 Ошибка примного робота в 15.01.2022 15:38:18
+№112 Ошибка примного робота в 15.01.2022 15:44:05
+№113 Ошибка примного робота в 15.01.2022 15:44:51
+№114 Ошибка примного робота в 15.01.2022 15:45:38
+№115 Ошибка примного робота в 15.01.2022 15:46:25
+№116 Ошибка примного робота в 15.01.2022 15:48:35
+№117 Ошибка примного робота в 15.01.2022 15:49:10
+№118 Ошибка примного робота в 15.01.2022 15:49:33
+№119 Ошибка примного робота в 15.01.2022 15:50:08
+№120 Ошибка примного робота в 15.01.2022 15:52:07
+№121 Ошибка примного робота в 15.01.2022 15:52:29
+№122 Ошибка примного робота в 15.01.2022 15:58:41
+№123 Ошибка примного робота в 17.01.2022 09:06:14
+№124 Ошибка примного робота в 17.01.2022 09:08:25
+№125 Ошибка примного робота в 17.01.2022 09:15:13
+№126 Ошибка примного робота в 17.01.2022 09:16:00
+№127 Ошибка примного робота в 17.01.2022 09:16:46
+№128 Ошибка примного робота в 17.01.2022 09:23:22
+№129 Ошибка примного робота в 17.01.2022 09:26:45
+№130 Ошибка примного робота в 17.01.2022 09:27:20
+№131 Ошибка примного робота в 17.01.2022 09:34:56
+№132 Ошибка примного робота в 17.01.2022 09:36:43
+№133 Ошибка примного робота в 17.01.2022 09:46:06
+№134 Ошибка примного робота в 17.01.2022 09:46:53
+№135 Ошибка примного робота в 17.01.2022 09:48:40
+№136 Ошибка примного робота в 17.01.2022 09:51:27
+№1 Ошибка голубого робота в 17.01.2022 10:06:28
+№137 Ошибка примного робота в 17.01.2022 10:07:02
+№138 Ошибка примного робота в 17.01.2022 10:08:13
+№139 Ошибка примного робота в 17.01.2022 10:08:36
+№140 Ошибка примного робота в 17.01.2022 10:08:47
+№141 Ошибка примного робота в 17.01.2022 13:12:40
+№142 Ошибка примного робота в 17.01.2022 13:14:15
+№143 Ошибка примного робота в 17.01.2022 13:27:40
+№144 Ошибка примного робота в 17.01.2022 13:32:15
+№145 Ошибка примного робота в 17.01.2022 13:33:02
+№146 Ошибка примного робота в 17.01.2022 13:33:13
+№147 Ошибка примного робота в 17.01.2022 13:33:23
+№148 Ошибка примного робота в 17.01.2022 13:33:46
+№149 Ошибка примного робота в 17.01.2022 13:34:33
+№150 Ошибка примного робота в 17.01.2022 13:39:08
+№151 Ошибка примного робота в 17.01.2022 13:42:08
+№152 Ошибка примного робота в 17.01.2022 13:42:30
+№1 Ошибка желтого робота в 17.01.2022 14:13:46
+№2 Ошибка голубого робота в 17.01.2022 14:23:11
+№2 Ошибка желтого робота в 17.01.2022 14:43:00
+№3 Ошибка желтого робота в 17.01.2022 15:17:56
+№153 Ошибка примного робота в 17.01.2022 15:25:34
+№154 Ошибка примного робота в 17.01.2022 15:26:57
+№4 Ошибка желтого робота в 17.01.2022 16:17:05
+№5 Ошибка желтого робота в 17.01.2022 17:56:13
+№6 Ошибка желтого робота в 17.01.2022 18:02:02
+№155 Ошибка примного робота в 18.01.2022 09:30:14
+№156 Ошибка примного робота в 18.01.2022 09:30:37
+№157 Ошибка примного робота в 18.01.2022 09:30:48
+№3 Ошибка голубого робота в 18.01.2022 11:20:37
+№4 Ошибка голубого робота в 18.01.2022 11:22:37
+№5 Ошибка голубого робота в 18.01.2022 11:24:12
+№158 Ошибка примного робота в 18.01.2022 20:21:51
+№159 Ошибка примного робота в 19.01.2022 09:16:18
+№160 Ошибка примного робота в 19.01.2022 12:31:08
+№7 Ошибка желтого робота в 19.01.2022 16:23:52
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x043396D0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04339028>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x043394D8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04339778>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04339778>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04339778>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04339778>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04339970>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04339A48>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04339AF0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04339B80>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04339B80>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04339B80>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04339B80>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x042E4688>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0427E130>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0430EAC0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+№6 Ошибка голубого робота в 19.01.2022 16:57:21
+№161 Ошибка примного робота в 20.01.2022 12:38:52
+№162 Ошибка примного робота в 20.01.2022 14:45:56
+№7 Ошибка голубого робота в 21.01.2022 12:04:48
+№8 Ошибка желтого робота в 21.01.2022 14:23:50
+№163 Ошибка примного робота в 24.01.2022 09:36:17
+№8 Ошибка голубого робота в 24.01.2022 11:45:34
+№9 Ошибка желтого робота в 25.01.2022 19:54:38
+№10 Ошибка желтого робота в 25.01.2022 19:55:10
+№11 Ошибка желтого робота в 25.01.2022 20:01:36
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x042E4778>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x048C31C0>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0430E9A0>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0430EEB0>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)'))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 144, in _new_conn
+    raise ConnectTimeoutError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ConnectTimeoutError: (<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0430EEB0>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0430EEB0>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0430EEB0>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)'))
+Старт бота был в 26.01.2022 09:05:30
+№1 Ошибка желтого робота в 26.01.2022 10:01:29
+№2 Ошибка желтого робота в 26.01.2022 16:27:31
+№1 Ошибка голубого робота в 27.01.2022 08:47:44
+№3 Ошибка желтого робота в 27.01.2022 14:00:15
+№4 Ошибка желтого робота в 27.01.2022 19:13:17
+№5 Ошибка желтого робота в 27.01.2022 19:50:37
+№6 Ошибка желтого робота в 28.01.2022 09:35:10
+№2 Ошибка голубого робота в 28.01.2022 15:04:25
+№3 Ошибка голубого робота в 28.01.2022 15:06:36
+№7 Ошибка желтого робота в 29.01.2022 10:34:30
+№1 Ошибка примного робота в 29.01.2022 10:45:41
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04FE67A8>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+№4 Ошибка голубого робота в 31.01.2022 11:10:38
+№5 Ошибка голубого робота в 31.01.2022 11:11:37
+№6 Ошибка голубого робота в 31.01.2022 11:12:48
+Error while getting Updates: Bad Gateway
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 254, in _request_wrapper
+    raise NetworkError('Bad Gateway')
+telegram.error.NetworkError: Bad Gateway
+№8 Ошибка желтого робота в 01.02.2022 08:40:37
+№9 Ошибка желтого робота в 01.02.2022 16:53:22
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04FE6388>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+№2 Ошибка примного робота в 02.02.2022 12:44:55
+№10 Ошибка желтого робота в 02.02.2022 12:48:43
+№11 Ошибка желтого робота в 02.02.2022 12:49:42
+№12 Ошибка желтого робота в 02.02.2022 15:45:20
+№13 Ошибка желтого робота в 02.02.2022 15:46:14
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04FE6178>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Старт бота был в 03.02.2022 08:13:05
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0444DA48>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getMe
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connectionpool.HTTPSConnectionPool object at 0x0444D850>, 'Connect timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connectionpool.HTTPSConnectionPool object at 0x0444D850>, 'Connect timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0446E928>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0446EB98>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+№1 Ошибка голубого робота в 03.02.2022 19:43:32
+Старт бота был в 04.02.2022 07:47:46
+Старт бота был в 04.02.2022 13:48:00
+Старт бота был в 04.02.2022 13:48:21
+Старт бота был в 04.02.2022 13:49:10
+Старт бота был в 04.02.2022 13:50:10
+Старт бота был в 04.02.2022 13:50:49
+Старт бота был в 04.02.2022 13:53:58
+Старт бота был в 04.02.2022 14:02:21
