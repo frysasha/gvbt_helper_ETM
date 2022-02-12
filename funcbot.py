@@ -20,10 +20,12 @@ def welcome_message (bot):
 
 def inline_button_pressed(bot, update):
     query = bot.callback_query
-    update.bot.send_message(ask_channel_id, 'Робота поправили! спасибо')
+    update.bot.send_message(ask_channel_id, f'Робота поправил {query.from_user.first_name} спасибо!')
     update.bot.edit_message_reply_markup(
         chat_id=query.message.chat.id,
         message_id=query.message.message_id, reply_markup='') #убирает кнопку в сообщении
+    print(f'Робота поправил {query.from_user.first_name}')
+
 
 def priem_msg(bot, time):
     bot.send_sticker(ask_channel_id, 'CAACAgIAAxkBAAEBV-5fY1yzqRqG6hFdFnC0OmD98UKzSQACBAADjVk3GTq8TbLpDM2NGwQ')
@@ -33,7 +35,6 @@ def priem_msg(bot, time):
     sleep(4)
     bot.send_photo(ask_channel_id, photo=open(photopath + 'priem.png', 'rb')) #отправка скрина
 
-    #data, addr = uCliSock.recvfrom(BUFSIZE)
 
 def blue_msg(bot, time):
 
@@ -99,18 +100,11 @@ def laps_zapros(bot, update):
             cleantext2.append(i)
         cleantext2 = cleantext2[-3][-13:].strip()
         print(f'Запрашиваемый пароль: {cleantext2}')
-        #read_text = open('C:\\python\\pass.txt', 'r')#, encoding='utf-16')
         if os.stat('C:\\python\\pass.txt').st_size == 0:
             net_parolya()
         laps_send_msg(f'пароль: {cleantext2}')
         return ConversationHandler.END  # закрывает диалог
-        # else:
-        #     rtext = read_text.read()
-        #     #print(rtext)
-        #if len(rtext) > 460: #убирает первые 460 символов
-            #cleantext = ('пароль: ' + rtext[460:].lstrip())
-            #print(type(cleantext))
-            #print(cleantext)
+
 
     else:
         laps_format_msg()

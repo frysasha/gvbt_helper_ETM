@@ -36,7 +36,7 @@ replykeyboard.row('LAPS', 'ASK_Pause', 'ASK_Work')
 inl_keyboard = types.InlineKeyboardMarkup() #кнопка в сообщении
 inl_keyboard.row(types.InlineKeyboardButton('Поправил', callback_data='popravil'))
 
-#filepathpriem = pathlib.Path('C:\\test\\123.txt') #пути до логов
+
 filepathpriem = pathlib.Path('V:\\priem.rps\\logs\\faults.log') #пути до логов
 filepathblue = pathlib.Path('V:\\blue.rps\logs\\faults.log')
 filepathyellow = pathlib.Path('V:\\yellow.rps\\logs\\faults.log')
