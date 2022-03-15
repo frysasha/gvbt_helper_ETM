@@ -22,15 +22,18 @@ def main():
                                                       states={
                                                           'user_name': [MessageHandler(Filters.text, laps_zapros)]},
                                                       fallbacks=[])) #реакция на LAPS , и последующее общение
-    my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('ASK_Pause'), ask_pause_button))
+    my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('АСК Пауза'), ask_pause_button))
+    #my_bot.dispatcher.add_handler(CommandHandler('Schedule', schedule))
+    my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('Расписание ГВБТ'), schedule))
     # my_bot.dispatcher.add_handler(ConversationHandler(entry_points=[MessageHandler(Filters.regex('ASK_Pause'), ask_pause_button)],
     #                                                    states={},
     #                                                    fallbacks=[]))
     # my_bot.dispatcher.add_handler(ConversationHandler(entry_points=[MessageHandler(Filters.regex('ASK_Work'), ask_work_button)],
     #                          states={},
     #                          fallbacks=[]))
-    my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('ASK_Work'), ask_work_button))
+    my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('АСК в работу'), ask_work_button))
     my_bot.dispatcher.add_handler(CallbackQueryHandler(inline_button_pressed)) #реакция на нажатую кнопку "поправил"
+
 
 
     try:
@@ -44,6 +47,7 @@ def main():
 
 
 if __name__ == "__main__":
+    welcome_message(bot)
     main()
 
 

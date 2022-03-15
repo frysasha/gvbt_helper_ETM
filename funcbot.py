@@ -5,7 +5,7 @@ import subprocess
 import re
 from telegram.ext import ConversationHandler
 import os
-
+from PIL import Image
 
 #from mainbot import bot
 
@@ -15,8 +15,9 @@ def update_message (bot, prog, ver):
 
 
 def welcome_message (bot):
-    pass
-    ##bot.send_message(ask_channel_id, 'start bot', reply_markup=replykeyboard) #вывод нижней клавы
+    #pass
+    #bot.send_message(ask_channel_id, 'start bot', reply_markup=gvbt_replykeyboard)
+    bot.send_message(sklad_channel, 'Старт бота', reply_markup=sklad_keyboard) #вывод нижней клавы
 
 def inline_button_pressed(bot, update):
     query = bot.callback_query
@@ -24,7 +25,7 @@ def inline_button_pressed(bot, update):
     update.bot.edit_message_reply_markup(
         chat_id=query.message.chat.id,
         message_id=query.message.message_id, reply_markup='') #убирает кнопку в сообщении
-    print(f'Робота поправил {query.from_user.first_name}')
+    print(f'Робота поправил {query.from_user.first_name} в {time.strftime("%d.%m.%Y %H:%M:%S")}')
 
 
 def priem_msg(bot, time):
@@ -96,13 +97,14 @@ def laps_zapros(bot, update):
         writetofile(bot.message.text)
         sleep(4)
         cleantext2 = []
-        for i in open('C:\\python\\pass.txt', 'r', encoding='utf-16').readlines():
-            cleantext2.append(i)
-        cleantext2 = cleantext2[-3][-13:].strip()
-        print(f'Запрашиваемый пароль: {cleantext2}')
         if os.stat('C:\\python\\pass.txt').st_size == 0:
             net_parolya()
-        laps_send_msg(f'пароль: {cleantext2}')
+        else:
+            for i in open('C:\\python\\pass.txt', 'r', encoding='utf-16').readlines():
+                cleantext2.append(i)
+            cleantext2 = cleantext2[-3][-13:].strip()
+            print(f'Запрашиваемый пароль: {cleantext2}')
+            laps_send_msg(f'пароль: {cleantext2}')
         return ConversationHandler.END  # закрывает диалог
 
 
@@ -122,19 +124,27 @@ def robot_oshibka(bot):
     bot.send_message(ask_channel_id, "Боту плохо, нужно его перезарустить!")
     print("Боту плохо, нужно его перезарустить!")
 
-def ask_pause_button(bot, context):
+def ask_pause_button(update, context):
     uCliSock.sendto(bytes('pause_button', 'cp1251'), SOCKADDR2)
     print('pause_button')
     sleep(5)
-    context.bot.send_photo(ask_channel_id, photo=open(photopath + 'pause.png', 'rb'))  # отправка скрина
-    #return ConversationHandler.END
+    im = Image.open(r'Z:\python\ASK screenshots\pause.png')
+    im.crop((810, 670, 1020, 780)).save(photopath + 'pause_new.png', quality=95)
+    sleep(1)
+    context.bot.send_photo(chat_id=update.message.chat_id, photo=open(photopath + 'pause_new.png', 'rb'))
 
-def ask_work_button(bot, context):
+
+def ask_work_button(update, context):
     uCliSock.sendto(bytes('work_button', 'cp1251'), SOCKADDR2)
     print('work_button')
     sleep(5)
-    context.bot.send_photo(ask_channel_id, photo=open(photopath + 'work.png', 'rb'))  # отправка скрина
+    im = Image.open(r'Z:\python\ASK screenshots\work.png')
+    im.crop((810, 670, 1020, 780)).save(photopath + 'work_new.png', quality=95)
+    sleep(1)
+    context.bot.send_photo(chat_id=update.message.chat_id, photo=open(photopath + 'work_new.png', 'rb'))
     #return ConversationHandler.END
 
+def schedule(update, context):
+    context.bot.send_photo(chat_id=update.message.chat_id, photo=open(r'Z:\python\расписание\schedule.jpg', 'rb'))
 
 

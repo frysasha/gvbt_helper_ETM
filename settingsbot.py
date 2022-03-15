@@ -30,8 +30,11 @@ testchannelid = "-750457583" # gvbt2021
 zabbixcpchannel = '-1001208212827' #заббикс цп
 ask_channel_id = "-713732030" # ASK ETM channel
 frychannelid = "423057805"
-replykeyboard = telebot.types.ReplyKeyboardMarkup(True, False) #кнопка снизу клавы
-replykeyboard.row('LAPS', 'ASK_Pause', 'ASK_Work')
+sklad_channel = '-784067672'
+gvbt_replykeyboard = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
+sklad_keyboard = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)#кнопка снизу клавы
+gvbt_replykeyboard.row('LAPS', 'АСК Пауза', 'АСК в работу', 'Расписание ГВБТ')
+sklad_keyboard.row('АСК Пауза', 'АСК в работу', 'Расписание ГВБТ')
 
 inl_keyboard = types.InlineKeyboardMarkup() #кнопка в сообщении
 inl_keyboard.row(types.InlineKeyboardButton('Поправил', callback_data='popravil'))

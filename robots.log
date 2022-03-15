@@ -34472,3 +34472,1710 @@ Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connecti
 Старт бота был в 04.02.2022 13:50:49
 Старт бота был в 04.02.2022 13:53:58
 Старт бота был в 04.02.2022 14:02:21
+Старт бота был в 04.02.2022 14:07:23
+Старт бота был в 04.02.2022 14:11:11
+Старт бота был в 04.02.2022 14:12:10
+Старт бота был в 04.02.2022 14:15:49
+Старт бота был в 04.02.2022 14:16:45
+Старт бота был в 04.02.2022 14:18:39
+Старт бота был в 04.02.2022 14:19:10
+Старт бота был в 04.02.2022 14:20:20
+Старт бота был в 04.02.2022 14:21:58
+Старт бота был в 04.02.2022 14:23:10
+Старт бота был в 04.02.2022 14:24:34
+Старт бота был в 04.02.2022 14:29:11
+№1 Ошибка желтого робота в 05.02.2022 10:33:51
+№2 Ошибка желтого робота в 05.02.2022 10:35:39
+№3 Ошибка желтого робота в 05.02.2022 11:51:00
+№1 Ошибка голубого робота в 07.02.2022 12:05:55
+№2 Ошибка голубого робота в 08.02.2022 12:06:26
+№3 Ошибка голубого робота в 08.02.2022 12:09:02
+№4 Ошибка голубого робота в 08.02.2022 12:09:48
+№4 Ошибка желтого робота в 08.02.2022 19:42:03
+№5 Ошибка желтого робота в 08.02.2022 19:52:52
+№6 Ошибка желтого робота в 08.02.2022 19:53:28
+№7 Ошибка желтого робота в 08.02.2022 19:56:29
+№5 Ошибка голубого робота в 08.02.2022 19:58:29
+№8 Ошибка желтого робота в 08.02.2022 21:45:53
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x049DA4A8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x049DA340>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x049DAB20>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x047166D0>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+№9 Ошибка желтого робота в 09.02.2022 20:04:35
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04716B38>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+№10 Ошибка желтого робота в 10.02.2022 15:40:43
+№11 Ошибка желтого робота в 10.02.2022 15:46:44
+№12 Ошибка желтого робота в 10.02.2022 15:46:55
+№13 Ошибка желтого робота в 10.02.2022 15:47:07
+№14 Ошибка желтого робота в 10.02.2022 15:50:19
+№15 Ошибка желтого робота в 10.02.2022 15:50:55
+№16 Ошибка желтого робота в 11.02.2022 10:34:33
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04716670>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+№6 Ошибка голубого робота в 11.02.2022 14:04:55
+№7 Ошибка голубого робота в 11.02.2022 16:08:36
+№8 Ошибка голубого робота в 11.02.2022 17:35:24
+Старт бота был в 12.02.2022 10:26:03
+Старт бота был в 12.02.2022 10:29:43
+Старт бота был в 12.02.2022 10:30:24
+Старт бота был в 12.02.2022 10:31:33
+Старт бота был в 12.02.2022 11:04:33
+Старт бота был в 12.02.2022 11:04:49
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\dispatcher.py", line 340, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\handler.py", line 119, in handle_update
+    return self.callback(update, context)
+  File "C:\Users\shlyakhov_ai\PycharmProjects\gvbt helper ETM\funcbot.py", line 24, in inline_button_pressed
+    update.bot.edit_message_reply_markup(
+  File "<decorator-gen-30>", line 2, in edit_message_reply_markup
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2073, in edit_message_reply_markup
+    return self._message(url, data, timeout=timeout, reply_markup=reply_markup, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 175, in _message
+    result = self._request.post(url, data, timeout=timeout)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 244, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\dispatcher.py", line 340, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\handler.py", line 119, in handle_update
+    return self.callback(update, context)
+  File "C:\Users\shlyakhov_ai\PycharmProjects\gvbt helper ETM\funcbot.py", line 24, in inline_button_pressed
+    update.bot.edit_message_reply_markup(
+  File "<decorator-gen-30>", line 2, in edit_message_reply_markup
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2073, in edit_message_reply_markup
+    return self._message(url, data, timeout=timeout, reply_markup=reply_markup, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 175, in _message
+    result = self._request.post(url, data, timeout=timeout)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 244, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0452C6A0>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+№1 Ошибка желтого робота в 14.02.2022 10:39:04
+Старт бота был в 14.02.2022 12:48:15
+№1 Ошибка желтого робота в 14.02.2022 14:27:05
+№2 Ошибка желтого робота в 15.02.2022 16:20:13
+№3 Ошибка желтого робота в 15.02.2022 16:20:49
+№4 Ошибка желтого робота в 16.02.2022 16:15:09
+№1 Ошибка голубого робота в 16.02.2022 16:16:10
+№5 Ошибка желтого робота в 16.02.2022 16:23:21
+№6 Ошибка желтого робота в 16.02.2022 16:24:33
+№7 Ошибка желтого робота в 16.02.2022 17:07:16
+№8 Ошибка желтого робота в 16.02.2022 17:10:17
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x046E9AD8>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+№2 Ошибка голубого робота в 17.02.2022 21:50:03
+№3 Ошибка голубого робота в 18.02.2022 09:50:08
+№4 Ошибка голубого робота в 18.02.2022 09:50:43
+№5 Ошибка голубого робота в 18.02.2022 09:52:53
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x046E9CD0>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+№6 Ошибка голубого робота в 18.02.2022 18:20:06
+№9 Ошибка желтого робота в 18.02.2022 18:49:34
+№7 Ошибка голубого робота в 21.02.2022 09:53:34
+Старт бота был в 21.02.2022 10:25:58
+Старт бота был в 21.02.2022 16:07:25
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\dispatcher.py", line 340, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\handler.py", line 119, in handle_update
+    return self.callback(update, context)
+  File "C:\Users\shlyakhov_ai\PycharmProjects\gvbt helper ETM\funcbot.py", line 141, in schedule
+    bot.send_photo(message.chat.id, photo=open('schedule.png', 'rb'))
+AttributeError: 'Update' object has no attribute 'send_photo'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\dispatcher.py", line 340, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\handler.py", line 119, in handle_update
+    return self.callback(update, context)
+  File "C:\Users\shlyakhov_ai\PycharmProjects\gvbt helper ETM\funcbot.py", line 141, in schedule
+    bot.send_photo(message.chat.id, photo=open('schedule.png', 'rb'))
+AttributeError: 'Update' object has no attribute 'send_photo'
+Старт бота был в 21.02.2022 16:09:36
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\dispatcher.py", line 340, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\handler.py", line 119, in handle_update
+    return self.callback(update, context)
+  File "C:\Users\shlyakhov_ai\PycharmProjects\gvbt helper ETM\funcbot.py", line 141, in schedule
+    bot.send_photo(message.chat.id, photo=open('schedule.png', 'rb'))
+AttributeError: 'Update' object has no attribute 'send_photo'
+Старт бота был в 21.02.2022 16:16:51
+Старт бота был в 21.02.2022 16:18:49
+Старт бота был в 21.02.2022 16:19:13
+Старт бота был в 21.02.2022 16:20:05
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\dispatcher.py", line 340, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\handler.py", line 119, in handle_update
+    return self.callback(update, context)
+  File "C:\Users\shlyakhov_ai\PycharmProjects\gvbt helper ETM\funcbot.py", line 141, in schedule
+    context.bot.send_photo(chat_id=update.effective_chat.id, photo=open('schedule.png', 'rb'))
+FileNotFoundError: [Errno 2] No such file or directory: 'schedule.png'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\dispatcher.py", line 340, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\handler.py", line 119, in handle_update
+    return self.callback(update, context)
+  File "C:\Users\shlyakhov_ai\PycharmProjects\gvbt helper ETM\funcbot.py", line 141, in schedule
+    context.bot.send_photo(chat_id=update.effective_chat.id, photo=open('schedule.png', 'rb'))
+FileNotFoundError: [Errno 2] No such file or directory: 'schedule.png'
+Старт бота был в 21.02.2022 16:20:40
+Старт бота был в 21.02.2022 16:21:01
+Старт бота был в 21.02.2022 16:21:48
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\dispatcher.py", line 340, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\handler.py", line 119, in handle_update
+    return self.callback(update, context)
+  File "C:\Users\shlyakhov_ai\PycharmProjects\gvbt helper ETM\funcbot.py", line 141, in schedule
+    context.bot.send_photo(chat_id=update.effective_chat.id, photo=open('schedule.png', 'rb'))
+FileNotFoundError: [Errno 2] No such file or directory: 'schedule.png'
+Старт бота был в 21.02.2022 16:27:19
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\dispatcher.py", line 340, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\handler.py", line 119, in handle_update
+    return self.callback(update, context)
+  File "C:\Users\shlyakhov_ai\PycharmProjects\gvbt helper ETM\funcbot.py", line 142, in schedule
+    context.bot.send_photo(chat_id=update.effective_chat.id, photo=open('schedule.png', 'rb'))
+FileNotFoundError: [Errno 2] No such file or directory: 'schedule.png'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\dispatcher.py", line 340, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\handler.py", line 119, in handle_update
+    return self.callback(update, context)
+  File "C:\Users\shlyakhov_ai\PycharmProjects\gvbt helper ETM\funcbot.py", line 142, in schedule
+    context.bot.send_photo(chat_id=update.effective_chat.id, photo=open('schedule.png', 'rb'))
+FileNotFoundError: [Errno 2] No such file or directory: 'schedule.png'
+Старт бота был в 21.02.2022 16:28:23
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\dispatcher.py", line 340, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\handler.py", line 119, in handle_update
+    return self.callback(update, context)
+  File "C:\Users\shlyakhov_ai\PycharmProjects\gvbt helper ETM\funcbot.py", line 142, in schedule
+    context.bot.send_photo(ask_channel_id, photo=open('schedule.png', 'rb'))
+FileNotFoundError: [Errno 2] No such file or directory: 'schedule.png'
+Старт бота был в 21.02.2022 16:29:01
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\dispatcher.py", line 340, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\handler.py", line 119, in handle_update
+    return self.callback(update, context)
+  File "C:\Users\shlyakhov_ai\PycharmProjects\gvbt helper ETM\funcbot.py", line 143, in schedule
+    context.bot.send_photo(ask_channel_id, photo=open('schedule.png', 'rb'))
+FileNotFoundError: [Errno 2] No such file or directory: 'schedule.png'
+Старт бота был в 21.02.2022 16:29:22
+Старт бота был в 21.02.2022 16:31:00
+Старт бота был в 21.02.2022 16:32:29
+Старт бота был в 21.02.2022 16:35:13
+№1 Ошибка желтого робота в 22.02.2022 12:32:22
+№2 Ошибка желтого робота в 22.02.2022 12:46:12
+№1 Ошибка примного робота в 24.02.2022 09:32:19
+№3 Ошибка желтого робота в 24.02.2022 09:48:06
+№4 Ошибка желтого робота в 24.02.2022 12:27:16
+№1 Ошибка голубого робота в 24.02.2022 16:50:09
+Error while getting Updates: urllib3 HTTPError ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\http\client.py", line 1322, in getresponse
+    response.begin()
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\http\client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\http\client.py", line 264, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 347, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\http\client.py", line 1322, in getresponse
+    response.begin()
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\http\client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\http\client.py", line 264, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B54790>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B54880>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B54970>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B54B08>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+№5 Ошибка желтого робота в 25.02.2022 15:35:29
+№6 Ошибка желтого робота в 25.02.2022 17:29:15
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B54B98>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+№7 Ошибка желтого робота в 26.02.2022 11:15:30
+№8 Ошибка желтого робота в 26.02.2022 12:45:42
+№9 Ошибка желтого робота в 26.02.2022 15:38:50
+№10 Ошибка желтого робота в 26.02.2022 16:32:47
+№11 Ошибка желтого робота в 26.02.2022 16:35:58
+№12 Ошибка желтого робота в 26.02.2022 16:37:21
+№13 Ошибка желтого робота в 26.02.2022 16:39:56
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B547C0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B54B98>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B54910>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A4F0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A4F0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A4F0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A4F0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A778>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A4A8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A4C0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A2F8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A2F8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A2F8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A2F8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A2B0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A928>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A940>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A760>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A760>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A760>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A760>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A460>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A9D0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534AA78>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534AB20>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534AB20>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534AB20>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534AB20>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A7C0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534AC10>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534ACB8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B54898>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B54898>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B54898>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B54898>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B54508>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B540B8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B36CE8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B36838>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B36838>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B36838>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B36838>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B548E0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534AA90>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A5F8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534AC88>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534AC88>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534AC88>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534AC88>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B544D8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A610>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A1C0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A478>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A478>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A478>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A478>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A808>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+№14 Ошибка желтого робота в 28.02.2022 09:37:57
+№15 Ошибка желтого робота в 28.02.2022 09:46:59
+№2 Ошибка голубого робота в 28.02.2022 15:26:32
+№3 Ошибка голубого робота в 01.03.2022 02:40:04
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0536E0B8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0536E268>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0536E388>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0536E4A8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0536E4A8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0536E4A8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0536E4A8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534ADA8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A190>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A370>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534AC88>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534AC88>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534AC88>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534AC88>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534AF58>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A100>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A1C0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A7A8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A7A8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A7A8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A7A8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534AF40>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A730>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B36838>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B366A0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B366A0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B366A0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B366A0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534AB50>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B545F8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B54460>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B54F70>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B54F70>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B54F70>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B54F70>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A748>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B545C8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B54B20>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0536E490>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0536E490>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0536E490>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0536E490>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04B547A8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0536E0E8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0536E3A0>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0536E598>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 149, in _new_conn
+    raise NewConnectionError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.NewConnectionError: <telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0536E598>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0536E598>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0536E598>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed'))
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0536E4A8>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0536E688>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0536E730>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+№16 Ошибка желтого робота в 01.03.2022 16:59:58
+№17 Ошибка желтого робота в 01.03.2022 17:01:34
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0534A940>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Старт бота был в 02.03.2022 08:15:27
+№1 Ошибка примного робота в 02.03.2022 08:56:55
+№2 Ошибка примного робота в 02.03.2022 09:10:44
+№1 Ошибка голубого робота в 02.03.2022 15:38:03
+№3 Ошибка примного робота в 03.03.2022 08:50:16
+№1 Ошибка желтого робота в 03.03.2022 09:57:05
+№2 Ошибка голубого робота в 03.03.2022 14:32:55
+№2 Ошибка желтого робота в 03.03.2022 14:40:07
+№3 Ошибка желтого робота в 03.03.2022 14:40:43
+№4 Ошибка желтого робота в 03.03.2022 15:31:28
+№5 Ошибка желтого робота в 04.03.2022 17:45:51
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04510A78>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+№6 Ошибка желтого робота в 05.03.2022 02:56:15
+№7 Ошибка желтого робота в 05.03.2022 13:21:38
+№8 Ошибка желтого робота в 05.03.2022 14:08:19
+№3 Ошибка голубого робота в 05.03.2022 18:15:49
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04510568>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04510F70>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 248, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 248, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 248, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 248, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 248, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 248, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 248, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 248, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04510718>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04E585E0>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+№9 Ошибка желтого робота в 10.03.2022 17:38:32
+№4 Ошибка голубого робота в 11.03.2022 09:34:54
+№4 Ошибка примного робота в 11.03.2022 09:44:06
+№5 Ошибка примного робота в 11.03.2022 09:47:06
+№10 Ошибка желтого робота в 12.03.2022 09:40:23
+№11 Ошибка желтого робота в 12.03.2022 14:13:09
+Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04E58B38>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x04E58B98>: Failed to establish a new connection: [Errno 11004] getaddrinfo failed')': /bot1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk/getUpdates
+№6 Ошибка примного робота в 14.03.2022 09:25:05
+№12 Ошибка желтого робота в 14.03.2022 10:39:29
+№13 Ошибка желтого робота в 14.03.2022 10:39:53
+Error while getting Updates: urllib3 HTTPError ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\http\client.py", line 1322, in getresponse
+    response.begin()
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\http\client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\http\client.py", line 264, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 224, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 347, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\http\client.py", line 1322, in getresponse
+    response.begin()
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\http\client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\http\client.py", line 264, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 379, in _network_loop_retry
+    if not action_cb():
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\updater.py", line 337, in polling_action_cb
+    updates = self.bot.get_updates(self.last_update_id,
+  File "<decorator-gen-31>", line 2, in get_updates
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 2138, in get_updates
+    result = self._request.post(url, data, timeout=float(read_latency) + float(timeout))
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 330, in post
+    result = self._request_wrapper('POST', url,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 230, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+№14 Ошибка желтого робота в 15.03.2022 09:26:22
+№15 Ошибка желтого робота в 15.03.2022 09:26:58
+№16 Ошибка желтого робота в 15.03.2022 10:27:19
+№17 Ошибка желтого робота в 15.03.2022 10:28:20
+№18 Ошибка желтого робота в 15.03.2022 10:28:31
+№19 Ошибка желтого робота в 15.03.2022 10:29:07
+№20 Ошибка желтого робота в 15.03.2022 10:29:18
+№21 Ошибка желтого робота в 15.03.2022 10:36:55
+№22 Ошибка желтого робота в 15.03.2022 10:37:19
+№23 Ошибка желтого робота в 15.03.2022 10:37:42
+№24 Ошибка желтого робота в 15.03.2022 11:29:00
+№25 Ошибка желтого робота в 15.03.2022 11:31:13
+Старт бота был в 15.03.2022 11:33:31
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\dispatcher.py", line 340, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\handler.py", line 119, in handle_update
+    return self.callback(update, context)
+  File "C:\Users\shlyakhov_ai\PycharmProjects\gvbt helper ETM\funcbot.py", line 133, in ask_pause_button
+    context.bot.send_photo(ask_channel_id, photo=im_crop)
+  File "<decorator-gen-5>", line 2, in send_photo
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 495, in send_photo
+    return self._message(url, data, timeout=timeout, disable_notification=disable_notification,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 175, in _message
+    result = self._request.post(url, data, timeout=timeout)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 331, in post
+    body=json.dumps(data).encode('utf-8'),
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\shlyakhov_ai\AppData\Local\Programs\Python\Python38-32\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Image is not JSON serializable
+Старт бота был в 15.03.2022 11:35:02
+Старт бота был в 15.03.2022 11:36:17
+Старт бота был в 15.03.2022 11:38:54
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\dispatcher.py", line 340, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\ext\handler.py", line 119, in handle_update
+    return self.callback(update, context)
+  File "C:\Users\shlyakhov_ai\PycharmProjects\gvbt helper ETM\funcbot.py", line 134, in ask_pause_button
+    context.bot.send_photo((ask_channel_id, sklad_channel), photo=open(photopath + 'pause_new.png', 'rb'))
+  File "<decorator-gen-5>", line 2, in send_photo
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 67, in decorator
+    result = func(*args, **kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 495, in send_photo
+    return self._message(url, data, timeout=timeout, disable_notification=disable_notification,
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\bot.py", line 175, in _message
+    result = self._request.post(url, data, timeout=timeout)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 328, in post
+    result = self._request_wrapper('POST', url, fields=data, **urlopen_kwargs)
+  File "C:\python\gvbt helper\gvbt helper ETM\lib\site-packages\telegram\utils\request.py", line 244, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Chat_id is empty
+Старт бота был в 15.03.2022 11:44:12
+Старт бота был в 15.03.2022 11:46:29
+Старт бота был в 15.03.2022 11:54:51
+Старт бота был в 15.03.2022 11:56:30
+Старт бота был в 15.03.2022 12:00:19
+Старт бота был в 15.03.2022 12:06:36
+Старт бота был в 15.03.2022 12:39:41
+Старт бота был в 15.03.2022 12:40:16
