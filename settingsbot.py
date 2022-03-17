@@ -33,8 +33,8 @@ frychannelid = "423057805"
 sklad_channel = '-784067672'
 gvbt_replykeyboard = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
 sklad_keyboard = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)#кнопка снизу клавы
-gvbt_replykeyboard.row('LAPS', 'АСК Пауза', 'АСК в работу', 'Расписание ГВБТ')
-sklad_keyboard.row('АСК Пауза', 'АСК в работу', 'Расписание ГВБТ')
+gvbt_replykeyboard.row('LAPS 🔐', 'АСК Пауза 🤖', 'АСК в работу 🤖', 'Расписание ГВБТ 📅')
+sklad_keyboard.row('АСК Пауза 🤖', 'АСК в работу 🤖', 'Расписание ГВБТ 📅')
 
 inl_keyboard = types.InlineKeyboardMarkup() #кнопка в сообщении
 inl_keyboard.row(types.InlineKeyboardButton('Поправил', callback_data='popravil'))

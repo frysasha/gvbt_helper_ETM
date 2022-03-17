@@ -7,16 +7,15 @@ from telegram.ext import ConversationHandler
 import os
 from PIL import Image
 
-#from mainbot import bot
 
 def update_message (bot, prog, ver):
     bot.send_sticker(testchannelid, 'CAACAgIAAxkBAAECNtBggUpZtX57WXfnT-saEaXxUOBM0QACygADq1fEC3fQ4RKXbxJiHwQ')
     bot.send_message(testchannelid, 'Успешно скачалась новая версия ' + prog + ' ' + ver)
 
-
 def welcome_message (bot):
     #pass
-    #bot.send_message(ask_channel_id, 'start bot', reply_markup=gvbt_replykeyboard)
+    bot.send_message(testchannelid, 'start bot', reply_markup=gvbt_replykeyboard)
+    bot.send_message(ask_channel_id, 'start bot', reply_markup=gvbt_replykeyboard)
     bot.send_message(sklad_channel, 'Старт бота', reply_markup=sklad_keyboard) #вывод нижней клавы
 
 def inline_button_pressed(bot, update):
@@ -27,7 +26,6 @@ def inline_button_pressed(bot, update):
         message_id=query.message.message_id, reply_markup='') #убирает кнопку в сообщении
     print(f'Робота поправил {query.from_user.first_name} в {time.strftime("%d.%m.%Y %H:%M:%S")}')
 
-
 def priem_msg(bot, time):
     bot.send_sticker(ask_channel_id, 'CAACAgIAAxkBAAEBV-5fY1yzqRqG6hFdFnC0OmD98UKzSQACBAADjVk3GTq8TbLpDM2NGwQ')
     bot.send_message(ask_channel_id, ('Приемный робот ошибка в ' + str(time)), reply_markup=inl_keyboard)  # пишет ошибку, время и добавляет кнопку
@@ -35,7 +33,6 @@ def priem_msg(bot, time):
     uCliSock.sendto(bytes('priem', 'cp1251'), SOCKADDR2)  # отправка на сервер АСК
     sleep(4)
     bot.send_photo(ask_channel_id, photo=open(photopath + 'priem.png', 'rb')) #отправка скрина
-
 
 def blue_msg(bot, time):
 
@@ -133,7 +130,6 @@ def ask_pause_button(update, context):
     sleep(1)
     context.bot.send_photo(chat_id=update.message.chat_id, photo=open(photopath + 'pause_new.png', 'rb'))
 
-
 def ask_work_button(update, context):
     uCliSock.sendto(bytes('work_button', 'cp1251'), SOCKADDR2)
     print('work_button')
@@ -145,6 +141,10 @@ def ask_work_button(update, context):
     #return ConversationHandler.END
 
 def schedule(update, context):
-    context.bot.send_photo(chat_id=update.message.chat_id, photo=open(r'Z:\python\расписание\schedule.jpg', 'rb'))
+    path = 'Z:\\python\\расписание\\'
+    try:
+        context.bot.send_photo(chat_id=update.message.chat_id, photo=open(path + time.strftime('%m') + '.jpg', 'rb'))
+    except:
+        context.bot.send_message(update.message.chat_id, 'Нет расписания на текущий месяц')
 
 
