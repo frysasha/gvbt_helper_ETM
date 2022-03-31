@@ -41,6 +41,7 @@ def db_update_who_repair(who_repair):
     cur.close()
 
 def db_who_is_most_broken_in_current_month(month=time.strftime("%m")):
+    db = sqlite3.connect('robots.db')
     cur = db.cursor()
     first_day = datetime.today().replace(day=1).strftime('%Y-' + str(month) + '-%d')
     plus_month = datetime.today().replace(day=1, month=(int(month)+1))
@@ -84,7 +85,8 @@ def db_who_fixed_the_most_off_all_time():
     return Counter(res_list).most_common()
 
 
-def db_who_fixed_in_current_month(month):
+def db_who_fixed_in_current_month(month=time.strftime("%m")):
+    db = sqlite3.connect('robots.db')
     cur = db.cursor()
     first_day = datetime.today().replace(day=1).strftime('%Y-' + month + '-%d')
     plus_month = datetime.today().replace(day=1, month=(int(month) + 1))
@@ -99,17 +101,6 @@ def db_who_fixed_in_current_month(month):
     return Counter(res_list).most_common()
 
 
-def db_test():
-    return 'ALALLALALALA'
-
 
 if __name__ == '__main__':
-    #print(date.today(), date.today() + timedelta(days=+30))
-    #db_update_who_repair('Fry')
-    #db_regular_insert('Голубой', time.strftime('%Y-%m-%d'), time.strftime("%H:%M:%S"))
-    #db_get_select_by_date(time.strftime('%m'))
-    # print(*db_who_fixed_the_most_off_all_time())
-    # print(*db_who_fixed_in_current_month('01'))
-    # print(*db_who_is_most_broken_in_current_month(time.strftime('%m')))
-    #print(*db_who_is_most_broken_off_all_time())
-    print(db_who_is_most_broken_in_current_month())
+    pass

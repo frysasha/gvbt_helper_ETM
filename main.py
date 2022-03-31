@@ -20,15 +20,15 @@ def main():
     my_bot.dispatcher.add_handler(ConversationHandler(entry_points=[MessageHandler(Filters.regex('LAPS'), laps_start)],
                                                       states={
                                                           'user_name': [MessageHandler(Filters.text, laps_zapros)]},
-                                                      fallbacks=[])) #реакция на LAPS , и последующее общение
+                                                      fallbacks=[CommandHandler('cancel', ConversationHandler.END)])) #реакция на LAPS , и последующее общение
     my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('АСК Пауза'), ask_pause_button))
     my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('Расписание ГВБТ'), schedule))
     my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('АСК в работу'), ask_work_button))
     my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('Статистика поломок общая'), all_statistic_bot))
     my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('Статистика починок'), all_statistic_gvbt))
-    #my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('Статистика поломок за месяц'), month_statistic_bot))
+    my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('Статистика за текущий месяц'), month_statistic_bot))
     my_bot.dispatcher.add_handler(CallbackQueryHandler(inline_button_pressed)) #реакция на нажатую кнопку "поправил"
-
+    my_bot.dispatcher.add_error_handler(error_handler)
 
     # my_bot.dispatcher.add_handler(CommandHandler('Schedule', schedule))
     # my_bot.dispatcher.add_handler(ConversationHandler(entry_points=[MessageHandler(Filters.regex('ASK_Pause'), ask_pause_button)],
@@ -50,7 +50,7 @@ def main():
 
 
 if __name__ == "__main__":
-    #welcome_message(bot)
+    welcome_message(bot)
     #test_mes(bot)
     #month_statistic_gvbt(bot, '03')
     #wms_day_report_message(bot)

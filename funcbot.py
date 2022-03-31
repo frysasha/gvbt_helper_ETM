@@ -7,40 +7,34 @@ from telegram.ext import ConversationHandler
 import os
 from PIL import Image
 from db import db_update_who_repair, db_who_is_most_broken_off_all_time, db_who_fixed_the_most_off_all_time, \
-    db_who_is_most_broken_in_current_month, db_who_fixed_in_current_month, db_test
+    db_who_is_most_broken_in_current_month, db_who_fixed_in_current_month
 
 
 def all_statistic_bot(update, context):
     context.bot.send_message(update.message.chat_id, str(db_who_is_most_broken_off_all_time()))
 
-# def month_statistic_bot(update, context):
-#     print('1')
-#     print(db_test())
-#     print(str(db_who_fixed_the_most_off_all_time()))
-#     month_statistic_gvbt(bot)
-#     print(str(db_who_is_most_broken_in_current_month()))
-#     context.bot.send_message(update.message.chat_id, str(db_who_is_most_broken_in_current_month()))
+def error_handler(update, context):
+    context.bot.send_message(frychannelid, context.error)
 
-
-
-def test_mes(bot, month=strftime('%m')):
-    bot.send_message(testchannelid, str(db_who_is_most_broken_in_current_month(month)))
+def bot_mes(mes):
+    bot.send_message(testchannelid, mes)
 
 def all_statistic_gvbt(update, context):
     context.bot.send_message(update.message.chat_id, str(db_who_fixed_the_most_off_all_time()))
 
+def month_statistic_bot(update, context):
+    context.bot.send_message(update.message.chat_id, str(db_who_is_most_broken_in_current_month()))
+    context.bot.send_message(update.message.chat_id, str(db_who_fixed_in_current_month()))
 
-def month_statistic_bot(bot, month=strftime('%m')):
+def every_month_statistic_bot(bot, month):
     bot.send_message(testchannelid, str(db_who_is_most_broken_in_current_month(month)))
-
-def month_statistic_gvbt(bot, month=strftime('%m')):
     bot.send_message(testchannelid, str(db_who_fixed_in_current_month(month)))
 
 
 def welcome_message (bot):
-    #pass
-    bot.send_message(testchannelid, 'start bot', reply_markup=gvbt_replykeyboard)
-    #bot.send_message(ask_channel_id, 'start bot', reply_markup=gvbt_replykeyboard)
+    bot.send_message(frychannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
+    bot.send_message(testchannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
+    bot.send_message(ask_channel_id, 'Старт бота', reply_markup=gvbt_replykeyboard)
     #bot.send_message(sklad_channel, 'Старт бота', reply_markup=sklad_keyboard) #вывод нижней клавы
 
 def inline_button_pressed(bot, update):
@@ -175,10 +169,10 @@ def schedule(update, context):
 
 
 if __name__ == "__main__":
-    #pass
+    pass
     #print(db_who_fixed_in_current_month(strftime('%m')))
     # print(str(db_who_fixed_the_most_off_all_time()))
-    print(str(db_who_is_most_broken_in_current_month('03')))
-    print(str(db_who_is_most_broken_in_current_month(strftime('%m'))))
-    month_statistic_gvbt(bot)
-    month_statistic_bot(bot)
+    #print(str(db_who_is_most_broken_in_current_month()))
+    #print(str(db_who_is_most_broken_in_current_month(strftime('%m'))))
+    # month_statistic_gvbt(bot)
+    # month_statistic_bot(bot)

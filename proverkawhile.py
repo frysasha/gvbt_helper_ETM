@@ -97,8 +97,8 @@ def robot_stat():
     while True:
         nowtime = time.strftime("%d %H:%M:%S")
         if (time.strftime("01 09:00:00")) == nowtime:
-            month_statistic_bot(bot, int(time.strftime("%m")) - 1)
-            month_statistic_gvbt(bot, int(time.strftime("%m")) - 1)
+            bot_mes('Ещемесячная статистика\n')
+            every_month_statistic_bot(bot, int(time.strftime("%m")) - 1)
         sleep(1)
 
 def wms_report():
