@@ -5,9 +5,11 @@ from aiogram.types import ReplyKeyboardRemove, \
 from telebot import types
 from telebot import apihelper
 from funcbot import *
-from telegram.ext import CommandHandler, CallbackQueryHandler, MessageHandler, Updater, Filters, ConversationHandler
+from telegram import Update
+from telegram.ext import CommandHandler, CallbackQueryHandler, MessageHandler, Updater, Filters, ConversationHandler, CallbackContext
 from settingsbot import *
 from proverkawhile import *
+from db import db_who_is_most_broken_off_all_time
 
 
 bot = telebot.TeleBot(TG_TOKEN)
@@ -22,6 +24,9 @@ def main():
     my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('АСК Пауза'), ask_pause_button))
     my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('Расписание ГВБТ'), schedule))
     my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('АСК в работу'), ask_work_button))
+    my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('Статистика поломок общая'), all_statistic_bot))
+    my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('Статистика починок'), all_statistic_gvbt))
+    #my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('Статистика поломок за месяц'), month_statistic_bot))
     my_bot.dispatcher.add_handler(CallbackQueryHandler(inline_button_pressed)) #реакция на нажатую кнопку "поправил"
 
 
@@ -45,7 +50,11 @@ def main():
 
 
 if __name__ == "__main__":
-    welcome_message(bot)
+    #welcome_message(bot)
+    #test_mes(bot)
+    #month_statistic_gvbt(bot, '03')
+    #wms_day_report_message(bot)
     main()
+
 
 

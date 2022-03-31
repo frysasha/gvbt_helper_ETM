@@ -1,22 +1,47 @@
 
-from time import sleep
+from time import sleep, strftime
 from settingsbot import *
 import subprocess
 import re
 from telegram.ext import ConversationHandler
 import os
 from PIL import Image
+from db import db_update_who_repair, db_who_is_most_broken_off_all_time, db_who_fixed_the_most_off_all_time, \
+    db_who_is_most_broken_in_current_month, db_who_fixed_in_current_month, db_test
 
 
-def update_message (bot, prog, ver):
-    bot.send_sticker(testchannelid, 'CAACAgIAAxkBAAECNtBggUpZtX57WXfnT-saEaXxUOBM0QACygADq1fEC3fQ4RKXbxJiHwQ')
-    bot.send_message(testchannelid, 'Успешно скачалась новая версия ' + prog + ' ' + ver)
+def all_statistic_bot(update, context):
+    context.bot.send_message(update.message.chat_id, str(db_who_is_most_broken_off_all_time()))
+
+# def month_statistic_bot(update, context):
+#     print('1')
+#     print(db_test())
+#     print(str(db_who_fixed_the_most_off_all_time()))
+#     month_statistic_gvbt(bot)
+#     print(str(db_who_is_most_broken_in_current_month()))
+#     context.bot.send_message(update.message.chat_id, str(db_who_is_most_broken_in_current_month()))
+
+
+
+def test_mes(bot, month=strftime('%m')):
+    bot.send_message(testchannelid, str(db_who_is_most_broken_in_current_month(month)))
+
+def all_statistic_gvbt(update, context):
+    context.bot.send_message(update.message.chat_id, str(db_who_fixed_the_most_off_all_time()))
+
+
+def month_statistic_bot(bot, month=strftime('%m')):
+    bot.send_message(testchannelid, str(db_who_is_most_broken_in_current_month(month)))
+
+def month_statistic_gvbt(bot, month=strftime('%m')):
+    bot.send_message(testchannelid, str(db_who_fixed_in_current_month(month)))
+
 
 def welcome_message (bot):
     #pass
     bot.send_message(testchannelid, 'start bot', reply_markup=gvbt_replykeyboard)
-    bot.send_message(ask_channel_id, 'start bot', reply_markup=gvbt_replykeyboard)
-    bot.send_message(sklad_channel, 'Старт бота', reply_markup=sklad_keyboard) #вывод нижней клавы
+    #bot.send_message(ask_channel_id, 'start bot', reply_markup=gvbt_replykeyboard)
+    #bot.send_message(sklad_channel, 'Старт бота', reply_markup=sklad_keyboard) #вывод нижней клавы
 
 def inline_button_pressed(bot, update):
     query = bot.callback_query
@@ -25,6 +50,7 @@ def inline_button_pressed(bot, update):
         chat_id=query.message.chat.id,
         message_id=query.message.message_id, reply_markup='') #убирает кнопку в сообщении
     print(f'Робота поправил {query.from_user.first_name} в {time.strftime("%d.%m.%Y %H:%M:%S")}')
+    db_update_who_repair(query.from_user.first_name)
 
 def priem_msg(bot, time):
     bot.send_sticker(ask_channel_id, 'CAACAgIAAxkBAAEBV-5fY1yzqRqG6hFdFnC0OmD98UKzSQACBAADjVk3GTq8TbLpDM2NGwQ')
@@ -63,9 +89,9 @@ def napominanie_msg(bot):
 
 def wms_day_report_message(bot):
     today = time.strftime("%d.%m.%Y")
-    reportpath = ('C:\\python\\WMS_Day_Report\\finaldayreport ' + today + '.txt')
+    report_file = 'C:\\Users\\shlyakhov_ai\\PycharmProjects\\WMS_Report 2\\отчеты\\' + today + '.xlsx'
     bot.send_message(testchannelid, ('Сформирован ежедневный отчет WMS. Необходимо проверить данные!'))
-    wmsreport = open(reportpath, 'r', encoding='cp1251')
+    wmsreport = open(report_file, 'rb')
     bot.send_document(testchannelid, wmsreport)
     wmsreport.close()
 
@@ -148,3 +174,11 @@ def schedule(update, context):
         context.bot.send_message(update.message.chat_id, 'Нет расписания на текущий месяц')
 
 
+if __name__ == "__main__":
+    #pass
+    #print(db_who_fixed_in_current_month(strftime('%m')))
+    # print(str(db_who_fixed_the_most_off_all_time()))
+    print(str(db_who_is_most_broken_in_current_month('03')))
+    print(str(db_who_is_most_broken_in_current_month(strftime('%m'))))
+    month_statistic_gvbt(bot)
+    month_statistic_bot(bot)

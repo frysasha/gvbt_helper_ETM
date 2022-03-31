@@ -7,9 +7,11 @@ from time import sleep
 from settingsbot import *
 import threading
 import sys
-import logging
+from db import db_regular_insert, db_who_is_most_broken_in_current_month
 from updater import *
 from socket import *
+import datetime
+
 
 logging.basicConfig(filename='robots.log', level=logging.INFO, format='%(message)s')
 
@@ -58,7 +60,7 @@ def proverka ():
             priemcount += 1
             logging.info('№' + str(priemcount) + ' Ошибка примного робота в ' + strnowtime)
             print(str(priemcount) + ' Ошибка примного робота в ' + strnowtime)
-
+            db_regular_insert(robot='Приемный', date=time.strftime("%Y-%m-%d"), time=nowtime)
 
         if last_modblue > timeblue:
 
@@ -67,7 +69,7 @@ def proverka ():
             bluecount += 1
             logging.info('№' + str(bluecount) + ' Ошибка голубого робота в ' + strnowtime)
             print(str(bluecount) + ' Ошибка голубого робота в ' + strnowtime)
-
+            db_regular_insert(robot='Голубой', date=time.strftime("%Y-%m-%d"), time=nowtime)
 
         if last_modyellow > timeyellow:
             yellow_msg(bot, nowtime)
@@ -75,7 +77,7 @@ def proverka ():
             yellowcount += 1
             logging.info('№' + str(yellowcount) + ' Ошибка желтого робота в ' + strnowtime)
             print(str(yellowcount) + ' Ошибка желтого робота в ' + strnowtime)
-
+            db_regular_insert(robot='Желтый', date=time.strftime("%Y-%m-%d"), time=nowtime)
 
         sleep(3)
 
@@ -91,23 +93,13 @@ def napominanie():
             napominanie_msg(bot)
         sleep(1)
 
-def start_to_update():
+def robot_stat():
     while True:
-        nowtime = time.strftime("%H:%M:%S")
-        #print(nowtime)
-        if (time.strftime("--------------21:30:00")) == nowtime:
-            print('время проверки новых программ')
-            firefox_update86()
-            firefox_update64()
-            skype_update()
-            cristaldisk_update()
-            zip_update()
-            cc_update()
-            tvnc_update()
-            google_update64()
-            google_update86()
-            zoom_update()
-        time.sleep(1)
+        nowtime = time.strftime("%d %H:%M:%S")
+        if (time.strftime("01 09:00:00")) == nowtime:
+            month_statistic_bot(bot, int(time.strftime("%m")) - 1)
+            month_statistic_gvbt(bot, int(time.strftime("%m")) - 1)
+        sleep(1)
 
 def wms_report():
     while True:
@@ -126,7 +118,7 @@ def wms_report():
 
 thread1 = threading.Timer(1, proverka)
 thread2 = threading.Timer(1, napominanie)
-thread3 = threading.Timer(1, start_to_update)
+thread3 = threading.Timer(1, robot_stat)
 thread4 = threading.Timer(1, wms_report)
 
 try:

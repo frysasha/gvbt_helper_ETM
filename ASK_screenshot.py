@@ -3,6 +3,7 @@ from time import sleep
 import pyautogui
 import os
 import sys
+from pywinauto.application import Application
 
 sys.path.append('C:\\python\\lib')
 
@@ -38,7 +39,6 @@ def scr_yellow():
     except Exception as e:
         print(e)
 
-
 def scr_blue():
     try:
         mainwindow = findwindows.find_window(best_match='<Синий (красный)>.Agent.R') #ищем окно по лучшем совпадению имени
@@ -56,7 +56,6 @@ def scr_blue():
         print('скрин голубого создан')
     except Exception as e:
         print(e)
-
 
 def scr_priem():
     try:
@@ -76,18 +75,21 @@ def scr_priem():
     except Exception as e:
         print(e)
 
-
 def pause_button():
-    pyautogui.click(844, 709)
-    sleep(1)
-    pyautogui.click(541, 431)
-
+    # pyautogui.click(844, 709)
+    # sleep(1)
+    # pyautogui.click(541, 431)
+    # sleep(1)
+    screenshot = pyautogui.screenshot(region=(812, 684, 300, 400))
+    screenshot.save(path + 'pause.new.png')
 
 def work_button():
-    pyautogui.click(964, 709)
-    sleep(1)
-    pyautogui.click(541, 431)
-
+    # pyautogui.click(964, 709)
+    # sleep(1)
+    # pyautogui.click(541, 431)
+    # sleep(1)
+    screenshot = pyautogui.screenshot(region=(812, 684, 300, 400))
+    screenshot.save(path + 'work.new.png')
 
 def perezagruzka():
     pyautogui.click(964, 709)
@@ -97,35 +99,36 @@ def perezagruzka():
     screenshot = pyautogui.screenshot()
     screenshot.save(path + 'perezagruzka.png')
 
-while True:
+if __name__ == '__main__':
+    print('Начало работы')
+    while True:
 
+        data,addr = uServSock.recvfrom(BUFSIZE)
+        loc_data = data.decode('cp1251')
 
-    data,addr = uServSock.recvfrom(BUFSIZE)
-    loc_data = data.decode('cp1251')
+        if loc_data == 'yellow':
+            print('yellow')
+            scr_yellow()
 
-    if loc_data == 'yellow':
-        print('yellow')
-        scr_yellow()
+        if loc_data == 'blue':
+            print('blue')
+            scr_blue()
 
-    if loc_data == 'blue':
-        print('blue')
-        scr_blue()
+        if loc_data == 'priem':
+            print('priem')
+            scr_priem()
 
-    if loc_data == 'priem':
-        print('priem')
-        scr_priem()
+        if loc_data == 'pause_button':
+            print('pause_button')
+            pause_button()
 
-    if loc_data == 'pause_button':
-        print('pause_button')
-        pause_button()
+        if loc_data == 'work_button':
+            print('work_button')
+            work_button()
 
-    if loc_data == 'work_button':
-        print('work_button')
-        work_button()
-
-    if loc_data == 'perezagruzka':
-        print('perezagruzka')
-        perezagruzka()
+        if loc_data == 'perezagruzka':
+            print('perezagruzka')
+            perezagruzka()
 
 
 
