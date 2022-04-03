@@ -28,13 +28,6 @@ def db_regular_insert(robot, date, time, who_repair=''):
 def db_update_who_repair(who_repair):
     db = sqlite3.connect('robots.db')
     cur = db.cursor()
-    # db = sqlite3.connect('robots.db')
-    # cur = db.cursor()
-    # cur.execute("UPDATE robot_error SET who_repair=:who WHERE (SELECT * FROM robot_error WHERE time < :time1 LIMIT 1"), {"time1": time.strftime('%H:%M:%S'), 'who': who_repair}
-    # cur.execute("SELECT time FROM robot_error WHERE time < :time1 AND date <= :date1", {"time1": time.strftime('%H:%M:%S'), 'date1': time.strftime('%Y-%m-%d')})
-    # cur.execute("UPDATE robot_error SET who_repair =:who WHERE ID = (SELECT ID FROM robot_error re ORDER BY [date1], [time1] DESC LIMIT 1)",
-    # {"time1": time.strftime('%H:%M:%S'), 'date1': time.strftime('%Y-%m-%d'), 'who': who_repair})
-    # cur.execute("SELECT * WHERE ID = (SELECT MAX(ID) FROM robot_error)", {'who': who_repair})
     cur.execute("UPDATE robot_error SET who_repair =:who WHERE ID = (SELECT MAX(ID) FROM robot_error)",
                 {'who': who_repair})
     db.commit()

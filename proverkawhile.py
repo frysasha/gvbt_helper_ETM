@@ -8,7 +8,6 @@ from settingsbot import *
 import threading
 import sys
 from db import db_regular_insert, db_who_is_most_broken_in_current_month
-from updater import *
 from socket import *
 import datetime
 
