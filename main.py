@@ -50,7 +50,7 @@ def main():
 
 
 if __name__ == "__main__":
-    welcome_message(bot)
+    #welcome_message(bot)
     #test_mes(bot)
     #month_statistic_gvbt(bot, '03')
     #wms_day_report_message(bot)

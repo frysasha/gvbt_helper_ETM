@@ -40,10 +40,10 @@ def db_update_who_repair(who_repair):
     db.commit()
     cur.close()
 
-def db_who_is_most_broken_in_current_month(month=time.strftime("%m")):
+def db_who_is_most_broken_in_current_month(month):
     db = sqlite3.connect('robots.db')
     cur = db.cursor()
-    first_day = datetime.today().replace(day=1).strftime('%Y-' + str(month) + '-%d')
+    first_day = datetime.today().replace(day=1).strftime('%Y-' + '0' + str(month) + '-%d')
     plus_month = datetime.today().replace(day=1, month=(int(month)+1))
     last_day = plus_month - timedelta(days=1)
     cur.execute("SELECT robot FROM robot_error WHERE date BETWEEN :date1 AND :date2", {'date1': first_day, 'date2': last_day.strftime('%Y-%m-%d')})
@@ -85,10 +85,10 @@ def db_who_fixed_the_most_off_all_time():
     return Counter(res_list).most_common()
 
 
-def db_who_fixed_in_current_month(month=time.strftime("%m")):
+def db_who_fixed_in_current_month(month):
     db = sqlite3.connect('robots.db')
     cur = db.cursor()
-    first_day = datetime.today().replace(day=1).strftime('%Y-' + month + '-%d')
+    first_day = datetime.today().replace(day=1).strftime('%Y-' + '0' + str(month) + '-%d')
     plus_month = datetime.today().replace(day=1, month=(int(month) + 1))
     last_day = plus_month - timedelta(days=1)
     cur.execute("SELECT who_repair FROM robot_error WHERE date BETWEEN :date1 AND :date2",
@@ -103,4 +103,5 @@ def db_who_fixed_in_current_month(month=time.strftime("%m")):
 
 
 if __name__ == '__main__':
-    pass
+    print(db_who_is_most_broken_in_current_month("11"))
+    print(db_who_fixed_in_current_month(10))

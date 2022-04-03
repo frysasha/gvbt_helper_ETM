@@ -23,8 +23,8 @@ def all_statistic_gvbt(update, context):
     context.bot.send_message(update.message.chat_id, str(db_who_fixed_the_most_off_all_time()))
 
 def month_statistic_bot(update, context):
-    context.bot.send_message(update.message.chat_id, str(db_who_is_most_broken_in_current_month()))
-    context.bot.send_message(update.message.chat_id, str(db_who_fixed_in_current_month()))
+    context.bot.send_message(update.message.chat_id, str(db_who_is_most_broken_in_current_month(time.strftime("%m"))))
+    context.bot.send_message(update.message.chat_id, str(db_who_fixed_in_current_month(time.strftime("%m"))))
 
 def every_month_statistic_bot(bot, month):
     bot.send_message(testchannelid, str(db_who_is_most_broken_in_current_month(month)))
@@ -176,3 +176,4 @@ if __name__ == "__main__":
     #print(str(db_who_is_most_broken_in_current_month(strftime('%m'))))
     # month_statistic_gvbt(bot)
     # month_statistic_bot(bot)
+    #print(every_month_statistic_bot(bot, int(time.strftime("%m")) - 1))

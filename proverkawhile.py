@@ -94,12 +94,13 @@ def napominanie():
         sleep(1)
 
 def robot_stat():
-    while True:
-        nowtime = time.strftime("%d %H:%M:%S")
-        if (time.strftime("01 09:00:00")) == nowtime:
-            bot_mes('Ещемесячная статистика\n')
-            every_month_statistic_bot(bot, int(time.strftime("%m")) - 1)
-        sleep(1)
+    pass
+    # while True:
+    #     nowtime = time.strftime("%d %H:%M:%S")
+    #     if (time.strftime("01 09:10:00")) == nowtime:
+    #         bot_mes('Ещемесячная статистика\n')
+    #         every_month_statistic_bot(bot, int(time.strftime("%m")) - 1)
+    #     sleep(1)
 
 def wms_report():
     while True:
