@@ -2,7 +2,7 @@ import telebot
 import pathlib
 from telebot import types
 import time
-import logging
+
 from socket import *
 HOST = '172.29.30.2' #для сообщений на Р2Д2
 PORT = 3000

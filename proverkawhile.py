@@ -13,12 +13,6 @@ from socket import *
 import datetime
 
 
-logging.basicConfig(filename='robots.log', level=logging.INFO, format='%(message)s')
-
-priemcount = 0
-bluecount = 0
-yellowcount = 0
-testcount = 0
 HOST = ''
 PORT = 3000
 BUFSIZE = 1024
@@ -26,18 +20,10 @@ SOCKADDR = (HOST,PORT)
 uServSock = socket(AF_INET,SOCK_DGRAM)
 uServSock.bind(SOCKADDR)
 
-def start(loginfo):
-    logging.info(loginfo)
-    print(loginfo)
 
 def proverka ():
 
-    global timepriem, last_modpriem, last_modblue, last_modyellow
-    global timeblue
-    global timeyellow
-    global priemcount
-    global bluecount
-    global yellowcount
+    global timepriem, last_modpriem, last_modblue, last_modyellow, timeblue, timeyellow
 
     while True:
 
@@ -54,41 +40,32 @@ def proverka ():
             sleep(5)
 
         if last_modpriem > timepriem:
-
-            priem_msg(bot, nowtime)
+            priem_robot.send_error(bot, nowtime)
+            #priem_msg(bot, nowtime)
             timepriem = last_modpriem
-            priemcount += 1
-            logging.info('№' + str(priemcount) + ' Ошибка примного робота в ' + strnowtime)
-            print(str(priemcount) + ' Ошибка примного робота в ' + strnowtime)
+            print('Ошибка примного робота в ' + strnowtime)
             db_regular_insert(robot='Приемный', date=time.strftime("%Y-%m-%d"), time=nowtime)
 
         if last_modblue > timeblue:
-
-            blue_msg(bot, nowtime)
+            priem_robot.send_error(bot, nowtime)
+            #blue_msg(bot, nowtime)
             timeblue = last_modblue
-            bluecount += 1
-            logging.info('№' + str(bluecount) + ' Ошибка голубого робота в ' + strnowtime)
-            print(str(bluecount) + ' Ошибка голубого робота в ' + strnowtime)
+            print('Ошибка голубого робота в ' + strnowtime)
             db_regular_insert(robot='Голубой', date=time.strftime("%Y-%m-%d"), time=nowtime)
 
         if last_modyellow > timeyellow:
-            yellow_msg(bot, nowtime)
+            priem_robot.send_error(bot, nowtime)
+            #yellow_msg(bot, nowtime)
             timeyellow = last_modyellow
-            yellowcount += 1
-            logging.info('№' + str(yellowcount) + ' Ошибка желтого робота в ' + strnowtime)
-            print(str(yellowcount) + ' Ошибка желтого робота в ' + strnowtime)
+            print('Ошибка желтого робота в ' + strnowtime)
             db_regular_insert(robot='Желтый', date=time.strftime("%Y-%m-%d"), time=nowtime)
 
-        sleep(3)
+        sleep(1)
 
 def napominanie():
-    global testcount
 
     while True:
-        nowtime = time.strftime("%H:%M:%S")
         nowdatetime = time.strftime("%a:%H:%M:%S")
-        strnowtime = str(nowtime)
-
         if (time.strftime("Sun:22:35:00")) == nowdatetime:
             napominanie_msg(bot)
         sleep(1)
@@ -104,17 +81,14 @@ def robot_stat():
 
 def wms_report():
     while True:
-        try:
-            data, addr = uServSock.recvfrom(BUFSIZE)
-            loc_data = data.decode('cp1251')
-            if loc_data == 'Сформирован ежедневный отчет WMS. Необходимо проверить данные!':
-                print('Сформирован ежедневный отчет WMS. Необходимо проверить данные!')
-                wms_day_report_message(bot)
-            else:
-                wms_day_report_error_message(bot, loc_data)
-        except Exception as e:
-            print('ошибка отправки результата wms report')
-            print(e)
+        data, addr = uServSock.recvfrom(BUFSIZE)
+        loc_data = data.decode('cp1251')
+        if loc_data == 'Сформирован ежедневный отчет WMS. Необходимо проверить данные!':
+            print('Сформирован ежедневный отчет WMS. Необходимо проверить данные!')
+            wms_day_report_message(bot)
+        else:
+            wms_day_report_error_message(bot, loc_data)
+
 
 
 thread1 = threading.Timer(1, proverka)

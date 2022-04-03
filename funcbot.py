@@ -37,6 +37,27 @@ def welcome_message (bot):
     bot.send_message(ask_channel_id, 'Старт бота', reply_markup=gvbt_replykeyboard)
     #bot.send_message(sklad_channel, 'Старт бота', reply_markup=sklad_keyboard) #вывод нижней клавы
 
+class Robot:
+
+    def __init__(self, sticker, name, eng_name):
+        self.sticker = sticker
+        self.name = name
+        self.eng_name = eng_name
+
+
+    def send_error(self, bot, time):
+        bot.send_sticker(ask_channel_id, self.sticker)
+        bot.send_message(ask_channel_id, str(self.name + ' робот ошибка в ' + str(time)), reply_markup=inl_keyboard)
+        uCliSock.sendto(bytes(str(self.name + ' робот ошибка', 'cp1251'), SOCKADDR))  # отправка текста на сервер спикера
+        uCliSock.sendto(bytes(self.eng_name, 'cp1251'), SOCKADDR2)  # отправка на сервер АСК
+        sleep(4)
+        bot.send_photo(ask_channel_id, photo=open(photopath + self.eng_name + '.png', 'rb'))  # отправка скрина
+
+
+priem_robot = Robot(sticker='CAACAgIAAxkBAAEBV-5fY1yzqRqG6hFdFnC0OmD98UKzSQACBAADjVk3GTq8TbLpDM2NGwQ', name='Приемный', eng_name='priem')
+blue_robot = Robot(sticker='CAACAgIAAxkBAAEBV6BfYwNb-miwdeZwoM0mY88-6tBJQAACAwADjVk3GYsJmaauajlLGwQ', name='Синий', eng_name='blue')
+yellow_robot = Robot(sticker='CAACAgIAAxkBAAEBV5xfYwMsdhZK_ojtyb9q1l48Et6EZwACAQADjVk3GTWKtUGHR0TKGwQ', name='Желтый', eng_name='yellow')
+
 def inline_button_pressed(bot, update):
     query = bot.callback_query
     update.bot.send_message(ask_channel_id, f'Робота поправил {query.from_user.first_name} спасибо!')
@@ -46,33 +67,33 @@ def inline_button_pressed(bot, update):
     print(f'Робота поправил {query.from_user.first_name} в {time.strftime("%d.%m.%Y %H:%M:%S")}')
     db_update_who_repair(query.from_user.first_name)
 
-def priem_msg(bot, time):
-    bot.send_sticker(ask_channel_id, 'CAACAgIAAxkBAAEBV-5fY1yzqRqG6hFdFnC0OmD98UKzSQACBAADjVk3GTq8TbLpDM2NGwQ')
-    bot.send_message(ask_channel_id, ('Приемный робот ошибка в ' + str(time)), reply_markup=inl_keyboard)  # пишет ошибку, время и добавляет кнопку
-    uCliSock.sendto(bytes('Приемный робот ошибка', 'cp1251'), SOCKADDR) #отправка текста на сервер спикера
-    uCliSock.sendto(bytes('priem', 'cp1251'), SOCKADDR2)  # отправка на сервер АСК
-    sleep(4)
-    bot.send_photo(ask_channel_id, photo=open(photopath + 'priem.png', 'rb')) #отправка скрина
-
-def blue_msg(bot, time):
-
-    bot.send_sticker(ask_channel_id, 'CAACAgIAAxkBAAEBV6BfYwNb-miwdeZwoM0mY88-6tBJQAACAwADjVk3GYsJmaauajlLGwQ')
-    bot.send_message(ask_channel_id, ('Голубой робот ошибка в ' + str(time)), reply_markup=inl_keyboard)  # пишет ошибку, время и добавляет кнопку
-    uCliSock.sendto(bytes('Синий робот ошибка', 'cp1251'), SOCKADDR) #отправка текста на сервер спикера
-    uCliSock.sendto(bytes('blue', 'cp1251'), SOCKADDR2)  # отправка на сервер АСК
-    sleep(4)
-    bot.send_photo(ask_channel_id, photo=open(photopath + 'blue.png', 'rb')) #отправка скрина
-    #data, addr = uCliSock.recvfrom(BUFSIZE)
-
-def yellow_msg(bot, time):
-
-    bot.send_sticker(ask_channel_id, 'CAACAgIAAxkBAAEBV5xfYwMsdhZK_ojtyb9q1l48Et6EZwACAQADjVk3GTWKtUGHR0TKGwQ')
-    bot.send_message(ask_channel_id, ('Желтый робот ошибка в ' + str(time)), reply_markup=inl_keyboard)  # пишет ошибку, время и добавляет кнопку
-    uCliSock.sendto(bytes('Желтый робот ошибка', 'cp1251'), SOCKADDR) #отправка текста на сервер спикера
-    uCliSock.sendto(bytes('yellow', 'cp1251'), SOCKADDR2) #отправка на сервер АСК
-    sleep(5)
-    bot.send_photo(ask_channel_id, photo=open(photopath + 'yellow.png', 'rb')) #отправка скрина
-    #data, addr = uCliSock.recvfrom(BUFSIZE)
+# def priem_msg(bot, time):
+#     bot.send_sticker(ask_channel_id, 'CAACAgIAAxkBAAEBV-5fY1yzqRqG6hFdFnC0OmD98UKzSQACBAADjVk3GTq8TbLpDM2NGwQ')
+#     bot.send_message(ask_channel_id, ('Приемный робот ошибка в ' + str(time)), reply_markup=inl_keyboard)  # пишет ошибку, время и добавляет кнопку
+#     uCliSock.sendto(bytes('Приемный робот ошибка', 'cp1251'), SOCKADDR) #отправка текста на сервер спикера
+#     uCliSock.sendto(bytes('priem', 'cp1251'), SOCKADDR2)  # отправка на сервер АСК
+#     sleep(4)
+#     bot.send_photo(ask_channel_id, photo=open(photopath + 'priem.png', 'rb')) #отправка скрина
+#
+# def blue_msg(bot, time):
+#
+#     bot.send_sticker(ask_channel_id, 'CAACAgIAAxkBAAEBV6BfYwNb-miwdeZwoM0mY88-6tBJQAACAwADjVk3GYsJmaauajlLGwQ')
+#     bot.send_message(ask_channel_id, ('Голубой робот ошибка в ' + str(time)), reply_markup=inl_keyboard)  # пишет ошибку, время и добавляет кнопку
+#     uCliSock.sendto(bytes('Синий робот ошибка', 'cp1251'), SOCKADDR) #отправка текста на сервер спикера
+#     uCliSock.sendto(bytes('blue', 'cp1251'), SOCKADDR2)  # отправка на сервер АСК
+#     sleep(4)
+#     bot.send_photo(ask_channel_id, photo=open(photopath + 'blue.png', 'rb')) #отправка скрина
+#     #data, addr = uCliSock.recvfrom(BUFSIZE)
+#
+# def yellow_msg(bot, time):
+#
+#     bot.send_sticker(ask_channel_id, 'CAACAgIAAxkBAAEBV5xfYwMsdhZK_ojtyb9q1l48Et6EZwACAQADjVk3GTWKtUGHR0TKGwQ')
+#     bot.send_message(ask_channel_id, ('Желтый робот ошибка в ' + str(time)), reply_markup=inl_keyboard)  # пишет ошибку, время и добавляет кнопку
+#     uCliSock.sendto(bytes('Желтый робот ошибка', 'cp1251'), SOCKADDR) #отправка текста на сервер спикера
+#     uCliSock.sendto(bytes('yellow', 'cp1251'), SOCKADDR2) #отправка на сервер АСК
+#     sleep(5)
+#     bot.send_photo(ask_channel_id, photo=open(photopath + 'yellow.png', 'rb')) #отправка скрина
+#     #data, addr = uCliSock.recvfrom(BUFSIZE)
 
 def napominanie_msg(bot):
     uCliSock.sendto(bytes('perezagruzka', 'cp1251'), SOCKADDR2)
