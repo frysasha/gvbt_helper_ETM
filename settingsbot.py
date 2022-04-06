@@ -2,14 +2,13 @@ import telebot
 import pathlib
 from telebot import types
 import time
-
 from socket import *
+
 HOST = '172.29.30.2' #для сообщений на Р2Д2
 PORT = 3000
 BUFSIZE = 1024
 SOCKADDR = (HOST, PORT)
 uCliSock = socket(AF_INET, SOCK_DGRAM)
-
 
 HOST2 = '172.29.2.125' #для сообщений на АСК
 PORT2 = 3000
@@ -26,7 +25,7 @@ TG_API_URL = 'https://api.telegram.org/bot'
 bot = telebot.TeleBot(TG_TOKEN)
 proxy = 'http://83.97.23.90:18080'
 
-testchannelid = "-750457583" # gvbt2021
+testchannelid = "-750457583" # gvbt2021F
 zabbixcpchannel = '-1001208212827' #заббикс цп
 ask_channel_id = "-713732030" # ASK ETM channel
 frychannelid = "423057805"
@@ -41,11 +40,9 @@ sklad_keyboard.row('АСК Пауза 🤖', 'АСК в работу 🤖', 'Р�
 inl_keyboard = types.InlineKeyboardMarkup() #кнопка в сообщении
 inl_keyboard.row(types.InlineKeyboardButton('Поправил', callback_data='popravil'))
 
-
 filepathpriem = pathlib.Path('V:\\priem.rps\\logs\\faults.log') #пути до логов
 filepathblue = pathlib.Path('V:\\blue.rps\logs\\faults.log')
 filepathyellow = pathlib.Path('V:\\yellow.rps\\logs\\faults.log')
-
 
 nowtimedate = time.strftime("%d.%m.%Y %H:%M:%S")
 

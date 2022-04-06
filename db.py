@@ -17,7 +17,7 @@ cur.execute("""CREATE TABLE IF NOT EXISTS robot_error(
 db.commit()
 
 
-def db_regular_insert(robot, date, time, who_repair=''):
+def db_regular_insert(robot, date, time, who_repair=None):
     db = sqlite3.connect('robots.db')
     cur = db.cursor()
     cur.execute("INSERT INTO robot_error (robot, date, time, who_repair) VALUES (?, ?, ?, ?);", (robot, date, time, who_repair))
@@ -98,3 +98,4 @@ def db_who_fixed_in_current_month(month):
 if __name__ == '__main__':
     print(db_who_is_most_broken_in_current_month("11"))
     print(db_who_fixed_in_current_month(10))
+    db_regular_insert('Голубой', date=time.strftime("%Y-%m-%d"), time=time.strftime("%H:%M:%S"))

@@ -48,7 +48,7 @@ class Robot:
     def send_error(self, bot, time):
         bot.send_sticker(ask_channel_id, self.sticker)
         bot.send_message(ask_channel_id, str(self.name + ' робот ошибка в ' + str(time)), reply_markup=inl_keyboard)
-        uCliSock.sendto(bytes(str(self.name + ' робот ошибка', 'cp1251'), SOCKADDR))  # отправка текста на сервер спикера
+        uCliSock.sendto(bytes(self.name + ' робот ошибка', 'cp1251'), SOCKADDR)  # отправка текста на сервер спикера
         uCliSock.sendto(bytes(self.eng_name, 'cp1251'), SOCKADDR2)  # отправка на сервер АСК
         sleep(4)
         bot.send_photo(ask_channel_id, photo=open(photopath + self.eng_name + '.png', 'rb'))  # отправка скрина
@@ -60,10 +60,11 @@ yellow_robot = Robot(sticker='CAACAgIAAxkBAAEBV5xfYwMsdhZK_ojtyb9q1l48Et6EZwACAQ
 
 def inline_button_pressed(bot, update):
     query = bot.callback_query
-    update.bot.send_message(ask_channel_id, f'Робота поправил {query.from_user.first_name} спасибо!')
     update.bot.edit_message_reply_markup(
         chat_id=query.message.chat.id,
-        message_id=query.message.message_id, reply_markup='') #убирает кнопку в сообщении
+        message_id=query.message.message_id, reply_markup='')  # убирает кнопку в сообщении
+    update.bot.send_message(ask_channel_id, f'Робота поправил {query.from_user.first_name} спасибо!')
+
     print(f'Робота поправил {query.from_user.first_name} в {time.strftime("%d.%m.%Y %H:%M:%S")}')
     db_update_who_repair(query.from_user.first_name)
 
