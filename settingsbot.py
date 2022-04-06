@@ -4,6 +4,8 @@ from telebot import types
 import time
 from socket import *
 
+#resolve_flag = True
+
 HOST = '172.29.30.2' #для сообщений на Р2Д2
 PORT = 3000
 BUFSIZE = 1024

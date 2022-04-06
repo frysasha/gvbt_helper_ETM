@@ -27,7 +27,7 @@ def main():
     my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('Статистика починок'), all_statistic_gvbt))
     my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('Статистика за текущий месяц'), month_statistic_bot))
     my_bot.dispatcher.add_handler(CallbackQueryHandler(inline_button_pressed)) #реакция на нажатую кнопку "поправил"
-    my_bot.dispatcher.add_error_handler(error_handler)
+    #my_bot.dispatcher.add_error_handler(error_handler)
 
 
     try:

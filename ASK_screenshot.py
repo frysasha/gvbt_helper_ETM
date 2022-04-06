@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 from socket import *
 from time import sleep
 import pyautogui
@@ -8,24 +10,27 @@ import cv2
 import numpy as np
 import threading
 
-
+pyautogui.FAILSAFE = False
 sys.path.append('C:\\python\\lib')
 
 from pywinauto import Application
 from pywinauto import findwindows
 
-HOST = '172.29.30.63'
+
+HOST = ''
+HOST2 = '172.29.30.63'
 PORT = 3000
 BUFSIZE = 1024
 SOCKADDR = (HOST,PORT)
+SOCKADDR2 = (HOST2,PORT)
 uServSock = socket(AF_INET,SOCK_DGRAM)
 uCliSock = socket(AF_INET, SOCK_DGRAM)
 uServSock.bind(SOCKADDR)
 
-path = 'Y:\\python\\ASK screenshots\\' #куда сохраняются скрины
+path = 'Y:\\python\\ASK screenshots\\'
 
 
-x = 0#координаты галки
+x = 0
 y = 0
 
 
@@ -44,7 +49,7 @@ def scr_yellow():
         sleep(1)
         screenshot = pyautogui.screenshot()
         screenshot.save(path + 'yellow.png')
-        print('скрин желтого создан')
+        print('yellow screen created')
     except Exception as e:
         print(e)
 
@@ -62,7 +67,7 @@ def scr_blue():
         sleep(1)
         screenshot = pyautogui.screenshot()
         screenshot.save(path + 'blue.png')
-        print('скрин голубого создан')
+        print('blue screen created')
     except Exception as e:
         print(e)
 
@@ -80,7 +85,7 @@ def scr_priem():
         sleep(1)
         screenshot = pyautogui.screenshot()
         screenshot.save(path + 'priem.png')
-        print('скрин приема создан')
+        print('priem screen created')
     except Exception as e:
         print(e)
 
@@ -112,9 +117,9 @@ def perezagruzka():
 def resolv_robot_error():
     pyautogui.click(x, y)
     sleep(1)
-    pyautogui.click(929, 176)#To resolve problem
+    pyautogui.click(x=929, y=176)#To resolve problem
     sleep(1)
-    pyautogui.click(506, 431)#координаты ДА или ОК
+    pyautogui.click(x=506, y=431)
     sleep(1)
     screenshot = pyautogui.screenshot()
     screenshot.save(path + 'resolve.png')
@@ -122,7 +127,7 @@ def resolv_robot_error():
 def check_upd():
     while True:
         data, addr = uServSock.recvfrom(BUFSIZE)
-        loc_data = data.decode('cp1251')
+        loc_data = data#.decode('utf-8')
         if loc_data == 'yellow':
             print('yellow')
             scr_yellow()
@@ -141,34 +146,37 @@ def check_upd():
         elif loc_data == 'perezagruzka':
             print('perezagruzka')
             perezagruzka()
-        elif loc_data == 'Решить ошибку':
+        elif loc_data == 'Resolve problem':
             resolv_robot_error()
         else:
-            print('Неизвестная команда по UDP')
+            print('unknown command UDP')
+    sleep(1)
 
 def check_galka():
-    screenshot = pyautogui.screenshot()
-    screenshot.save(path +'check_galka.png')
-    img_rgb = cv2.imread(path +'check_galka.png')
-    img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
-    template = cv2.imread(path + 'galka.png', 0)
-    w, h = template.shape[::-1]
-    res = cv2.matchTemplate(img_gray, template, cv2.TM_CCOEFF_NORMED)
-    threshold = 0.9
-    loc = np.where(res >= threshold)
+    while True:
+        screenshot = pyautogui.screenshot()
+        screenshot.save(path +'check_galka.png')
+        img_rgb = cv2.imread(path +'check_galka.png')
+        img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
+        template = cv2.imread(path + 'galka.png', 0)
+        w, h = template.shape[::-1]
+        res = cv2.matchTemplate(img_gray, template, cv2.TM_CCOEFF_NORMED)
+        threshold = 0.9
+        loc = np.where(res >= threshold)
 
-    res = (list(zip(*loc[::-1])))
-    if res:
-        x = res[0][0] + 5
-        y = res[0][1] + 5
-        print(f'галка по координатам {x= }{y= }')
-        if 665 < x < 675 and 87 < y < 128:
-            print('Допустимые координаты галки')
-            uCliSock.sendto(bytes('Есть решение', 'cp1251'), SOCKADDR)
+        res = (list(zip(*loc[::-1])))
+        if res:
+            x = res[0][0] + 5
+            y = res[0][1] + 5
+            print('galka po koordinatam')
+            if 665 < x < 675 and 87 < y < 128:
+                print('Dopustimie koordinaty galki')
+                uCliSock.sendto(bytes('Est reshenie'), SOCKADDR2)
+            else:
+                print('Koordinaty galki nedopustimy')
         else:
-            print('Координаты галки недопустимые')
-    else:
-        print('Нет')
+            print('net galki')
+        sleep(1)
 
 
 
@@ -176,11 +184,11 @@ thread1 = threading.Timer(1, check_upd)
 thread2 = threading.Timer(1, check_galka)
 
 if __name__ == '__main__':
-    print('Начало работы')
+    print('Nachalo raboty')
     thread1.start()
     thread2.start()
 
 
 
 
-uServSock.close()
+#uServSock.close()

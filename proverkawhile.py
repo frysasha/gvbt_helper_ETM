@@ -72,6 +72,10 @@ def robot_stat():
     #         every_month_statistic_bot(bot, int(time.strftime("%m")) - 1)
     #     sleep(1)
 
+
+
+
+
 def wms_report():
     while True:
         data, addr = uServSock.recvfrom(BUFSIZE)
@@ -79,9 +83,10 @@ def wms_report():
         if loc_data == 'Сформирован ежедневный отчет WMS. Необходимо проверить данные!':
             print('Сформирован ежедневный отчет WMS. Необходимо проверить данные!')
             wms_day_report_message(bot)
-        elif loc_data == 'Есть решение':
+        elif loc_data == 'Est reshenie':
             print('Есть решение ошибки робота')
-            yellow_robot.update_inline_button(bot)
+            if yellow_robot.resolve_flag:
+                update_inline_button(bot)
         else:
             wms_day_report_error_message(bot, loc_data)
 
