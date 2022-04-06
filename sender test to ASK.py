@@ -16,6 +16,14 @@ def send():
     data, addr = uCliSock.recvfrom(BUFSIZE)
     uCliSock.close()
 
-    return "OK"
 
-send()
+def send_robot_resolve():
+    uCliSock = socket(AF_INET, SOCK_DGRAM)
+    uCliSock.sendto(bytes('Желтый есть решение', 'cp1251'), SOCKADDR)
+    data, addr = uCliSock.recvfrom(BUFSIZE)
+    uCliSock.close()
+
+
+if __name__ == '__main__':
+    #send()
+    send_robot_resolve()
