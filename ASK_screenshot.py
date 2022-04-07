@@ -30,23 +30,22 @@ uServSock.bind(SOCKADDR)
 path = 'Y:\\python\\ASK screenshots\\'
 
 
-x = 0
-y = 0
+# x = 0
+# y = 0
 
 
 def scr_yellow():
     try:
-
-        mainwindow = findwindows.find_window(best_match='<Желтый>.Agent.R') #ищем окно по лучшем совпадению имени
-        appmain = Application().connect(handle=mainwindow)
-        try:
-            manualwindow = findwindows.find_window(best_match='Manual Control( Желтый)')  # ищем окно по лучшем совпадению имени
-            appman = Application().connect(handle=manualwindow)
-            appman.window(handle=manualwindow).close()  # закрывает окно
-        except Exception as e:
-            print('нет окна manual')
-        appmain.window(handle=mainwindow).set_focus() #фокус на окне
-        sleep(1)
+        # mainwindow = findwindows.find_window(best_match='<Желтый>.Agent.R')
+        # appmain = Application().connect(handle=mainwindow)
+        # try:
+        #     manualwindow = findwindows.find_window(best_match='Manual Control( Желтый)')
+        #     appman = Application().connect(handle=manualwindow)
+        #     appman.window(handle=manualwindow).close()
+        # except Exception as e:
+        #     print('нет окна manual')
+        # appmain.window(handle=mainwindow).set_focus()
+        # sleep(1)
         screenshot = pyautogui.screenshot()
         screenshot.save(path + 'yellow.png')
         print('yellow screen created')
@@ -55,16 +54,16 @@ def scr_yellow():
 
 def scr_blue():
     try:
-        mainwindow = findwindows.find_window(best_match='<Синий (красный)>.Agent.R') #ищем окно по лучшем совпадению имени
-        appmain = Application().connect(handle=mainwindow)
-        try:
-            manualwindow = findwindows.find_window(best_match='Manual Control( Синий(красный))')  # ищем окно по лучшем совпадению имени
-            appman = Application().connect(handle=manualwindow)
-            appman.window(handle=manualwindow).close()  # закрывает окно
-        except Exception as e:
-            print('нет окна manual')
-        appmain.window(handle=mainwindow).set_focus() #фокус на окне
-        sleep(1)
+        # mainwindow = findwindows.find_window(best_match='<Синий (красный)>.Agent.R') #ищем окно по лучшем совпадению имени
+        # appmain = Application().connect(handle=mainwindow)
+        # try:
+        #     manualwindow = findwindows.find_window(best_match='Manual Control( Синий(красный))')  # ищем окно по лучшем совпадению имени
+        #     appman = Application().connect(handle=manualwindow)
+        #     appman.window(handle=manualwindow).close()  # закрывает окно
+        # except Exception as e:
+        #     print('нет окна manual')
+        # appmain.window(handle=mainwindow).set_focus() #фокус на окне
+        # sleep(1)
         screenshot = pyautogui.screenshot()
         screenshot.save(path + 'blue.png')
         print('blue screen created')
@@ -73,16 +72,16 @@ def scr_blue():
 
 def scr_priem():
     try:
-        mainwindow = findwindows.find_window(best_match='<Приемный>.Agent.R')  # ищем окно по лучшем совпадению имени
-        appmain = Application().connect(handle=mainwindow)
-        try:
-            manualwindow = findwindows.find_window(best_match='Manual Control( Приемный)')  # ищем окно по лучшем совпадению имени
-            appman = Application().connect(handle=manualwindow)
-            appman.window(handle=manualwindow).close()  # закрывает окно
-        except Exception as e:
-            print('нет окна manual')
-        appmain.window(handle=mainwindow).set_focus()  # фокус на окне
-        sleep(1)
+        # mainwindow = findwindows.find_window(best_match='<Приемный>.Agent.R')  # ищем окно по лучшем совпадению имени
+        # appmain = Application().connect(handle=mainwindow)
+        # try:
+        #     manualwindow = findwindows.find_window(best_match='Manual Control( Приемный)')  # ищем окно по лучшем совпадению имени
+        #     appman = Application().connect(handle=manualwindow)
+        #     appman.window(handle=manualwindow).close()  # закрывает окно
+        # except Exception as e:
+        #     print('нет окна manual')
+        # appmain.window(handle=mainwindow).set_focus()  # фокус на окне
+        # sleep(1)
         screenshot = pyautogui.screenshot()
         screenshot.save(path + 'priem.png')
         print('priem screen created')
@@ -115,6 +114,8 @@ def perezagruzka():
 
 
 def resolv_robot_error():
+    print('najimau na koordinaty')
+    print(x, y)
     pyautogui.click(x, y)
     sleep(1)
     pyautogui.click(x=929, y=176)#To resolve problem
@@ -166,10 +167,13 @@ def check_galka():
         loc = np.where(res >= threshold)
         res = (list(zip(*loc[::-1])))
         if res:
+            global x, y
             x = res[0][0] + 5
             y = res[0][1] + 5
-            if 665 < x < 675 and 87 < y < 128:
+            if 600 < x < 675 and 87 < y < 128:
                 uCliSock.sendto(bytes('Est reshenie'), SOCKADDR2)
+                print('est galka')
+
         sleep(1)
 
 

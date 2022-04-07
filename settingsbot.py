@@ -3,7 +3,7 @@ import pathlib
 from telebot import types
 import time
 from socket import *
-
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 #resolve_flag = True
 
 HOST = '172.29.30.2' #для сообщений на Р2Д2
@@ -44,6 +44,8 @@ inl_keyboard.row(types.InlineKeyboardButton('Поправил', callback_data='p
 inl_keyboard2 = types.InlineKeyboardMarkup()
 inl_keyboard2.row(types.InlineKeyboardButton('Поправил', callback_data='popravil'))
 inl_keyboard2.row(types.InlineKeyboardButton('Решение', callback_data='reshenie'))
+
+inl_keyboard3 = InlineKeyboardMarkup([[InlineKeyboardButton('Поправил', callback_data='popravil')]])
 
 
 filepathpriem = pathlib.Path('V:\\priem.rps\\logs\\faults.log') #пути до логов

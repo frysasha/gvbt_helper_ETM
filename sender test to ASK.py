@@ -21,7 +21,7 @@ def send():
 
 def send_robot_resolve():
     uCliSock = socket(AF_INET, SOCK_DGRAM)
-    uCliSock.sendto(bytes('Желтый есть решение', 'cp1251'), SOCKADDR)
+    uCliSock.sendto(bytes('Resolve problem', 'utf-8'), SOCKADDR3)
     data, addr = uCliSock.recvfrom(BUFSIZE)
     uCliSock.close()
 
@@ -33,5 +33,5 @@ def send_to_ASK():
 
 if __name__ == '__main__':
     #send()
-    #send_robot_resolve()
-    send_to_ASK()
+    send_robot_resolve()
+    #send_to_ASK()

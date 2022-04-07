@@ -12,9 +12,6 @@ from db import db_update_who_repair, db_who_is_most_broken_off_all_time, db_who_
 
 def all_statistic_bot(update, context):
     context.bot.send_message(update.message.chat_id, str(db_who_is_most_broken_off_all_time()))
-#
-# def error_handler(update, context):
-#     context.bot.send_message(frychannelid, context.error)
 
 def bot_mes(mes):
     bot.send_message(testchannelid, mes)
@@ -41,12 +38,12 @@ class Robot:
 
     last_mes_id = ''
 
-    def __init__(self, sticker, name, eng_name):
+    def __init__(self, sticker, name, eng_name, log_file):
         self.sticker = sticker
         self.name = name
         self.eng_name = eng_name
         self.resolve_flag = True
-
+        self.log_file = log_file
 
     def send_error(self, bot, time):
 
@@ -56,9 +53,15 @@ class Robot:
         last_mes_id = send.message_id
         uCliSock.sendto(bytes(self.name + ' робот ошибка', 'cp1251'), SOCKADDR)  # отправка текста на сервер спикера
         uCliSock.sendto(bytes(self.eng_name, 'utf-8'), SOCKADDR2)  # отправка на сервер АСК
-        sleep(4)
+        sleep(1)
         yellow_robot.resolve_flag = True
-        bot.send_photo(ask_channel_id, photo=open(photopath + self.eng_name + '.png', 'rb'))  # отправка скрина
+        bot.send_message(ask_channel_id, self.send_error_text())
+        #bot.send_photo(ask_channel_id, photo=open(photopath + self.eng_name + '.png', 'rb'))  # отправка скрина
+
+    def send_error_text(self):
+        with open(self.log_file, 'r') as f:
+            last_line = f.readlines()[-2]
+            return last_line
 
     #@staticmethod
 def update_inline_button(bot):
@@ -68,9 +71,14 @@ def update_inline_button(bot):
     except:
         print('Не удалось найти последнее сообщение')
         yellow_robot.resolve_flag = False
-priem_robot = Robot(sticker='CAACAgIAAxkBAAEBV-5fY1yzqRqG6hFdFnC0OmD98UKzSQACBAADjVk3GTq8TbLpDM2NGwQ', name='Приемный', eng_name='priem')
-blue_robot = Robot(sticker='CAACAgIAAxkBAAEBV6BfYwNb-miwdeZwoM0mY88-6tBJQAACAwADjVk3GYsJmaauajlLGwQ', name='Синий', eng_name='blue')
-yellow_robot = Robot(sticker='CAACAgIAAxkBAAEBV5xfYwMsdhZK_ojtyb9q1l48Et6EZwACAQADjVk3GTWKtUGHR0TKGwQ', name='Желтый', eng_name='yellow')
+
+
+priem_robot = Robot(sticker='CAACAgIAAxkBAAEBV-5fY1yzqRqG6hFdFnC0OmD98UKzSQACBAADjVk3GTq8TbLpDM2NGwQ',
+                    name='Приемный', eng_name='priem', log_file='V:\\priem.rps\\logs\\faults.log')
+blue_robot = Robot(sticker='CAACAgIAAxkBAAEBV6BfYwNb-miwdeZwoM0mY88-6tBJQAACAwADjVk3GYsJmaauajlLGwQ',
+                   name='Синий', eng_name='blue', log_file='V:\\blue.rps\logs\\faults.log')
+yellow_robot = Robot(sticker='CAACAgIAAxkBAAEBV5xfYwMsdhZK_ojtyb9q1l48Et6EZwACAQADjVk3GTWKtUGHR0TKGwQ',
+                     name='Желтый', eng_name='yellow', log_file='V:\\yellow.rps\\logs\\faults.log')
 
 
 def inline_popravil_button_pressed(bot, update):
@@ -88,8 +96,8 @@ def inline_reshenie_button_pressed(bot, update):
     yellow_robot.resolve_flag = False
     update.bot.edit_message_reply_markup(
         chat_id=query.message.chat.id,
-        message_id=query.message.message_id, reply_markup='')
-    update.bot.send_message(ask_channel_id, f'Пробую решить ошибку')#, reply_markup=inl_keyboard)
+        message_id=query.message.message_id, reply_markup=inl_keyboard3) #оставляетс только кнопку "Поправил"
+    update.bot.send_message(ask_channel_id, f'Пробую решить ошибку')
     uCliSock.sendto(bytes('Resolve problem', 'utf-8'), SOCKADDR2)
     print(f'{query.from_user.first_name} в {time.strftime("%d.%m.%Y %H:%M:%S")} нажал кнопку "Решение"')
 
