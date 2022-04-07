@@ -45,6 +45,7 @@ inl_keyboard2 = types.InlineKeyboardMarkup()
 inl_keyboard2.row(types.InlineKeyboardButton('Поправил', callback_data='popravil'))
 inl_keyboard2.row(types.InlineKeyboardButton('Решение', callback_data='reshenie'))
 
+
 filepathpriem = pathlib.Path('V:\\priem.rps\\logs\\faults.log') #пути до логов
 filepathblue = pathlib.Path('V:\\blue.rps\logs\\faults.log')
 filepathyellow = pathlib.Path('V:\\yellow.rps\\logs\\faults.log')

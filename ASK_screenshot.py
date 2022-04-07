@@ -147,6 +147,7 @@ def check_upd():
             print('perezagruzka')
             perezagruzka()
         elif loc_data == 'Resolve problem':
+            print(loc_data)
             resolv_robot_error()
         else:
             print('unknown command UDP')
@@ -163,19 +164,12 @@ def check_galka():
         res = cv2.matchTemplate(img_gray, template, cv2.TM_CCOEFF_NORMED)
         threshold = 0.9
         loc = np.where(res >= threshold)
-
         res = (list(zip(*loc[::-1])))
         if res:
             x = res[0][0] + 5
             y = res[0][1] + 5
-            print('galka po koordinatam')
             if 665 < x < 675 and 87 < y < 128:
-                print('Dopustimie koordinaty galki')
                 uCliSock.sendto(bytes('Est reshenie'), SOCKADDR2)
-            else:
-                print('Koordinaty galki nedopustimy')
-        else:
-            print('net galki')
         sleep(1)
 
 

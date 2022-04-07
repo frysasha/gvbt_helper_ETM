@@ -26,9 +26,8 @@ def main():
     my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('Статистика поломок общая'), all_statistic_bot))
     my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('Статистика починок'), all_statistic_gvbt))
     my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('Статистика за текущий месяц'), month_statistic_bot))
-    my_bot.dispatcher.add_handler(CallbackQueryHandler(inline_button_pressed)) #реакция на нажатую кнопку "поправил"
-    #my_bot.dispatcher.add_error_handler(error_handler)
-
+    my_bot.dispatcher.add_handler(CallbackQueryHandler(inline_popravil_button_pressed, pattern='popravil')) #реакция на нажатую кнопку "поправил"
+    my_bot.dispatcher.add_handler(CallbackQueryHandler(inline_reshenie_button_pressed, pattern='reshenie'))
 
     try:
         def pol():
@@ -42,7 +41,7 @@ def main():
 
 
 if __name__ == "__main__":
-    #welcome_message(bot)
+    welcome_message(bot)
     main()
 
 

@@ -32,9 +32,9 @@ def every_month_statistic_bot(bot, month):
 
 
 def welcome_message (bot):
-    bot.send_message(frychannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
-    bot.send_message(testchannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
-    bot.send_message(ask_channel_id, 'Старт бота', reply_markup=gvbt_replykeyboard)
+    bot.send_message(frychannelid, 'Старт бота', reply_markup=inl_keyboard2)
+    #bot.send_message(testchannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
+    #bot.send_message(ask_channel_id, 'Старт бота', reply_markup=gvbt_replykeyboard)
     #bot.send_message(sklad_channel, 'Старт бота', reply_markup=sklad_keyboard) #вывод нижней клавы
 
 class Robot:
@@ -55,7 +55,7 @@ class Robot:
         global last_mes_id
         last_mes_id = send.message_id
         uCliSock.sendto(bytes(self.name + ' робот ошибка', 'cp1251'), SOCKADDR)  # отправка текста на сервер спикера
-        uCliSock.sendto(bytes(self.eng_name, 'cp1251'), SOCKADDR2)  # отправка на сервер АСК
+        uCliSock.sendto(bytes(self.eng_name, 'utf-8'), SOCKADDR2)  # отправка на сервер АСК
         sleep(4)
         yellow_robot.resolve_flag = True
         bot.send_photo(ask_channel_id, photo=open(photopath + self.eng_name + '.png', 'rb'))  # отправка скрина
@@ -73,29 +73,26 @@ blue_robot = Robot(sticker='CAACAgIAAxkBAAEBV6BfYwNb-miwdeZwoM0mY88-6tBJQAACAwAD
 yellow_robot = Robot(sticker='CAACAgIAAxkBAAEBV5xfYwMsdhZK_ojtyb9q1l48Et6EZwACAQADjVk3GTWKtUGHR0TKGwQ', name='Желтый', eng_name='yellow')
 
 
-def test_test():
-    print('priem BLYAD')
-
-def inline_button_pressed(bot, update):
+def inline_popravil_button_pressed(bot, update):
     query = bot.callback_query
-    if query.data == 'popravil':
-        update.bot.edit_message_reply_markup(
-            chat_id=query.message.chat.id,
-            message_id=query.message.message_id, reply_markup='')  # убирает кнопку в сообщении
-        update.bot.send_message(ask_channel_id, f'Робота поправил {query.from_user.first_name} спасибо!')
+    update.bot.edit_message_reply_markup(
+        chat_id=query.message.chat.id,
+        message_id=query.message.message_id, reply_markup='')  # убирает кнопку в сообщении
+    update.bot.send_message(ask_channel_id, f'Робота поправил {query.from_user.first_name} спасибо!')
 
-        print(f'Робота поправил {query.from_user.first_name} в {time.strftime("%d.%m.%Y %H:%M:%S")}')
-        db_update_who_repair(query.from_user.first_name)
-    elif query.data == 'reshenie':
-        yellow_robot.resolve_flag = False
-        update.bot.edit_message_reply_markup(
-            chat_id=query.message.chat.id,
-            message_id=query.message.message_id, reply_markup=inl_keyboard)
-        update.bot.send_message(ask_channel_id, f'Пробую решить ошибку')
-        uCliSock.sendto(bytes('Resolve problem', 'utf-8'), SOCKADDR2)
-        print(f'{query.from_user.first_name} в {time.strftime("%d.%m.%Y %H:%M:%S")} нажал кнопку "Решение"')
-        # sleep(5)
-        # update.bot.send_photo(ask_channel_id, photo=open(photopath + 'resolve.png', 'rb'))  # отправка скрина
+    print(f'Робота поправил {query.from_user.first_name} в {time.strftime("%d.%m.%Y %H:%M:%S")}')
+    db_update_who_repair(query.from_user.first_name)
+
+def inline_reshenie_button_pressed(bot, update):
+    query = bot.callback_query
+    yellow_robot.resolve_flag = False
+    update.bot.edit_message_reply_markup(
+        chat_id=query.message.chat.id,
+        message_id=query.message.message_id, reply_markup='')
+    update.bot.send_message(ask_channel_id, f'Пробую решить ошибку')#, reply_markup=inl_keyboard)
+    uCliSock.sendto(bytes('Resolve problem', 'utf-8'), SOCKADDR2)
+    print(f'{query.from_user.first_name} в {time.strftime("%d.%m.%Y %H:%M:%S")} нажал кнопку "Решение"')
+
 
 
 def napominanie_msg(bot):
