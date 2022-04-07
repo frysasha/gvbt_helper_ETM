@@ -33,5 +33,5 @@ def send_to_ASK():
 
 if __name__ == '__main__':
     #send()
-    send_robot_resolve()
-    #send_to_ASK()
+    #send_robot_resolve()
+    send_to_ASK()

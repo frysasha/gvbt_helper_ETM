@@ -151,7 +151,7 @@ def check_upd():
             resolv_robot_error()
         else:
             print('unknown command UDP')
-    sleep(1)
+        sleep(1)
 
 def check_galka():
     while True:
