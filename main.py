@@ -41,7 +41,7 @@ def main():
 
 
 if __name__ == "__main__":
-    welcome_message(bot)
+    #welcome_message(bot)
     main()
 
 

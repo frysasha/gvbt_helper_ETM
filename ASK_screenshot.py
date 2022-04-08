@@ -30,10 +30,6 @@ uServSock.bind(SOCKADDR)
 path = 'Y:\\python\\ASK screenshots\\'
 
 
-# x = 0
-# y = 0
-
-
 def scr_yellow():
     try:
         # mainwindow = findwindows.find_window(best_match='<Желтый>.Agent.R')

@@ -8,7 +8,9 @@ import os
 from PIL import Image
 from db import db_update_who_repair, db_who_is_most_broken_off_all_time, db_who_fixed_the_most_off_all_time, \
     db_who_is_most_broken_in_current_month, db_who_fixed_in_current_month
-
+import websocket
+import re
+from contextlib import closing
 
 def all_statistic_bot(update, context):
     context.bot.send_message(update.message.chat_id, str(db_who_is_most_broken_off_all_time()))
@@ -34,19 +36,22 @@ def welcome_message (bot):
     #bot.send_message(ask_channel_id, 'Старт бота', reply_markup=gvbt_replykeyboard)
     #bot.send_message(sklad_channel, 'Старт бота', reply_markup=sklad_keyboard) #вывод нижней клавы
 
+
 class Robot:
 
     last_mes_id = ''
 
-    def __init__(self, sticker, name, eng_name, log_file):
+    def __init__(self, sticker, name, eng_name, log_file, ws_port):
         self.sticker = sticker
         self.name = name
         self.eng_name = eng_name
         self.resolve_flag = True
+        resolve_flag = True
         self.log_file = log_file
+        self.ws_port = ws_port
 
     def send_error(self, bot, time):
-
+        last_broken_robot = self.eng_name
         bot.send_sticker(ask_channel_id, self.sticker)
         send = bot.send_message(ask_channel_id, str(self.name + ' робот ошибка в ' + str(time)), reply_markup=inl_keyboard)
         global last_mes_id
@@ -57,13 +62,20 @@ class Robot:
         yellow_robot.resolve_flag = True
         bot.send_message(ask_channel_id, self.send_error_text())
         #bot.send_photo(ask_channel_id, photo=open(photopath + self.eng_name + '.png', 'rb'))  # отправка скрина
+        sleep(5)
+        bot.send_message(ask_channel_id, self.check_ws_state())
+
+    def check_ws_state(self):
+        with closing(websocket.create_connection('ws://172.29.2.125:' + self.ws_port + '/wscChannel')) as wd:
+            res = (re.search('"CMD_STATE": "(\w+)', wd.recv()).group(1))
+        return res
 
     def send_error_text(self):
         with open(self.log_file, 'r') as f:
             last_line = f.readlines()[-2]
             return last_line
 
-    #@staticmethod
+
 def update_inline_button(bot):
     try:
         bot.edit_message_reply_markup(ask_channel_id, message_id=last_mes_id, reply_markup=inl_keyboard2)
@@ -74,11 +86,11 @@ def update_inline_button(bot):
 
 
 priem_robot = Robot(sticker='CAACAgIAAxkBAAEBV-5fY1yzqRqG6hFdFnC0OmD98UKzSQACBAADjVk3GTq8TbLpDM2NGwQ',
-                    name='Приемный', eng_name='priem', log_file='V:\\priem.rps\\logs\\faults.log')
+                    name='Приемный', eng_name='priem', log_file='V:\\priem.rps\\logs\\faults.log', ws_port=8003)
 blue_robot = Robot(sticker='CAACAgIAAxkBAAEBV6BfYwNb-miwdeZwoM0mY88-6tBJQAACAwADjVk3GYsJmaauajlLGwQ',
-                   name='Синий', eng_name='blue', log_file='V:\\blue.rps\logs\\faults.log')
+                   name='Синий', eng_name='blue', log_file='V:\\blue.rps\logs\\faults.log', ws_port=8001)
 yellow_robot = Robot(sticker='CAACAgIAAxkBAAEBV5xfYwMsdhZK_ojtyb9q1l48Et6EZwACAQADjVk3GTWKtUGHR0TKGwQ',
-                     name='Желтый', eng_name='yellow', log_file='V:\\yellow.rps\\logs\\faults.log')
+                     name='Желтый', eng_name='yellow', log_file='V:\\yellow.rps\\logs\\faults.log', ws_port=8002)
 
 
 def inline_popravil_button_pressed(bot, update):
@@ -100,7 +112,6 @@ def inline_reshenie_button_pressed(bot, update):
     update.bot.send_message(ask_channel_id, f'Пробую решить ошибку')
     uCliSock.sendto(bytes('Resolve problem', 'utf-8'), SOCKADDR2)
     print(f'{query.from_user.first_name} в {time.strftime("%d.%m.%Y %H:%M:%S")} нажал кнопку "Решение"')
-
 
 
 def napominanie_msg(bot):

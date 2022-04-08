@@ -3,6 +3,9 @@ from socket import *
 import sys
 
 
+
+
+
 HOST = '172.29.30.63'
 HOST2 = '172.29.50.200'
 HOST3 = '172.29.2.125'
