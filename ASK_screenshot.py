@@ -5,17 +5,11 @@ from time import sleep
 import pyautogui
 import os
 import sys
-from pywinauto.application import Application
 import cv2
 import numpy as np
 import threading
 
-pyautogui.FAILSAFE = False
 sys.path.append('C:\\python\\lib')
-
-from pywinauto import Application
-from pywinauto import findwindows
-
 
 HOST = ''
 HOST2 = '172.29.30.63'
@@ -31,58 +25,22 @@ path = 'Y:\\python\\ASK screenshots\\'
 
 
 def scr_yellow():
-    try:
-        # mainwindow = findwindows.find_window(best_match='<Желтый>.Agent.R')
-        # appmain = Application().connect(handle=mainwindow)
-        # try:
-        #     manualwindow = findwindows.find_window(best_match='Manual Control( Желтый)')
-        #     appman = Application().connect(handle=manualwindow)
-        #     appman.window(handle=manualwindow).close()
-        # except Exception as e:
-        #     print('нет окна manual')
-        # appmain.window(handle=mainwindow).set_focus()
-        # sleep(1)
-        screenshot = pyautogui.screenshot()
-        screenshot.save(path + 'yellow.png')
-        print('yellow screen created')
-    except Exception as e:
-        print(e)
+    screenshot = pyautogui.screenshot()
+    screenshot.save(path + 'yellow.png')
+    print('yellow screen created')
+
 
 def scr_blue():
-    try:
-        # mainwindow = findwindows.find_window(best_match='<Синий (красный)>.Agent.R') #ищем окно по лучшем совпадению имени
-        # appmain = Application().connect(handle=mainwindow)
-        # try:
-        #     manualwindow = findwindows.find_window(best_match='Manual Control( Синий(красный))')  # ищем окно по лучшем совпадению имени
-        #     appman = Application().connect(handle=manualwindow)
-        #     appman.window(handle=manualwindow).close()  # закрывает окно
-        # except Exception as e:
-        #     print('нет окна manual')
-        # appmain.window(handle=mainwindow).set_focus() #фокус на окне
-        # sleep(1)
-        screenshot = pyautogui.screenshot()
-        screenshot.save(path + 'blue.png')
-        print('blue screen created')
-    except Exception as e:
-        print(e)
+    screenshot = pyautogui.screenshot()
+    screenshot.save(path + 'blue.png')
+    print('blue screen created')
+
 
 def scr_priem():
-    try:
-        # mainwindow = findwindows.find_window(best_match='<Приемный>.Agent.R')  # ищем окно по лучшем совпадению имени
-        # appmain = Application().connect(handle=mainwindow)
-        # try:
-        #     manualwindow = findwindows.find_window(best_match='Manual Control( Приемный)')  # ищем окно по лучшем совпадению имени
-        #     appman = Application().connect(handle=manualwindow)
-        #     appman.window(handle=manualwindow).close()  # закрывает окно
-        # except Exception as e:
-        #     print('нет окна manual')
-        # appmain.window(handle=mainwindow).set_focus()  # фокус на окне
-        # sleep(1)
-        screenshot = pyautogui.screenshot()
-        screenshot.save(path + 'priem.png')
-        print('priem screen created')
-    except Exception as e:
-        print(e)
+    screenshot = pyautogui.screenshot()
+    screenshot.save(path + 'priem.png')
+    print('priem screen created')
+
 
 def pause_button():
     pyautogui.click(844, 709)
@@ -90,7 +48,7 @@ def pause_button():
     pyautogui.click(541, 431)
     sleep(1)
     screenshot = pyautogui.screenshot()
-    screenshot.save(path + 'pause.new.png')
+    screenshot.save(path + 'pause.png')
 
 def work_button():
     pyautogui.click(964, 709)
@@ -98,7 +56,7 @@ def work_button():
     pyautogui.click(541, 431)
     sleep(1)
     screenshot = pyautogui.screenshot()
-    screenshot.save(path + 'work.new.png')
+    screenshot.save(path + 'work.png')
 
 def perezagruzka():
     pyautogui.click(964, 709)
@@ -116,7 +74,7 @@ def resolv_robot_error():
     sleep(1)
     pyautogui.click(x=929, y=176)#To resolve problem
     sleep(1)
-    pyautogui.click(x=506, y=431)
+    pyautogui.click(x=534, y=434)
     sleep(1)
     screenshot = pyautogui.screenshot()
     screenshot.save(path + 'resolve.png')
@@ -124,7 +82,7 @@ def resolv_robot_error():
 def check_upd():
     while True:
         data, addr = uServSock.recvfrom(BUFSIZE)
-        loc_data = data#.decode('utf-8')
+        loc_data = data
         if loc_data == 'yellow':
             print('yellow')
             scr_yellow()
@@ -168,8 +126,6 @@ def check_galka():
             y = res[0][1] + 5
             if 600 < x < 675 and 87 < y < 128:
                 uCliSock.sendto(bytes('Est reshenie'), SOCKADDR2)
-                print('est galka')
-
         sleep(1)
 
 
@@ -181,7 +137,6 @@ if __name__ == '__main__':
     print('Nachalo raboty')
     thread1.start()
     thread2.start()
-
 
 
 

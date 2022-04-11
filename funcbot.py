@@ -32,9 +32,9 @@ def every_month_statistic_bot(bot, month):
 
 def welcome_message (bot):
     bot.send_message(frychannelid, 'Старт бота', reply_markup=inl_keyboard2)
-    #bot.send_message(testchannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
-    #bot.send_message(ask_channel_id, 'Старт бота', reply_markup=gvbt_replykeyboard)
-    #bot.send_message(sklad_channel, 'Старт бота', reply_markup=sklad_keyboard) #вывод нижней клавы
+    bot.send_message(testchannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
+    bot.send_message(ask_channel_id, 'Старт бота', reply_markup=gvbt_replykeyboard)
+    bot.send_message(sklad_channel, 'Старт бота', reply_markup=sklad_keyboard) #вывод нижней клавы
 
 
 class Robot:
@@ -53,7 +53,7 @@ class Robot:
     def send_error(self, bot, time):
         last_broken_robot = self.eng_name
         bot.send_sticker(ask_channel_id, self.sticker)
-        send = bot.send_message(ask_channel_id, str(self.name + ' робот ошибка в ' + str(time)), reply_markup=inl_keyboard)
+        send = bot.send_message(ask_channel_id, str(self.name + ' робот ошибка в ' + str(time)), reply_markup=inl_keyboard3)
         global last_mes_id
         last_mes_id = send.message_id
         uCliSock.sendto(bytes(self.name + ' робот ошибка', 'cp1251'), SOCKADDR)  # отправка текста на сервер спикера
@@ -86,11 +86,11 @@ def update_inline_button(bot):
 
 
 priem_robot = Robot(sticker='CAACAgIAAxkBAAEBV-5fY1yzqRqG6hFdFnC0OmD98UKzSQACBAADjVk3GTq8TbLpDM2NGwQ',
-                    name='Приемный', eng_name='priem', log_file='V:\\priem.rps\\logs\\faults.log', ws_port=8003)
+                    name='Приемный', eng_name='priem', log_file='V:\\priem.rps\\logs\\faults.log', ws_port="8003")
 blue_robot = Robot(sticker='CAACAgIAAxkBAAEBV6BfYwNb-miwdeZwoM0mY88-6tBJQAACAwADjVk3GYsJmaauajlLGwQ',
-                   name='Синий', eng_name='blue', log_file='V:\\blue.rps\logs\\faults.log', ws_port=8001)
+                   name='Синий', eng_name='blue', log_file='V:\\blue.rps\logs\\faults.log', ws_port="8001")
 yellow_robot = Robot(sticker='CAACAgIAAxkBAAEBV5xfYwMsdhZK_ojtyb9q1l48Et6EZwACAQADjVk3GTWKtUGHR0TKGwQ',
-                     name='Желтый', eng_name='yellow', log_file='V:\\yellow.rps\\logs\\faults.log', ws_port=8002)
+                     name='Желтый', eng_name='yellow', log_file='V:\\yellow.rps\\logs\\faults.log', ws_port="8002")
 
 
 def inline_popravil_button_pressed(bot, update):
@@ -99,7 +99,6 @@ def inline_popravil_button_pressed(bot, update):
         chat_id=query.message.chat.id,
         message_id=query.message.message_id, reply_markup='')  # убирает кнопку в сообщении
     update.bot.send_message(ask_channel_id, f'Робота поправил {query.from_user.first_name} спасибо!')
-
     print(f'Робота поправил {query.from_user.first_name} в {time.strftime("%d.%m.%Y %H:%M:%S")}')
     db_update_who_repair(query.from_user.first_name)
 

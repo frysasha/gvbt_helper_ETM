@@ -84,7 +84,7 @@ def wms_report():
             print('Сформирован ежедневный отчет WMS. Необходимо проверить данные!')
             wms_day_report_message(bot)
         elif loc_data == 'Est reshenie':
-            print('Есть решение ошибки робота')
+            #print('Есть решение ошибки робота')
             if yellow_robot.resolve_flag:
                 update_inline_button(bot)
         else:
