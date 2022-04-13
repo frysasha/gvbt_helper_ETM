@@ -39,7 +39,9 @@ def welcome_message (bot):
 
 class Robot:
 
-    last_mes_id = ''
+    last_mes_id = None
+
+
 
     def __init__(self, sticker, name, eng_name, log_file, ws_port):
         self.sticker = sticker
@@ -51,19 +53,17 @@ class Robot:
         self.ws_port = ws_port
 
     def send_error(self, bot, time):
-        last_broken_robot = self.eng_name
+        global last_broken_robot
+        last_broken_robot = self
         bot.send_sticker(ask_channel_id, self.sticker)
-        send = bot.send_message(ask_channel_id, str(self.name + ' робот ошибка в ' + str(time)), reply_markup=inl_keyboard3)
+        send = bot.send_message(ask_channel_id, str(self.name + ' робот ошибка в ' + str(time)), reply_markup=inl_keyboard)
         global last_mes_id
         last_mes_id = send.message_id
         uCliSock.sendto(bytes(self.name + ' робот ошибка', 'cp1251'), SOCKADDR)  # отправка текста на сервер спикера
-        uCliSock.sendto(bytes(self.eng_name, 'utf-8'), SOCKADDR2)  # отправка на сервер АСК
-        sleep(1)
+        uCliSock.sendto(bytes('robot_error', 'utf-8'), SOCKADDR2)  # отправка на сервер АСК
         yellow_robot.resolve_flag = True
         bot.send_message(ask_channel_id, self.send_error_text())
-        #bot.send_photo(ask_channel_id, photo=open(photopath + self.eng_name + '.png', 'rb'))  # отправка скрина
-        sleep(5)
-        bot.send_message(ask_channel_id, self.check_ws_state())
+
 
     def check_ws_state(self):
         with closing(websocket.create_connection('ws://172.29.2.125:' + self.ws_port + '/wscChannel')) as wd:
@@ -111,10 +111,12 @@ def inline_reshenie_button_pressed(bot, update):
     update.bot.send_message(ask_channel_id, f'Пробую решить ошибку')
     uCliSock.sendto(bytes('Resolve problem', 'utf-8'), SOCKADDR2)
     print(f'{query.from_user.first_name} в {time.strftime("%d.%m.%Y %H:%M:%S")} нажал кнопку "Решение"')
+    sleep(5)
+    update.bot.send_message(ask_channel_id, last_broken_robot.check_ws_state()) # отправка статуса CMD_State последнего робота с ошибкой
 
 
 def napominanie_msg(bot):
-    uCliSock.sendto(bytes('perezagruzka', 'cp1251'), SOCKADDR2)
+    uCliSock.sendto(bytes('work_button', 'cp1251'), SOCKADDR2)
     uCliSock.sendto(bytes('restart_televizor', 'cp1251'), SOCKADDR3)
     sleep(5)
     bot.send_message(ask_channel_id, ('Будет запущен АСК и включен телик на складе после еженедельной перезагрузки!'))

@@ -39,8 +39,8 @@ gvbt_replykeyboard.row('Статистика поломок общая','Ста�
 gvbt_replykeyboard.row('Статистика за текущий месяц') # третья строка меню
 sklad_keyboard.row('АСК Пауза 🤖', 'АСК в работу 🤖', 'Расписание ГВБТ 📅')
 
-# inl_keyboard = types.InlineKeyboardMarkup() #кнопка в сообщении
-# inl_keyboard.row(types.InlineKeyboardButton('Поправил', callback_data='popravil'))
+inl_keyboard = types.InlineKeyboardMarkup() #кнопка в сообщении
+inl_keyboard.row(types.InlineKeyboardButton('Поправил', callback_data='popravil'))
 inl_keyboard2 = types.InlineKeyboardMarkup()
 inl_keyboard2.row(types.InlineKeyboardButton('Поправил', callback_data='popravil'))
 inl_keyboard2.row(types.InlineKeyboardButton('Решение', callback_data='reshenie'))

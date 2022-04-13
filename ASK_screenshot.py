@@ -15,106 +15,63 @@ HOST = ''
 HOST2 = '172.29.30.63'
 PORT = 3000
 BUFSIZE = 1024
-SOCKADDR = (HOST,PORT)
-SOCKADDR2 = (HOST2,PORT)
+SOCKADDR = (HOST, PORT)
+SOCKADDR2 = (HOST2, PORT)
 uServSock = socket(AF_INET,SOCK_DGRAM)
 uCliSock = socket(AF_INET, SOCK_DGRAM)
 uServSock.bind(SOCKADDR)
 
-path = 'Y:\\python\\ASK screenshots\\'
+PATH = 'Y:\\python\\ASK screenshots\\'
+
+robot_error = False
 
 
-def scr_yellow():
+PAUSE_BUTTON_COORDS = (844, 709)
+WORK_BUTTON_COORDS = (964, 709)
+ACCEPT_BUTTON_COORDS = (541, 431)
+RESOLVE_PROBLEM_BUTTON_COORDS = (929, 176)
+ACCEPT_RESOLVE_PROBLEM_COORDS = (534, 434)
+
+
+def create_screenshot(filename):
     screenshot = pyautogui.screenshot()
-    screenshot.save(path + 'yellow.png')
-    print('yellow screen created')
+    screenshot.save(PATH + filename + '.png')
+    print(filename + 'screen created')
 
 
-def scr_blue():
-    screenshot = pyautogui.screenshot()
-    screenshot.save(path + 'blue.png')
-    print('blue screen created')
-
-
-def scr_priem():
-    screenshot = pyautogui.screenshot()
-    screenshot.save(path + 'priem.png')
-    print('priem screen created')
-
-
-def pause_button():
-    pyautogui.click(844, 709)
+def pause():
+    pyautogui.click(PAUSE_BUTTON_COORDS)
     sleep(1)
-    pyautogui.click(541, 431)
-    sleep(1)
-    screenshot = pyautogui.screenshot()
-    screenshot.save(path + 'pause.png')
+    pyautogui.click(ACCEPT_BUTTON_COORDS)
+    create_screenshot('pause')
 
-def work_button():
-    pyautogui.click(964, 709)
-    sleep(1)
-    pyautogui.click(541, 431)
-    sleep(1)
-    screenshot = pyautogui.screenshot()
-    screenshot.save(path + 'work.png')
 
-def perezagruzka():
-    pyautogui.click(964, 709)
+def work():
+    pyautogui.click(WORK_BUTTON_COORDS)
     sleep(1)
-    pyautogui.click(541, 431)
-    sleep(1)
-    screenshot = pyautogui.screenshot()
-    screenshot.save(path + 'perezagruzka.png')
-
+    pyautogui.click(ACCEPT_BUTTON_COORDS)
+    create_screenshot('work')
 
 def resolv_robot_error():
     print('najimau na koordinaty')
     print(x, y)
     pyautogui.click(x, y)
     sleep(1)
-    pyautogui.click(x=929, y=176)#To resolve problem
+    pyautogui.click(RESOLVE_PROBLEM_BUTTON_COORDS)
     sleep(1)
-    pyautogui.click(x=534, y=434)
+    pyautogui.click(ACCEPT_RESOLVE_PROBLEM_COORDS)
     sleep(1)
-    screenshot = pyautogui.screenshot()
-    screenshot.save(path + 'resolve.png')
+    create_screenshot('resolve')
+    robot_error = False
 
-def check_upd():
-    while True:
-        data, addr = uServSock.recvfrom(BUFSIZE)
-        loc_data = data
-        if loc_data == 'yellow':
-            print('yellow')
-            scr_yellow()
-        elif loc_data == 'blue':
-            print('blue')
-            scr_blue()
-        elif loc_data == 'priem':
-            print('priem')
-            scr_priem()
-        elif loc_data == 'pause_button':
-            print('pause_button')
-            pause_button()
-        elif loc_data == 'work_button':
-            print('work_button')
-            work_button()
-        elif loc_data == 'perezagruzka':
-            print('perezagruzka')
-            perezagruzka()
-        elif loc_data == 'Resolve problem':
-            print(loc_data)
-            resolv_robot_error()
-        else:
-            print('unknown command UDP')
-        sleep(1)
 
 def check_galka():
     while True:
         screenshot = pyautogui.screenshot()
-        screenshot.save(path +'check_galka.png')
-        img_rgb = cv2.imread(path +'check_galka.png')
+        screenshot.save(PATH +'check_galka.png')
+        img_rgb = cv2.imread(PATH +'check_galka.png')
         img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
-        template = cv2.imread(path + 'galka.png', 0)
+        template = cv2.imread(PATH + 'galka.png', 0)
         w, h = template.shape[::-1]
         res = cv2.matchTemplate(img_gray, template, cv2.TM_CCOEFF_NORMED)
         threshold = 0.9
@@ -129,6 +86,26 @@ def check_galka():
         sleep(1)
 
 
+def check_upd():
+    while True:
+        data, addr = uServSock.recvfrom(BUFSIZE)
+        loc_data = data
+        if loc_data == 'robot_error':
+            print(loc_data)
+            robot_error = True
+            create_screenshot('robot_error')
+        elif loc_data == 'pause_button':
+            print('pause_button')
+            pause()
+        elif loc_data == 'work_button':
+            print('work_button')
+            work()
+        elif loc_data == 'Resolve problem':
+            print(loc_data)
+            resolv_robot_error()
+        else:
+            print('unknown command UDP')
+        sleep(1)
 
 thread1 = threading.Timer(1, check_upd)
 thread2 = threading.Timer(1, check_galka)
@@ -137,7 +114,3 @@ if __name__ == '__main__':
     print('Nachalo raboty')
     thread1.start()
     thread2.start()
-
-
-
-#uServSock.close()

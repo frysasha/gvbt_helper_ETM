@@ -74,8 +74,6 @@ def robot_stat():
 
 
 
-
-
 def wms_report():
     while True:
         data, addr = uServSock.recvfrom(BUFSIZE)
