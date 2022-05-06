@@ -121,8 +121,35 @@ def db_who_win_in_prev_month(month):
     return res_list
 
 
+def db_get_last_6_months():
+    db = sqlite3.connect('robots.db')
+    cur = db.cursor()
+    cur.execute("""Select distinct strftime('%m', date)
+                from robot_error
+                where date between date('now','-6 month') and date('now')""")
+    res = cur.fetchall()
+    res_list = []
+    for i in res:
+        res_list.append(*i)
+    cur.close()
+    return res_list
+
+
+def db_robot_stat_30_days(robot):
+    db = sqlite3.connect('robots.db')
+    cur = db.cursor()
+    cur.execute("""select CMD_error, SECTION_error, date, time
+                from robot_error
+                where robot = :robot and CMD_error is not null""", {"robot": robot})
+    res = cur.fetchall()
+    res_str = ''
+    for i in res:
+        res_str = res_str + str(i) + '\n'
+    cur.close()
+    return f'{robot}:\nКоманда, Секция, Дата, Время\n{res_str}'
+
 if __name__ == '__main__':
-    pass
+    print(db_robot_stat_30_days('Желтый'))
     # print(db_who_is_most_broken_in_current_month("11"))
     # print(db_who_fixed_in_current_month(10))
     # db_error_insert('Голубой', date=time.strftime("%Y-%m-%d"), time=time.strftime("%H:%M:%S"))

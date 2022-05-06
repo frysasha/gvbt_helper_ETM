@@ -38,10 +38,10 @@ def every_month_statistic_bot(bot, month):
 
 
 def welcome_message(bot):
-    bot.send_message(frychannelid, 'Старт бота', reply_markup=inl_keyboard2)
-    bot.send_message(testchannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
-    bot.send_message(ask_channel_id, 'Старт бота', reply_markup=gvbt_replykeyboard)
-    bot.send_message(sklad_channel, 'Старт бота', reply_markup=sklad_keyboard)  # вывод нижней клавы
+    bot.send_message(frychannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
+    # bot.send_message(testchannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
+    # bot.send_message(ask_channel_id, 'Старт бота', reply_markup=gvbt_replykeyboard)
+    # bot.send_message(sklad_channel, 'Старт бота', reply_markup=sklad_keyboard)  # вывод нижней клавы
 
 
 def error_hand(update, context):
@@ -180,30 +180,30 @@ def startbat():
     p = subprocess.Popen('C:\\python\\start.start.bat')
 
 
-def laps_zapros(bot, update):
-    update.user_data['name'] = bot.message.text
-    textmes = bot.message.text
+def laps_zapros(update, context):
     rex = re.compile(
         "^[0-9]{4}-[0-9]{3}[A-z]{2}$")  # формат текста [тип текста] , {кол-во символов} , ^ начало , $ конец
-    if rex.match(textmes):
-        writetofile(bot.message.text)
+    if rex.match(update.message.text):
+        writetofile(update.message.text)
         sleep(4)
         cleantext2 = []
         if os.stat('C:\\python\\pass.txt').st_size == 0:
-            bot.send_message(testchannelid, 'пароль не найден')
+            context.bot.send_message(update.message.chat_id, 'пароль не найден')
         else:
             for i in open('C:\\python\\pass.txt', 'r', encoding='utf-16').readlines():
                 cleantext2.append(i)
             cleantext2 = cleantext2[-3][-13:].strip()
             print(f'Запрашиваемый пароль: {cleantext2}')
-            laps_send_msg(cleantext2)
+            laps_send_msg(cleantext2, update, context)
         return ConversationHandler.END  # закрывает диалог
+    elif update.message.text == 'exit':
+        return ConversationHandler.END
     else:
-        bot.send_message(testchannelid, 'неправильный формат! нужен формат вида "0200-300PC')
+        context.bot.send_message(update.message.chat_id, 'неправильный формат! нужен формат вида "0200-300PC')
 
 
-def laps_send_msg(cleantext):
-    bot.send_message(testchannelid, cleantext)  # сообщение с паролем
+def laps_send_msg(cleantext, update, context):
+    context.bot.send_message(update.message.chat_id, cleantext)  # сообщение с паролем
 
 
 def ask_pause_button(update, context):
@@ -213,7 +213,8 @@ def ask_pause_button(update, context):
     im = Image.open(r'Z:\python\ASK\screenshots\pause.png')
     im.crop((810, 670, 1020, 780)).save(photopath + 'pause_new.png', quality=95)
     sleep(1)
-    context.bot.send_photo(chat_id=update.message.chat_id, photo=open(photopath + 'pause_new.png', 'rb'))
+    context.bot.send_photo(chat_id=update.effective_chat.id, photo=open(photopath + 'pause_new.png', 'rb'))
+
 
 
 def ask_work_button(update, context):
@@ -223,7 +224,7 @@ def ask_work_button(update, context):
     im = Image.open(r'Z:\python\ASK\screenshots\work.png')
     im.crop((810, 670, 1020, 780)).save(photopath + 'work_new.png', quality=95)
     sleep(1)
-    context.bot.send_photo(chat_id=update.message.chat_id, photo=open(photopath + 'work_new.png', 'rb'))
+    context.bot.send_photo(chat_id=update.effective_chat.id, photo=open(photopath + 'work_new.png', 'rb'))
 
 
 def schedule(update, context):
