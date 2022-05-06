@@ -12,15 +12,19 @@ cur.execute("""CREATE TABLE IF NOT EXISTS robot_error(
    robot TEXT,
    date DATE,
    time TIME,
-   who_repair TEXT);
+   who_repair TEXT,
+   auto_repair TEXT,
+   CMD_error TEXT,
+   SECTION_error TEXT);
 """)
 db.commit()
 
 
-def db_regular_insert(robot, date, time, who_repair=None):
+def db_error_insert(robot, date, time, cmd, section):
     db = sqlite3.connect('robots.db')
     cur = db.cursor()
-    cur.execute("INSERT INTO robot_error (robot, date, time, who_repair) VALUES (?, ?, ?, ?);", (robot, date, time, who_repair))
+    cur.execute("INSERT INTO robot_error (robot, date, time, CMD_error, SECTION_error) VALUES (?, ?, ?, ?, ?);",
+                (robot, date, time, cmd, section))
     db.commit()
     cur.close()
 
@@ -33,18 +37,26 @@ def db_update_who_repair(who_repair):
     db.commit()
     cur.close()
 
+
+def db_update_auto_repair():
+    db = sqlite3.connect('robots.db')
+    cur = db.cursor()
+    cur.execute("UPDATE robot_error SET auto_repair ='Да' WHERE ID = (SELECT MAX(ID) FROM robot_error)")
+    db.commit()
+    cur.close()
+
+
 def db_who_is_most_broken_in_current_month(month):
     db = sqlite3.connect('robots.db')
     cur = db.cursor()
-    first_day = datetime.today().replace(day=1).strftime('%Y-' + '0' + str(month) + '-%d')
-    plus_month = datetime.today().replace(day=1, month=(int(month)+1))
-    last_day = plus_month - timedelta(days=1)
-    cur.execute("SELECT robot FROM robot_error WHERE date BETWEEN :date1 AND :date2", {'date1': first_day, 'date2': last_day.strftime('%Y-%m-%d')})
+    cur.execute("SELECT robot FROM robot_error where strftime ('%m', date) = :month", {'month': month})
     res = cur.fetchall()
     res_list = []
     for i in res:
         res_list.append(*i)
-    cur.execute("SELECT robot FROM robot_error WHERE (time BETWEEN '00:00:00' AND '07:00:00') AND (date BETWEEN :date1 AND :date2)", {'date1': first_day, 'date2': last_day.strftime('%Y-%m-%d')})
+    cur.execute(
+        "SELECT robot FROM robot_error WHERE (time BETWEEN '00:00:00' AND '07:00:00') AND strftime ('%m', date) = :month",
+        {'month': month})
     night = cur.fetchall()
     night_list = []
     for i in night:
@@ -69,7 +81,7 @@ def db_who_is_most_broken_off_all_time():
 def db_who_fixed_the_most_off_all_time():
     db = sqlite3.connect('robots.db')
     cur = db.cursor()
-    cur.execute("SELECT who_repair FROM robot_error")
+    cur.execute("SELECT who_repair FROM robot_error where who_repair is not null")
     res = cur.fetchall()
     res_list = []
     for i in res:
@@ -81,11 +93,8 @@ def db_who_fixed_the_most_off_all_time():
 def db_who_fixed_in_current_month(month):
     db = sqlite3.connect('robots.db')
     cur = db.cursor()
-    first_day = datetime.today().replace(day=1).strftime('%Y-' + '0' + str(month) + '-%d')
-    plus_month = datetime.today().replace(day=1, month=(int(month) + 1))
-    last_day = plus_month - timedelta(days=1)
-    cur.execute("SELECT who_repair FROM robot_error WHERE date BETWEEN :date1 AND :date2",
-                {'date1': first_day, 'date2': last_day.strftime('%Y-%m-%d')})
+    cur.execute("SELECT who_repair FROM robot_error WHERE strftime ('%m', date) = :month and who_repair is not null",
+                {'month': month})
     res = cur.fetchall()
     res_list = []
     for i in res:
@@ -94,8 +103,26 @@ def db_who_fixed_in_current_month(month):
     return Counter(res_list).most_common()
 
 
+def db_who_win_in_prev_month(month):
+    db = sqlite3.connect('robots.db')
+    cur = db.cursor()
+    cur.execute("""select who_repair, max(cnt)
+                    from
+                    (SELECT who_repair, count(*) as cnt
+                    FROM robot_error 
+                    WHERE strftime ('%m', date) = :month
+                    group by who_repair)
+                    where who_repair is not null""", {'month': month})
+    res = cur.fetchall()
+    res_list = []
+    for i in res:
+        res_list.append(i)
+    cur.close()
+    return res_list
+
 
 if __name__ == '__main__':
-    print(db_who_is_most_broken_in_current_month("11"))
-    print(db_who_fixed_in_current_month(10))
-    db_regular_insert('Голубой', date=time.strftime("%Y-%m-%d"), time=time.strftime("%H:%M:%S"))
+    pass
+    # print(db_who_is_most_broken_in_current_month("11"))
+    # print(db_who_fixed_in_current_month(10))
+    # db_error_insert('Голубой', date=time.strftime("%Y-%m-%d"), time=time.strftime("%H:%M:%S"))

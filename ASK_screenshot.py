@@ -21,7 +21,7 @@ uServSock = socket(AF_INET,SOCK_DGRAM)
 uCliSock = socket(AF_INET, SOCK_DGRAM)
 uServSock.bind(SOCKADDR)
 
-PATH = 'Y:\\python\\ASK screenshots\\'
+PATH = 'Y:\\python\\ASK\\screenshots\\'
 
 robot_error = False
 
@@ -35,7 +35,11 @@ ACCEPT_RESOLVE_PROBLEM_COORDS = (534, 434)
 
 def create_screenshot(filename):
     screenshot = pyautogui.screenshot()
-    screenshot.save(PATH + filename + '.png')
+    try:
+        screenshot.save(PATH + filename + '.png')
+    except Exception as e:
+        print(e)
+        print('Cannot save screenshot')
     print(filename + 'screen created')
 
 

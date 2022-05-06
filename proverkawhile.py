@@ -7,7 +7,7 @@ from time import sleep
 from settingsbot import *
 import threading
 import sys
-from db import db_regular_insert, db_who_is_most_broken_in_current_month
+from db import db_error_insert, db_who_is_most_broken_in_current_month
 from socket import *
 import datetime
 
@@ -34,24 +34,24 @@ def proverka ():
 
         if last_modpriem > timepriem:
             priem_robot.send_error(bot, nowtime)
-            #priem_msg(bot, nowtime)
             timepriem = last_modpriem
             print('Ошибка приемного робота в ' + strnowtime)
-            db_regular_insert(robot='Приемный', date=time.strftime("%Y-%m-%d"), time=nowtime)
+            #db_error_insert(robot='Приемный', date=time.strftime("%Y-%m-%d"), time=nowtime)
+            priem_robot.db_error_insert(date=time.strftime("%Y-%m-%d"), time=nowtime)
 
         if last_modblue > timeblue:
             blue_robot.send_error(bot, nowtime)
-            #blue_msg(bot, nowtime)
             timeblue = last_modblue
             print('Ошибка голубого робота в ' + strnowtime)
-            db_regular_insert(robot='Голубой', date=time.strftime("%Y-%m-%d"), time=nowtime)
+            #db_error_insert(robot='Голубой', date=time.strftime("%Y-%m-%d"), time=nowtime)
+            blue_robot.db_error_insert(date=time.strftime("%Y-%m-%d"), time=nowtime)
 
         if last_modyellow > timeyellow:
             yellow_robot.send_error(bot, nowtime)
-            #yellow_msg(bot, nowtime)
             timeyellow = last_modyellow
             print('Ошибка желтого робота в ' + strnowtime)
-            db_regular_insert(robot='Желтый', date=time.strftime("%Y-%m-%d"), time=nowtime)
+            #db_error_insert(robot='Желтый', date=time.strftime("%Y-%m-%d"), time=nowtime)
+            yellow_robot.db_error_insert(date=time.strftime("%Y-%m-%d"), time=nowtime)
 
         sleep(1)
 
@@ -63,14 +63,19 @@ def napominanie():
             napominanie_msg(bot)
         sleep(1)
 
-def robot_stat():
-    pass
-    # while True:
-    #     nowtime = time.strftime("%d %H:%M:%S")
-    #     if (time.strftime("01 09:10:00")) == nowtime:
-    #         bot_mes('Ещемесячная статистика\n')
-    #         every_month_statistic_bot(bot, int(time.strftime("%m")) - 1)
-    #     sleep(1)
+def ask_month_stat():
+    while True:
+        nowtime = time.strftime("%d %H:%M:%S")
+
+        if (time.strftime("01 11:00:00")) == nowtime:
+            prev_month = str('0' + str(int(time.strftime("%m")) - 1)) if int(time.strftime("%m")) < 10 else int(time.strftime("%m")) - 1
+            if prev_month == '00':
+                prev_month = '12'
+            try:
+                every_month_statistic_bot(bot, prev_month)
+            except:
+                print(' every_month_statistic_bot error')
+        sleep(1)
 
 
 
@@ -83,35 +88,24 @@ def wms_report():
             wms_day_report_message(bot)
         elif loc_data == 'Est reshenie':
             #print('Есть решение ошибки робота')
-            if yellow_robot.resolve_flag:
+            if Robot.resolve_flag:
                 update_inline_button(bot)
         else:
-            wms_day_report_error_message(bot, loc_data)
+            bot_mes(loc_data)
 
 thread1 = threading.Timer(1, proverka)
 thread2 = threading.Timer(1, napominanie)
-thread3 = threading.Timer(1, robot_stat)
+thread3 = threading.Timer(1, ask_month_stat)
 thread4 = threading.Timer(1, wms_report)
 
 try:
     thread1.start()
-except Exception:
-    robot_oshibka(bot)
-    print('ошибка thread1')
-try:
     thread2.start()
-except Exception:
-    robot_oshibka(bot)
-    print('ошибка thread2')
-try:
     thread3.start()
-except Exception:
-    print('ошибка thread3')
-
-try:
     thread4.start()
+
 except Exception:
-    print("ошибка thread4")
+    print(Exception)
 
 
 

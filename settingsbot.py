@@ -20,7 +20,7 @@ SOCKADDR2 = (HOST2, PORT2)
 HOST3 = '172.29.50.200' #телевизор
 SOCKADDR3 = (HOST3, PORT)
 
-photopath = 'Z:\\python\\ASK screenshots\\' #куда сохраняются скрины
+photopath = 'Z:\\python\\ASK\\screenshots\\' #куда сохраняются скрины
 
 TG_TOKEN = "1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk"
 TG_API_URL = 'https://api.telegram.org/bot'
