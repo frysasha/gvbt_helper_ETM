@@ -15,16 +15,17 @@ cur.execute("""CREATE TABLE IF NOT EXISTS robot_error(
    who_repair TEXT,
    auto_repair TEXT,
    CMD_error TEXT,
-   SECTION_error TEXT);
+   SECTION_error TEXT,
+   faults TEXT);
 """)
 db.commit()
 
 
-def db_error_insert(robot, date, time, cmd, section):
+def db_error_insert(robot, date, time, cmd, section, faults):
     db = sqlite3.connect('robots.db')
     cur = db.cursor()
-    cur.execute("INSERT INTO robot_error (robot, date, time, CMD_error, SECTION_error) VALUES (?, ?, ?, ?, ?);",
-                (robot, date, time, cmd, section))
+    cur.execute("INSERT INTO robot_error (robot, date, time, CMD_error, SECTION_error, faults) VALUES (?, ?, ?, ?, ?, ?);",
+                (robot, date, time, cmd, section, faults))
     db.commit()
     cur.close()
 
@@ -138,7 +139,7 @@ def db_get_last_6_months():
 def db_robot_stat_30_days(robot):
     db = sqlite3.connect('robots.db')
     cur = db.cursor()
-    cur.execute("""select CMD_error, SECTION_error, date, time
+    cur.execute("""select CMD_error, SECTION_error, faults, date, time
                 from robot_error
                 where robot = :robot and CMD_error is not null""", {"robot": robot})
     res = cur.fetchall()
@@ -146,7 +147,7 @@ def db_robot_stat_30_days(robot):
     for i in res:
         res_str = res_str + str(i) + '\n'
     cur.close()
-    return f'{robot}:\nКоманда, Секция, Дата, Время\n{res_str}'
+    return f'{robot}:\nКоманда, Секция, Ошибка, Дата, Время\n{res_str}'
 
 if __name__ == '__main__':
     print(db_robot_stat_30_days('Желтый'))

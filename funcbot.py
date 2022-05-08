@@ -90,14 +90,20 @@ class Robot:
             res = (re.search('"SECTION": "(\w+)', wd.recv()).group(1))
         return res
 
-    def db_error_insert(self, date, time):
-        db_error_insert(robot=self.name, date=date, time=time, cmd=self._check_ws_cmd(), section=self._check_ws_section())
-
     def send_error_text(self):
         with open(self.log_file, 'r') as f:
             last_line = f.readlines()[-2]
             return last_line
 
+    def search_fault_text(self):
+        with open(self.log_file, 'r') as f:
+            last_line = f.readlines()[-2]
+            res = (re.search('faults:\((.+)\)', last_line).group(1))
+            return res
+
+    def db_error_insert(self, date, time):
+        db_error_insert(robot=self.name, date=date, time=time, cmd=self._check_ws_cmd(), section=self._check_ws_section(),
+                        faults=self.search_fault_text())
 
 def update_inline_button(bot):
     try:
