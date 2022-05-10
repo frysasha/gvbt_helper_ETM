@@ -3,6 +3,7 @@ from settingsbot import *
 import subprocess
 import re
 from telegram.ext import ConversationHandler
+from telegram.error import BadRequest
 import os
 from PIL import Image
 from db import db_update_who_repair, db_who_is_most_broken_off_all_time, db_who_fixed_the_most_off_all_time, \
@@ -46,7 +47,9 @@ def welcome_message(bot):
 
 def error_hand(update, context):
     print('Ошибка error handler')
-    print(context.error)
+    if isinstance(context.error, BadRequest):
+        pass
+    else: print(context.error)
 
 
 class Robot:

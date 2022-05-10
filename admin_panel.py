@@ -3,10 +3,10 @@ import time
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ConversationHandler
 from db import db_get_last_6_months, db_who_is_most_broken_in_current_month, db_who_fixed_in_current_month, \
-    db_robot_stat_30_days
+    db_robot_stat_30_days, db_ask_cell_stat
 
-
-HOME_MENU, STAT_MENU, COMMANDS_MENU, SCHEDULE_MENU, SCHEDULE_UPLOAD_MENU, ASK_STAT_MONTH_MENU, ROBOT_MENU, SCHEDULE_MONTH_MENU = range(8)
+HOME_MENU, STAT_MENU, COMMANDS_MENU, SCHEDULE_MENU, SCHEDULE_UPLOAD_MENU, ASK_STAT_MONTH_MENU, ROBOT_MENU, \
+CELL_STAT_MENU, SCHEDULE_MONTH_MENU = range(9)
 
 
 def build_menu(buttons, n_cols, header_buttons=None, footer_buttons=None):
@@ -41,14 +41,44 @@ def ask_stat_menu(update, _):
     ask_stat_menu_list = [
             InlineKeyboardButton("За месяц", callback_data='ASK_month_stat'),
             InlineKeyboardButton("По роботам(30 дней)", callback_data='ASK_robot_menu'),
+            InlineKeyboardButton("По ячейкам", callback_data='ASK_cell_stat_menu'),
             InlineKeyboardButton("Домой", callback_data='home_menu'),
             ]
-    ask_stat_menu_keyboard = InlineKeyboardMarkup(build_menu(ask_stat_menu_list, n_cols=2))
+    ask_stat_menu_keyboard = InlineKeyboardMarkup(build_menu(ask_stat_menu_list, n_cols=3))
     query.edit_message_text(
         text="Выбери статистику", reply_markup=ask_stat_menu_keyboard
     )
     return STAT_MENU
 
+def ask_cell_stat_menu(update, _):
+    query = update.callback_query
+    query.answer()
+    ask_cell_stat_menu_list = [
+        InlineKeyboardButton("По дате", callback_data='ASK_cell_stat_orderby_date'),
+        InlineKeyboardButton("По ячейке", callback_data='ASK_cell_stat_orderby_cell'),
+        InlineKeyboardButton("Домой", callback_data='home_menu'),
+    ]
+    ask_cell_stat_menu_keyboard = InlineKeyboardMarkup(build_menu(ask_cell_stat_menu_list, n_cols=2))
+    query.edit_message_text(
+        text="Выбери сортировку", reply_markup=ask_cell_stat_menu_keyboard)
+    return CELL_STAT_MENU
+
+def ask_cell_stat_choice(update, _):
+    query = update.callback_query
+    query.answer()
+    ask_cell_stat_menu_list = [
+        InlineKeyboardButton("По дате", callback_data='ASK_cell_stat_orderby_date'),
+        InlineKeyboardButton("По ячейке", callback_data='ASK_cell_stat_orderby_cell'),
+        InlineKeyboardButton("Домой", callback_data='home_menu'),
+    ]
+    ask_cell_stat_menu_keyboard = InlineKeyboardMarkup(build_menu(ask_cell_stat_menu_list, n_cols=2))
+    if query.data == 'ASK_cell_stat_orderby_date':
+        query.edit_message_text(
+            text=db_ask_cell_stat('id'), reply_markup=ask_cell_stat_menu_keyboard)
+    elif query.data == 'ASK_cell_stat_orderby_cell':
+        query.edit_message_text(
+            text=db_ask_cell_stat('section_error'), reply_markup=ask_cell_stat_menu_keyboard)
+    return CELL_STAT_MENU
 
 def ask_month_stat_menu(update, _):
     query = update.callback_query

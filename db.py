@@ -147,10 +147,25 @@ def db_robot_stat_30_days(robot):
     for i in res:
         res_str = res_str + str(i) + '\n'
     cur.close()
-    return f'{robot}:\nКоманда, Секция, Ошибка, Дата, Время\n{res_str}'
+    return f'{robot}:\nКоманда, Секция, Ошибка, Дата, Время\n{"="* 45}\n{res_str}'
+
+def db_ask_cell_stat(order_by):
+    db = sqlite3.connect('robots.db')
+    cur = db.cursor()
+    cur.execute(f"""select  SECTION_error, cmd_error, faults, date, time
+                    from robot_error
+                    where CMD_error is not null
+                    order by {order_by}""")
+    res = cur.fetchall()
+    res_str = ''
+    for i in res:
+        res_str = res_str + str(i) + '\n'
+    cur.close()
+    return f'Секция, Команда, Ошибка, Дата, Время\n{"="* 45}\n{res_str}'
 
 if __name__ == '__main__':
-    print(db_robot_stat_30_days('Желтый'))
+    print(db_ask_cell_stat('section_error'))
+    #print(db_robot_stat_30_days('Желтый'))
     # print(db_who_is_most_broken_in_current_month("11"))
     # print(db_who_fixed_in_current_month(10))
     # db_error_insert('Голубой', date=time.strftime("%Y-%m-%d"), time=time.strftime("%H:%M:%S"))

@@ -14,7 +14,7 @@ from admin_panel import ask_stat_menu, ask_commands_menu, schedule_menu, home_me
     SCHEDULE_MENU, ask_month_stat_menu, ASK_STAT_MONTH_MENU, ask_month_choice, ask_robot_menu, ROBOT_MENU, \
     ask_robot_choice, \
     SCHEDULE_UPLOAD_MENU, schedule_month_menu, SCHEDULE_MONTH_MENU, schedule_month_choice, schedule_upload, \
-    schedule_show
+    schedule_show, CELL_STAT_MENU, ask_cell_stat_choice, ask_cell_stat_menu
 
 bot = telebot.TeleBot(TG_TOKEN)
 
@@ -50,6 +50,13 @@ def main():
                     CallbackQueryHandler(ask_month_stat_menu, pattern='ASK_month_stat'),
                     CallbackQueryHandler(ask_robot_menu,
                                          pattern='ASK_robot_menu'),
+                    CallbackQueryHandler(ask_cell_stat_menu,
+                                         pattern='ASK_cell_stat_menu'),
+                ],
+            CELL_STAT_MENU:
+                [
+                    CallbackQueryHandler(home_menu, pattern='home_menu'),
+                    CallbackQueryHandler(ask_cell_stat_choice, pattern='ASK_cell_stat_orderby_date|ASK_cell_stat_orderby_cell'),
                 ],
             COMMANDS_MENU:
                 [
@@ -87,7 +94,7 @@ def main():
         },
         fallbacks=[MessageHandler(Filters.user([423057805, 237426192]) & Filters.regex('/Admin'), home_menu)]))
 
-    # my_bot.dispatcher.add_error_handler(error_hand)
+    my_bot.dispatcher.add_error_handler(error_hand)
     try:
         def pol():
             my_bot.start_polling()
