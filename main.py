@@ -2,8 +2,6 @@ import telebot
 from aiogram.types import ReplyKeyboardRemove, \
     ReplyKeyboardMarkup, KeyboardButton, \
     InlineKeyboardMarkup, InlineKeyboardButton
-from telebot import types
-from telebot import apihelper
 from funcbot import *
 from telegram import Update
 from telegram.ext import CommandHandler, CallbackQueryHandler, MessageHandler, Updater, Filters, ConversationHandler, \
@@ -56,7 +54,8 @@ def main():
             CELL_STAT_MENU:
                 [
                     CallbackQueryHandler(home_menu, pattern='home_menu'),
-                    CallbackQueryHandler(ask_cell_stat_choice, pattern='ASK_cell_stat_orderby_date|ASK_cell_stat_orderby_cell'),
+                    CallbackQueryHandler(ask_cell_stat_choice,
+                                         pattern='ASK_cell_stat_orderby_date|ASK_cell_stat_orderby_cell'),
                 ],
             COMMANDS_MENU:
                 [
@@ -95,16 +94,16 @@ def main():
         fallbacks=[MessageHandler(Filters.user([423057805, 237426192]) & Filters.regex('/Admin'), home_menu)]))
 
     my_bot.dispatcher.add_error_handler(error_hand)
-    try:
-        def pol():
-            my_bot.start_polling()
-            my_bot.idle()
+    # try:
+    # def pol():
+    my_bot.start_polling()
+    my_bot.idle()
 
-        pol()
-    except Exception as e:
-        print('e')
-        sleep(10)
-        pol()
+    # pol()
+    # except Exception as e:
+    #     print('e')
+    #     sleep(10)
+    #     pol()
 
 
 if __name__ == "__main__":

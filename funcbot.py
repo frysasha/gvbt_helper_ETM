@@ -1,3 +1,5 @@
+import csv
+from datetime import datetime
 from time import sleep, strftime
 from settingsbot import *
 import subprocess
@@ -8,7 +10,7 @@ import os
 from PIL import Image
 from db import db_update_who_repair, db_who_is_most_broken_off_all_time, db_who_fixed_the_most_off_all_time, \
     db_who_is_most_broken_in_current_month, db_who_fixed_in_current_month, db_who_win_in_prev_month, \
-    db_update_auto_repair, db_error_insert
+    db_update_auto_repair, db_error_insert, db_ask_cell_stat
 import websocket
 import re
 from contextlib import closing
@@ -108,6 +110,7 @@ class Robot:
         db_error_insert(robot=self.name, date=date, time=time, cmd=self._check_ws_cmd(), section=self._check_ws_section(),
                         faults=self.search_fault_text())
 
+
 def update_inline_button(bot):
     try:
         bot.edit_message_reply_markup(ask_channel_id, message_id=last_mes_id, reply_markup=inl_keyboard2)
@@ -120,7 +123,7 @@ def update_inline_button(bot):
 priem_robot = Robot(sticker='CAACAgIAAxkBAAEBV-5fY1yzqRqG6hFdFnC0OmD98UKzSQACBAADjVk3GTq8TbLpDM2NGwQ',
                     name='Приемный', eng_name='priem', log_file=r'V:\priem.rps\logs\faults.log', ws_port="8003")
 blue_robot = Robot(sticker='CAACAgIAAxkBAAEBV6BfYwNb-miwdeZwoM0mY88-6tBJQAACAwADjVk3GYsJmaauajlLGwQ',
-                   name='Синий', eng_name='blue', log_file=r'V:\blue.rps\logs\faults.log', ws_port="8001")
+                   name='Голубой', eng_name='blue', log_file=r'V:\blue.rps\logs\faults.log', ws_port="8001")
 yellow_robot = Robot(sticker='CAACAgIAAxkBAAEBV5xfYwMsdhZK_ojtyb9q1l48Et6EZwACAQADjVk3GTWKtUGHR0TKGwQ',
                      name='Желтый', eng_name='yellow', log_file=r'V:\yellow.rps\logs\faults.log', ws_port="8002")
 
@@ -225,7 +228,6 @@ def ask_pause_button(update, context):
     context.bot.send_photo(chat_id=update.effective_chat.id, photo=open(photopath + 'pause_new.png', 'rb'))
 
 
-
 def ask_work_button(update, context):
     uCliSock.sendto(bytes('work_button', 'cp1251'), SOCKADDR2)
     print('work_button')
@@ -244,8 +246,16 @@ def schedule(update, context):
         context.bot.send_message(update.message.chat_id, 'Нет расписания на текущий месяц')
 
 
+def create_csv_report(db_sql_request, order_by):
+    file_name = 'csv_reports\\'+ str(datetime.now().strftime('%y%m%d.%H%M%S') + '.csv')
+    with open(file_name, 'w') as fp:
+        file_to_write = csv.writer(fp, delimiter=';', lineterminator="\r")
+        file_to_write.writerow(['Секция', 'Команда', 'Робот', 'Ошибка', 'Дата', 'Время'])
+        file_to_write.writerows(db_sql_request(order_by))
+    return file_name
+
 if __name__ == "__main__":
-    pass
+    create_csv_report(db_ask_cell_stat)
     # print(db_who_fixed_in_current_month(strftime('%m')))
     # print(str(db_who_fixed_the_most_off_all_time()))
     # print(str(db_who_is_most_broken_in_current_month()))

@@ -3,22 +3,22 @@ from datetime import date, timedelta, datetime
 import time
 from collections import Counter
 import calendar
-
-db = sqlite3.connect('robots.db')
-cur = db.cursor()
-
-cur.execute("""CREATE TABLE IF NOT EXISTS robot_error(
-    ID INTEGER PRIMARY KEY AUTOINCREMENT,
-   robot TEXT,
-   date DATE,
-   time TIME,
-   who_repair TEXT,
-   auto_repair TEXT,
-   CMD_error TEXT,
-   SECTION_error TEXT,
-   faults TEXT);
-""")
-db.commit()
+#
+# db = sqlite3.connect('robots.db')
+# cur = db.cursor()
+#
+# cur.execute("""CREATE TABLE IF NOT EXISTS robot_error(
+#     ID INTEGER PRIMARY KEY AUTOINCREMENT,
+#    robot TEXT,
+#    date DATE,
+#    time TIME,
+#    who_repair TEXT,
+#    auto_repair TEXT,
+#    CMD_error TEXT,
+#    SECTION_error TEXT,
+#    faults TEXT);
+# """)
+# db.commit()
 
 
 def db_error_insert(robot, date, time, cmd, section, faults):
@@ -141,7 +141,8 @@ def db_robot_stat_30_days(robot):
     cur = db.cursor()
     cur.execute("""select CMD_error, SECTION_error, faults, date, time
                 from robot_error
-                where robot = :robot and CMD_error is not null""", {"robot": robot})
+                where robot = :robot and CMD_error is not null
+                and date between date('now','-30 day') and date('now')""", {"robot": robot})
     res = cur.fetchall()
     res_str = ''
     for i in res:
@@ -152,7 +153,7 @@ def db_robot_stat_30_days(robot):
 def db_ask_cell_stat(order_by):
     db = sqlite3.connect('robots.db')
     cur = db.cursor()
-    cur.execute(f"""select  SECTION_error, cmd_error, faults, date, time
+    cur.execute(f"""select  SECTION_error, cmd_error, robot, faults, date, time
                     from robot_error
                     where CMD_error is not null
                     order by {order_by}""")
@@ -161,7 +162,8 @@ def db_ask_cell_stat(order_by):
     for i in res:
         res_str = res_str + str(i) + '\n'
     cur.close()
-    return f'Секция, Команда, Ошибка, Дата, Время\n{"="* 45}\n{res_str}'
+    #return f'Секция, Команда, Робот, Ошибка, Дата, Время\n{"="* 45}\n{res_str}'
+    return res
 
 if __name__ == '__main__':
     print(db_ask_cell_stat('section_error'))

@@ -1,4 +1,3 @@
-
 import pathlib
 from funcbot import *
 from telegram.ext import CommandHandler, CallbackQueryHandler, MessageHandler, Updater, Filters
@@ -7,19 +6,18 @@ from time import sleep
 from settingsbot import *
 import threading
 import sys
-from db import db_error_insert, db_who_is_most_broken_in_current_month
 from socket import *
 import datetime
 
 HOST = ''
 PORT = 3000
 BUFSIZE = 1024
-SOCKADDR = (HOST,PORT)
-uServSock = socket(AF_INET,SOCK_DGRAM)
+SOCKADDR = (HOST, PORT)
+uServSock = socket(AF_INET, SOCK_DGRAM)
 uServSock.bind(SOCKADDR)
 
-def proverka ():
 
+def proverka():
     global timepriem, last_modpriem, last_modblue, last_modyellow, timeblue, timeyellow
     while True:
         nowtime = time.strftime("%H:%M:%S")  # текущее время
@@ -30,45 +28,43 @@ def proverka ():
             last_modyellow = filepathyellow.stat().st_mtime
         except Exception:
             print('нет доступа к логам!' + strnowtime)
-            sleep(5)
+            sleep(30)
 
         if last_modpriem > timepriem:
             priem_robot.send_error(bot, nowtime)
             timepriem = last_modpriem
             print('Ошибка приемного робота в ' + strnowtime)
-            #db_error_insert(robot='Приемный', date=time.strftime("%Y-%m-%d"), time=nowtime)
             priem_robot.db_error_insert(date=time.strftime("%Y-%m-%d"), time=nowtime)
 
         if last_modblue > timeblue:
             blue_robot.send_error(bot, nowtime)
             timeblue = last_modblue
             print('Ошибка голубого робота в ' + strnowtime)
-            #db_error_insert(robot='Голубой', date=time.strftime("%Y-%m-%d"), time=nowtime)
             blue_robot.db_error_insert(date=time.strftime("%Y-%m-%d"), time=nowtime)
 
         if last_modyellow > timeyellow:
             yellow_robot.send_error(bot, nowtime)
             timeyellow = last_modyellow
             print('Ошибка желтого робота в ' + strnowtime)
-            #db_error_insert(robot='Желтый', date=time.strftime("%Y-%m-%d"), time=nowtime)
             yellow_robot.db_error_insert(date=time.strftime("%Y-%m-%d"), time=nowtime)
 
         sleep(1)
 
-def napominanie():
 
+def napominanie():
     while True:
         nowdatetime = time.strftime("%a:%H:%M:%S")
         if (time.strftime("Sun:22:35:00")) == nowdatetime:
             napominanie_msg(bot)
         sleep(1)
 
+
 def ask_month_stat():
     while True:
         nowtime = time.strftime("%d %H:%M:%S")
-
         if (time.strftime("01 11:00:00")) == nowtime:
-            prev_month = str('0' + str(int(time.strftime("%m")) - 1)) if int(time.strftime("%m")) < 10 else int(time.strftime("%m")) - 1
+            prev_month = str('0' + str(int(time.strftime("%m")) - 1)) if int(time.strftime("%m")) < 10 else int(
+                time.strftime("%m")) - 1
             if prev_month == '00':
                 prev_month = '12'
             try:
@@ -78,8 +74,7 @@ def ask_month_stat():
         sleep(1)
 
 
-
-def wms_report():
+def udp_client():
     while True:
         data, addr = uServSock.recvfrom(BUFSIZE)
         loc_data = data.decode('cp1251')
@@ -87,16 +82,16 @@ def wms_report():
             print('Сформирован ежедневный отчет WMS. Необходимо проверить данные!')
             wms_day_report_message(bot)
         elif loc_data == 'Est reshenie':
-            #print('Есть решение ошибки робота')
             if Robot.resolve_flag:
                 update_inline_button(bot)
         else:
             bot_mes(loc_data)
 
+
 thread1 = threading.Timer(1, proverka)
 thread2 = threading.Timer(1, napominanie)
 thread3 = threading.Timer(1, ask_month_stat)
-thread4 = threading.Timer(1, wms_report)
+thread4 = threading.Timer(1, udp_client)
 
 try:
     thread1.start()
@@ -106,6 +101,3 @@ try:
 
 except Exception:
     print(Exception)
-
-
-
