@@ -1,13 +1,8 @@
 import telebot
-from aiogram.types import ReplyKeyboardRemove, \
-    ReplyKeyboardMarkup, KeyboardButton, \
-    InlineKeyboardMarkup, InlineKeyboardButton
-from funcbot import *
-from telegram import Update
-from telegram.ext import CommandHandler, CallbackQueryHandler, MessageHandler, Updater, Filters, ConversationHandler, \
-    CallbackContext
-from settingsbot import *
-from proverkawhile import *
+from telegram.ext import CallbackQueryHandler, MessageHandler, Updater, Filters, ConversationHandler
+from funcbot import laps_start, laps_zapros, ask_pause_button, schedule, ask_work_button, all_statistic_bot, \
+    all_statistic_gvbt, month_statistic_bot, inline_popravil_button_pressed, inline_reshenie_button_pressed, error_hand
+from settingsbot import TG_TOKEN, nowtimedate, ADMIN_URERS_ID
 from admin_panel import ask_stat_menu, ask_commands_menu, schedule_menu, home_menu, HOME_MENU, STAT_MENU, COMMANDS_MENU, \
     SCHEDULE_MENU, ask_month_stat_menu, ASK_STAT_MONTH_MENU, ask_month_choice, ask_robot_menu, ROBOT_MENU, \
     ask_robot_choice, \
@@ -34,7 +29,7 @@ def main():
                                                        pattern='popravil'))  # реакция на нажатую кнопку "поправил"
     my_bot.dispatcher.add_handler(CallbackQueryHandler(inline_reshenie_button_pressed, pattern='reshenie'))
     my_bot.dispatcher.add_handler(ConversationHandler(
-        entry_points=[MessageHandler(Filters.user([423057805, 237426192]) & Filters.regex('/Admin'), home_menu)],
+        entry_points=[MessageHandler(Filters.user(ADMIN_URERS_ID) & Filters.regex('/Admin'), home_menu)],
         states={
             HOME_MENU:
                 [
@@ -55,7 +50,7 @@ def main():
                 [
                     CallbackQueryHandler(home_menu, pattern='home_menu'),
                     CallbackQueryHandler(ask_cell_stat_choice,
-                                         pattern='ASK_cell_stat_orderby_date|ASK_cell_stat_orderby_cell'),
+                                         pattern='date|section_error'),
                 ],
             COMMANDS_MENU:
                 [
@@ -91,19 +86,12 @@ def main():
                     CallbackQueryHandler(home_menu, pattern='home_menu')
                 ],
         },
-        fallbacks=[MessageHandler(Filters.user([423057805, 237426192]) & Filters.regex('/Admin'), home_menu)]))
+        fallbacks=[MessageHandler(Filters.user(ADMIN_URERS_ID) & Filters.regex('/Admin'), home_menu)]))
 
     my_bot.dispatcher.add_error_handler(error_hand)
-    # try:
-    # def pol():
+
     my_bot.start_polling()
     my_bot.idle()
-
-    # pol()
-    # except Exception as e:
-    #     print('e')
-    #     sleep(10)
-    #     pol()
 
 
 if __name__ == "__main__":

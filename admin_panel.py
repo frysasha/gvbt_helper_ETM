@@ -1,5 +1,4 @@
 import time
-
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ConversationHandler
 from db import db_get_last_6_months, db_who_is_most_broken_in_current_month, \
@@ -56,8 +55,8 @@ def ask_cell_stat_menu(update, _):
     query = update.callback_query
     query.answer()
     ask_cell_stat_menu_list = [
-        InlineKeyboardButton("По дате", callback_data='ASK_cell_stat_orderby_date'),
-        InlineKeyboardButton("По ячейке", callback_data='ASK_cell_stat_orderby_cell'),
+        InlineKeyboardButton("По дате", callback_data='date'),
+        InlineKeyboardButton("По ячейке", callback_data='section_error'),
         InlineKeyboardButton("Домой", callback_data='home_menu'),
     ]
     ask_cell_stat_menu_keyboard = InlineKeyboardMarkup(build_menu(ask_cell_stat_menu_list, n_cols=2))
@@ -69,12 +68,8 @@ def ask_cell_stat_menu(update, _):
 def ask_cell_stat_choice(update, context):
     query = update.callback_query
     query.answer()
-    if query.data == 'ASK_cell_stat_orderby_date':
-        context.bot.send_document(chat_id=update.effective_chat.id,
-                                  document=open(create_csv_report(db_ask_cell_stat, 'date'), 'rb'))
-    elif query.data == 'ASK_cell_stat_orderby_cell':
-        context.bot.send_document(chat_id=update.effective_chat.id,
-                                  document=open(create_csv_report(db_ask_cell_stat, 'section_error'), 'rb'))
+    context.bot.send_document(chat_id=update.effective_chat.id,
+                              document=open(create_csv_report(db_ask_cell_stat, query.data), 'rb'))
     return CELL_STAT_MENU
 
 

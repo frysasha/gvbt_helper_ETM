@@ -1,8 +1,8 @@
+from socket import socket, AF_INET, SOCK_DGRAM
 import telebot
 import pathlib
 from telebot import types
 import time
-from socket import *
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 
 
@@ -56,3 +56,5 @@ nowtimedate = time.strftime("%d.%m.%Y %H:%M:%S")
 timepriem = filepathpriem.stat().st_mtime #время в секундах
 timeblue = filepathblue.stat().st_mtime
 timeyellow = filepathyellow.stat().st_mtime
+
+ADMIN_URERS_ID = [423057805, 237426192]

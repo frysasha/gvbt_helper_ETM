@@ -1,9 +1,6 @@
 import csv
-from datetime import datetime
+from datetime import datetime, time
 from time import sleep, strftime
-from settingsbot import *
-import subprocess
-import re
 from telegram.ext import ConversationHandler
 from telegram.error import BadRequest
 import os
@@ -14,6 +11,8 @@ from db import db_update_who_repair, db_who_is_most_broken_off_all_time, db_who_
 import websocket
 import re
 from contextlib import closing
+from settingsbot import bot, testchannelid, ask_channel_id, frychannelid, sklad_channel, gvbt_replykeyboard, \
+    sklad_keyboard, inl_keyboard, uCliSock, SOCKADDR2, SOCKADDR, inl_keyboard2, inl_keyboard3, SOCKADDR3, photopath
 
 
 def all_statistic_bot(update, context):
@@ -42,9 +41,9 @@ def every_month_statistic_bot(bot, month):
 
 def welcome_message(bot):
     bot.send_message(frychannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
-    # bot.send_message(testchannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
-    # bot.send_message(ask_channel_id, 'Старт бота', reply_markup=gvbt_replykeyboard)
-    # bot.send_message(sklad_channel, 'Старт бота', reply_markup=sklad_keyboard)  # вывод нижней клавы
+    bot.send_message(testchannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
+    bot.send_message(ask_channel_id, 'Старт бота', reply_markup=gvbt_replykeyboard)
+    bot.send_message(sklad_channel, 'Старт бота', reply_markup=sklad_keyboard)  # вывод нижней клавы
 
 
 def error_hand(update, context):
@@ -247,15 +246,20 @@ def schedule(update, context):
 
 
 def create_csv_report(db_sql_request, order_by):
-    file_name = 'csv_reports\\'+ str(datetime.now().strftime('%y%m%d.%H%M%S') + '.csv')
-    with open(file_name, 'w') as fp:
+    unic_file_name = 'csv_reports\\' + str(datetime.now().strftime('%y%m%d.%H%M%S') + '.csv')
+    with open(unic_file_name, 'w') as fp:
         file_to_write = csv.writer(fp, delimiter=';', lineterminator="\r")
         file_to_write.writerow(['Секция', 'Команда', 'Робот', 'Ошибка', 'Дата', 'Время'])
         file_to_write.writerows(db_sql_request(order_by))
-    return file_name
+    return unic_file_name
+
+
+def month_statistic_gvbt(bot):
+    pass
+
 
 if __name__ == "__main__":
-    create_csv_report(db_ask_cell_stat)
+    create_csv_report(db_ask_cell_stat, 'date')
     # print(db_who_fixed_in_current_month(strftime('%m')))
     # print(str(db_who_fixed_the_most_off_all_time()))
     # print(str(db_who_is_most_broken_in_current_month()))

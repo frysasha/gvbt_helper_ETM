@@ -1,13 +1,10 @@
-import pathlib
-from funcbot import *
-from telegram.ext import CommandHandler, CallbackQueryHandler, MessageHandler, Updater, Filters
+from socket import socket, AF_INET, SOCK_DGRAM
 import time
 from time import sleep
-from settingsbot import *
 import threading
-import sys
-from socket import *
-import datetime
+from funcbot import priem_robot, blue_robot, yellow_robot, napominanie_msg, every_month_statistic_bot, \
+    wms_day_report_message, Robot, update_inline_button, bot_mes
+from settingsbot import filepathpriem, filepathblue, filepathyellow, bot
 
 HOST = ''
 PORT = 3000
