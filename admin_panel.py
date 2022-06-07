@@ -1,9 +1,11 @@
 import time
+
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ConversationHandler
+
 from db import db_get_last_6_months, db_who_is_most_broken_in_current_month, \
     db_robot_stat_30_days, db_ask_cell_stat
-from funcbot import create_csv_report
+from funcbot import create_csv_report, bot_mes
 
 HOME_MENU, STAT_MENU, COMMANDS_MENU, SCHEDULE_MENU, SCHEDULE_UPLOAD_MENU, ASK_STAT_MONTH_MENU, ROBOT_MENU, \
 CELL_STAT_MENU, SCHEDULE_MONTH_MENU = range(9)
@@ -186,11 +188,13 @@ def schedule_month_choice(update, _):
 
 
 def schedule_upload(update, context):
+    who_upload = update.message.chat.first_name
     file = update.message.photo[-1].file_id
     obj = context.bot.get_file(file)
     obj.download('Z:\\python\\расписание\\' + selected_month + '.jpg')
     update.message.reply_text(text="Расписание загружено")
-    print("загрузили новое расписание" + selected_month)
+    bot_mes(f'{who_upload} загрузил новое расписание. Месяц - {selected_month}')
+    print(f"{who_upload} загрузил новое расписание. Месяц - {selected_month}")
     return ConversationHandler.END
 
 
@@ -203,3 +207,7 @@ def schedule_show(update, context):
     except:
         context.bot.send_message(chat_id=update.effective_chat.id, text='Нет расписания на текущий месяц')
     return SCHEDULE_MENU
+
+def wrong_content_file(update, context):
+    context.bot.send_message(chat_id=update.effective_chat.id, text='Неправильный формат. Нужно отправить картинку')
+

@@ -1,4 +1,5 @@
 import csv
+import subprocess
 from datetime import datetime, time
 from time import sleep, strftime
 from telegram.ext import ConversationHandler
@@ -28,9 +29,9 @@ def all_statistic_gvbt(update, context):
 
 
 def month_statistic_bot(update, context):
-    context.bot.send_message(update.message.chat_id, str(db_who_is_most_broken_in_current_month(time.strftime("%m"))))
+    context.bot.send_message(update.message.chat_id, str(db_who_is_most_broken_in_current_month(strftime("%m"))))
     context.bot.send_message(update.message.chat_id,
-                             f'Кто чинил:\n{str(db_who_fixed_in_current_month(time.strftime("%m")))}')
+                             f'Кто чинил:\n{str(db_who_fixed_in_current_month(strftime("%m")))}')
 
 
 def every_month_statistic_bot(bot, month):
@@ -62,7 +63,6 @@ class Robot:
         self.sticker = sticker
         self.name = name
         self.eng_name = eng_name
-
         self.log_file = log_file
         self.ws_port = ws_port
 
@@ -133,7 +133,7 @@ def inline_popravil_button_pressed(bot, update):
         chat_id=query.message.chat.id,
         message_id=query.message.message_id, reply_markup='')  # убирает кнопку в сообщении
     update.bot.send_message(ask_channel_id, f'Робота поправил {query.from_user.first_name} спасибо!')
-    print(f'Робота поправил {query.from_user.first_name} в {time.strftime("%d.%m.%Y %H:%M:%S")}')
+    print(f'Робота поправил {query.from_user.first_name} в {strftime("%d.%m.%Y %H:%M:%S")}')
     uCliSock.sendto(bytes(f'{query.from_user.first_name} поправил робота', 'cp1251'), SOCKADDR)
     db_update_who_repair(query.from_user.first_name)
 
@@ -150,7 +150,7 @@ def inline_reshenie_button_pressed(bot, update):
         if cmd_state_now == 'FAILURE':
             update.bot.send_message(ask_channel_id, f'{query.from_user.first_name} нажал кнопку Решение')
             uCliSock.sendto(bytes('Resolve problem', 'utf-8'), SOCKADDR2)
-            print(f'{query.from_user.first_name} в {time.strftime("%d.%m.%Y %H:%M:%S")} нажал кнопку "Решение"')
+            print(f'{query.from_user.first_name} в {strftime("%d.%m.%Y %H:%M:%S")} нажал кнопку "Решение"')
             uCliSock.sendto(bytes(f'{query.from_user.first_name} нажал кнопку Решение', 'cp1251'), SOCKADDR)
             db_update_auto_repair()
         else:
@@ -167,8 +167,8 @@ def napominanie_msg(bot):
 
 
 def wms_day_report_message(bot):
-    today = time.strftime("%d.%m.%Y")
-    report_file = 'C:\\Users\\shlyakhov_ai\\PycharmProjects\\WMS_Report 2\\отчеты\\' + today + '.xlsx'
+    today = strftime("%d.%m.%Y")
+    report_file = 'S:\\09.ГВБТ\\WMS_Rerort\\' + today + '.xlsx'
     bot.send_message(testchannelid, ('Сформирован ежедневный отчет WMS. Необходимо проверить данные!'))
     wmsreport = open(report_file, 'rb')
     bot.send_document(testchannelid, wmsreport)
@@ -240,7 +240,8 @@ def ask_work_button(update, context):
 def schedule(update, context):
     path = 'Z:\\python\\расписание\\'
     try:
-        context.bot.send_photo(chat_id=update.message.chat_id, photo=open(path + time.strftime('%m') + '.jpg', 'rb'))
+        context.bot.send_photo(chat_id=update.message.chat_id, photo=open(path + strftime('%m') + '.jpg', 'rb'))
+
     except:
         context.bot.send_message(update.message.chat_id, 'Нет расписания на текущий месяц')
 
@@ -252,10 +253,6 @@ def create_csv_report(db_sql_request, order_by):
         file_to_write.writerow(['Секция', 'Команда', 'Робот', 'Ошибка', 'Дата', 'Время'])
         file_to_write.writerows(db_sql_request(order_by))
     return unic_file_name
-
-
-def month_statistic_gvbt(bot):
-    pass
 
 
 if __name__ == "__main__":

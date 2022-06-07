@@ -4,7 +4,7 @@ from time import sleep
 import threading
 from funcbot import priem_robot, blue_robot, yellow_robot, napominanie_msg, every_month_statistic_bot, \
     wms_day_report_message, Robot, update_inline_button, bot_mes
-from settingsbot import filepathpriem, filepathblue, filepathyellow, bot
+from settingsbot import filepathpriem, filepathblue, filepathyellow, bot, timeblue, timepriem, timeyellow
 
 HOST = ''
 PORT = 3000
@@ -15,7 +15,7 @@ uServSock.bind(SOCKADDR)
 
 
 def proverka():
-    global timepriem, last_modpriem, last_modblue, last_modyellow, timeblue, timeyellow
+    global last_modpriem, last_modblue, last_modyellow, timepriem, timeblue, timeyellow
     while True:
         nowtime = time.strftime("%H:%M:%S")  # текущее время
         strnowtime = str(time.strftime("%d.%m.%Y %H:%M:%S"))
@@ -59,7 +59,7 @@ def napominanie():
 def ask_month_stat():
     while True:
         nowtime = time.strftime("%d %H:%M:%S")
-        if (time.strftime("01 11:00:00")) == nowtime:
+        if (time.strftime("01 10:00:00")) == nowtime:
             prev_month = str('0' + str(int(time.strftime("%m")) - 1)) if int(time.strftime("%m")) < 10 else int(
                 time.strftime("%m")) - 1
             if prev_month == '00':
@@ -89,12 +89,16 @@ thread1 = threading.Timer(1, proverka)
 thread2 = threading.Timer(1, napominanie)
 thread3 = threading.Timer(1, ask_month_stat)
 thread4 = threading.Timer(1, udp_client)
+def main_threads():
+    try:
+        thread1.start()
+        thread2.start()
+        thread3.start()
+        thread4.start()
 
-try:
-    thread1.start()
-    thread2.start()
-    thread3.start()
-    thread4.start()
+    except Exception:
+        print(Exception)
 
-except Exception:
-    print(Exception)
+
+if __name__ == '__main__':
+    main_threads()

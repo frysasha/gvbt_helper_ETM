@@ -1,20 +1,22 @@
 import telebot
 from telegram.ext import CallbackQueryHandler, MessageHandler, Updater, Filters, ConversationHandler
-from funcbot import laps_start, laps_zapros, ask_pause_button, schedule, ask_work_button, all_statistic_bot, \
-    all_statistic_gvbt, month_statistic_bot, inline_popravil_button_pressed, inline_reshenie_button_pressed, error_hand
-from settingsbot import TG_TOKEN, nowtimedate, ADMIN_URERS_ID
+
 from admin_panel import ask_stat_menu, ask_commands_menu, schedule_menu, home_menu, HOME_MENU, STAT_MENU, COMMANDS_MENU, \
     SCHEDULE_MENU, ask_month_stat_menu, ASK_STAT_MONTH_MENU, ask_month_choice, ask_robot_menu, ROBOT_MENU, \
     ask_robot_choice, \
     SCHEDULE_UPLOAD_MENU, schedule_month_menu, SCHEDULE_MONTH_MENU, schedule_month_choice, schedule_upload, \
-    schedule_show, CELL_STAT_MENU, ask_cell_stat_choice, ask_cell_stat_menu
+    schedule_show, CELL_STAT_MENU, ask_cell_stat_choice, ask_cell_stat_menu, wrong_content_file
+from funcbot import laps_start, laps_zapros, ask_pause_button, schedule, ask_work_button, all_statistic_bot, \
+    all_statistic_gvbt, month_statistic_bot, inline_popravil_button_pressed, inline_reshenie_button_pressed, error_hand
+from proverkawhile import main_threads
+from settingsbot import TG_TOKEN, nowtimedate, ADMIN_URERS_ID
 
 bot = telebot.TeleBot(TG_TOKEN)
 
 
 def main():
-    print('Старт бота был в ' + nowtimedate)  # запись в лог о старте
-    my_bot = Updater(TG_TOKEN, use_context=True)  # обьявление бота
+    print('Старт бота был в ' + nowtimedate)
+    my_bot = Updater(TG_TOKEN, use_context=True)
     my_bot.dispatcher.add_handler(ConversationHandler(entry_points=[MessageHandler(Filters.regex('LAPS'), laps_start)],
                                                       states={
                                                           'user_name': [MessageHandler(Filters.text, laps_zapros)]},
@@ -66,7 +68,8 @@ def main():
                 ],
             SCHEDULE_UPLOAD_MENU:
                 [
-                    MessageHandler(Filters.photo, schedule_upload)
+                    MessageHandler(Filters.photo, schedule_upload),
+                    MessageHandler(~ Filters.photo, wrong_content_file)
                 ],
             SCHEDULE_MONTH_MENU:
                 [
@@ -96,4 +99,6 @@ def main():
 
 if __name__ == "__main__":
     # welcome_message(bot)
+    main_threads()
     main()
+

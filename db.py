@@ -156,13 +156,13 @@ def db_ask_cell_stat(order_by):
     cur.execute(f"""select  SECTION_error, cmd_error, robot, faults, date, time
                     from robot_error
                     where CMD_error is not null
+                    and date between date('now','-1 year') and date('now')
                     order by {order_by}""")
     res = cur.fetchall()
     res_str = ''
     for i in res:
         res_str = res_str + str(i) + '\n'
     cur.close()
-    #return f'Секция, Команда, Робот, Ошибка, Дата, Время\n{"="* 45}\n{res_str}'
     return res
 
 if __name__ == '__main__':
