@@ -6,6 +6,8 @@ from admin_panel import ask_stat_menu, ask_commands_menu, schedule_menu, home_me
     ask_robot_choice, \
     SCHEDULE_UPLOAD_MENU, schedule_month_menu, SCHEDULE_MONTH_MENU, schedule_month_choice, schedule_upload, \
     schedule_show, CELL_STAT_MENU, ask_cell_stat_choice, ask_cell_stat_menu, wrong_content_file
+from wms_user_menu import wms_menu, wms_user_list_menu, are_you_sure_menu, WMS_MENU, WMS_USER_LIST_MENU, \
+    ARE_YOU_SURE_MENU, exit_from_wms_menu, wrong_number
 from funcbot import laps_start, laps_zapros, ask_pause_button, schedule, ask_work_button, all_statistic_bot, \
     all_statistic_gvbt, month_statistic_bot, inline_popravil_button_pressed, inline_reshenie_button_pressed, error_hand
 from proverkawhile import main_threads
@@ -91,7 +93,32 @@ def main():
         },
         fallbacks=[MessageHandler(Filters.user(ADMIN_URERS_ID) & Filters.regex('/Admin'), home_menu)]))
 
-    my_bot.dispatcher.add_error_handler(error_hand)
+    my_bot.dispatcher.add_handler(ConversationHandler(
+        entry_points=[MessageHandler(Filters.user(ADMIN_URERS_ID) & Filters.regex('/WMS'), wms_menu)],
+        states={
+            WMS_MENU:
+                [
+                    CallbackQueryHandler(wms_user_list_menu, pattern='WMS_USER_LIST_MENU'),
+                    CallbackQueryHandler(exit_from_wms_menu, pattern='exit'),
+                ],
+            WMS_USER_LIST_MENU:
+                [
+                    CallbackQueryHandler(exit_from_wms_menu, pattern='exit'),
+                    MessageHandler(Filters.regex(r'^[1-9][0-9]?$|^100$'), are_you_sure_menu),
+                    MessageHandler(Filters.text, wrong_number),
+                ],
+            ARE_YOU_SURE_MENU:
+                [
+                    CallbackQueryHandler(wms_user_list_menu, pattern='WMS_USER_LIST_MENU'),
+                    CallbackQueryHandler(exit_from_wms_menu, pattern='exit'),
+                    CallbackQueryHandler(are_you_sure_menu, pattern='[01-100]'),
+
+                ],
+        },
+        fallbacks=[MessageHandler(Filters.user(ADMIN_URERS_ID) & Filters.regex('/WMS'), wms_menu)]
+    ))
+
+    # my_bot.dispatcher.add_error_handler(error_hand)
 
     my_bot.start_polling()
     my_bot.idle()
