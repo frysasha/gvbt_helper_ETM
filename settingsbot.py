@@ -58,3 +58,5 @@ timeblue = filepathblue.stat().st_mtime
 timeyellow = filepathyellow.stat().st_mtime
 
 ADMIN_URERS_ID = [423057805, 237426192]
+SKLAD_GROUP_ID = None
+

@@ -27,14 +27,15 @@ def get_browser_driver():
 
 
 def get_user_list():
+    global browser_driver
+    global wms_user_dict
+    wms_user_dict.clear()
     user_list_str = ''
     driver = get_browser_driver()
     driver.minimize_window()
-    global browser_driver
     browser_driver = driver
     wait = WebDriverWait(driver, 150)
     driver.get(WMS_OHE_AUTH_URL)
-
     driver.implicitly_wait(150)
     login = driver.find_element(By.ID, 'USR')
     password = driver.find_element(By.ID, 'PSD')
@@ -70,6 +71,7 @@ def del_user_from_wms(user_name):
 def quit_browser_driver():
     if browser_driver:
         browser_driver.quit()
+        print('Закрываю браузер')
     else:
         print(f'Не определен driver!')
 

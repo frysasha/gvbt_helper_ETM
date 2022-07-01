@@ -38,6 +38,7 @@ def wms_user_list_menu(update, context):
     quit_browser_driver()
     query = update.callback_query
     query.answer()
+    query.edit_message_text(text="Загрузка...")
     wms_usr_menu_list = [
         InlineKeyboardButton("Выйти", callback_data='exit'),
     ]

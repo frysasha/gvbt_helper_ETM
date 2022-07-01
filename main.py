@@ -94,7 +94,7 @@ def main():
         fallbacks=[MessageHandler(Filters.user(ADMIN_URERS_ID) & Filters.regex('/Admin'), home_menu)]))
 
     my_bot.dispatcher.add_handler(ConversationHandler(
-        entry_points=[MessageHandler(Filters.user(ADMIN_URERS_ID) & Filters.regex('/WMS'), wms_menu)],
+        entry_points=[MessageHandler((Filters.user(ADMIN_URERS_ID) | Filters.chat()) & Filters.regex('/WMS'), wms_menu)],
         states={
             WMS_MENU:
                 [
