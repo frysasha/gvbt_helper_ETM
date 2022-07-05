@@ -36,8 +36,9 @@ gvbt_replykeyboard = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
 sklad_keyboard = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)#кнопка снизу клавы
 gvbt_replykeyboard.row('LAPS 🔐', 'АСК Пауза 🤖', 'АСК в работу 🤖', 'Расписание ГВБТ 📅') # первая строка меню
 gvbt_replykeyboard.row('Статистика поломок общая','Статистика починок общая') # вторая строка меню
-gvbt_replykeyboard.row('Статистика за текущий месяц') # третья строка меню
-sklad_keyboard.row('АСК Пауза 🤖', 'АСК в работу 🤖', 'Расписание ГВБТ 📅')
+gvbt_replykeyboard.row('Статистика за текущий месяц', '/Admin', '/WMS') # третья строка меню
+sklad_keyboard.row('АСК Пауза 🤖', 'АСК в работу 🤖')
+sklad_keyboard.row('Расписание ГВБТ 📅', '/WMS')
 
 inl_keyboard = types.InlineKeyboardMarkup() #кнопка в сообщении
 inl_keyboard.row(types.InlineKeyboardButton('Поправил', callback_data='popravil'))

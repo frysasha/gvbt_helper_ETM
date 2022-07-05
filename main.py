@@ -9,7 +9,8 @@ from admin_panel import ask_stat_menu, ask_commands_menu, schedule_menu, home_me
 from wms_user_menu import wms_menu, wms_user_list_menu, are_you_sure_menu, WMS_MENU, WMS_USER_LIST_MENU, \
     ARE_YOU_SURE_MENU, exit_from_wms_menu, wrong_number
 from funcbot import laps_start, laps_zapros, ask_pause_button, schedule, ask_work_button, all_statistic_bot, \
-    all_statistic_gvbt, month_statistic_bot, inline_popravil_button_pressed, inline_reshenie_button_pressed, error_hand
+    all_statistic_gvbt, month_statistic_bot, inline_popravil_button_pressed, inline_reshenie_button_pressed, error_hand, \
+    welcome_message
 from proverkawhile import main_threads
 from settingsbot import TG_TOKEN, nowtimedate, ADMIN_URERS_ID
 
@@ -111,7 +112,7 @@ def main():
                 [
                     CallbackQueryHandler(wms_user_list_menu, pattern='WMS_USER_LIST_MENU'),
                     CallbackQueryHandler(exit_from_wms_menu, pattern='exit'),
-                    CallbackQueryHandler(are_you_sure_menu, pattern='[01-100]'),
+                    CallbackQueryHandler(are_you_sure_menu, pattern=r'^[1-9][0-9]?$|^100$'),
 
                 ],
         },
@@ -125,7 +126,7 @@ def main():
 
 
 if __name__ == "__main__":
-    # welcome_message(bot)
+    #welcome_message(bot)
     main_threads()
     main()
 

@@ -33,18 +33,21 @@ def wms_menu(update, _):
         )
     return WMS_MENU
 
+wms_user_list_query = None
 
 def wms_user_list_menu(update, context):
     quit_browser_driver()
     query = update.callback_query
     query.answer()
+    global wms_user_list_query
+    wms_user_list_query = query
     query.edit_message_text(text="Загрузка...")
     wms_usr_menu_list = [
         InlineKeyboardButton("Выйти", callback_data='exit'),
     ]
     menu_keyboard = InlineKeyboardMarkup(build_menu(wms_usr_menu_list, n_cols=1))
-    context.bot.send_message(chat_id=update.effective_chat.id, text=get_user_list(), reply_markup=menu_keyboard)
-    query.edit_message_text(text="Введи номер пользователя")
+    query.edit_message_text(text=get_user_list(), reply_markup=menu_keyboard)
+    #query.edit_message_text(text="Введи номер пользователя")
     return WMS_USER_LIST_MENU
 
 
@@ -57,7 +60,6 @@ def are_you_sure_menu(update, context):
         del_user_from_wms(wms_user_name)
         query.edit_message_text(text=f'{wms_user_name} Удален', reply_markup='')
     else:
-
         wms_user_menu_list = [
             InlineKeyboardButton("Удалить из WMS", callback_data=int(update.message.text)),
             InlineKeyboardButton("Список пользователей ТСД", callback_data='WMS_USER_LIST_MENU'),
@@ -66,12 +68,10 @@ def are_you_sure_menu(update, context):
         menu_keyboard = InlineKeyboardMarkup(build_menu(wms_user_menu_list, n_cols=1))
         try:
             wms_user_name = wms_user_dict[update.message.text]
-            context.bot.send_message(chat_id=update.effective_chat.id,
-                                     text=f"Удалить пользователя {wms_user_name}?", reply_markup=menu_keyboard)
+            wms_user_list_query.edit_message_text(text=f"Удалить пользователя {wms_user_name}?", reply_markup=menu_keyboard)
             return ARE_YOU_SURE_MENU
         except:
-            context.bot.send_message(chat_id=update.effective_chat.id,
-                                     text=f"Пользователь {update.message.text} не найден")
+            context.bot.send_message(chat_id=update.effective_chat.id, text=f"Пользователь {update.message.text} не найден")
             return WMS_USER_LIST_MENU
 
 
