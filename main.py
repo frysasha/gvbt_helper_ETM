@@ -13,6 +13,10 @@ from funcbot import laps_start, laps_zapros, ask_pause_button, schedule, ask_wor
     welcome_message
 from proverkawhile import main_threads
 from settingsbot import TG_TOKEN, nowtimedate, ADMIN_URERS_ID
+from telegram.utils.request import NetworkError
+from requests.adapters import ProxyError
+from time import sleep
+
 
 bot = telebot.TeleBot(TG_TOKEN)
 
@@ -95,7 +99,7 @@ def main():
         fallbacks=[MessageHandler(Filters.user(ADMIN_URERS_ID) & Filters.regex('/Admin'), home_menu)]))
 
     my_bot.dispatcher.add_handler(ConversationHandler(
-        entry_points=[MessageHandler((Filters.user(ADMIN_URERS_ID) | Filters.chat()) & Filters.regex('/WMS'), wms_menu)],
+        entry_points=[MessageHandler(Filters.regex('/WMS'), wms_menu)],
         states={
             WMS_MENU:
                 [
@@ -120,9 +124,19 @@ def main():
     ))
 
     # my_bot.dispatcher.add_error_handler(error_hand)
-
-    my_bot.start_polling()
-    my_bot.idle()
+    def start():
+        my_bot.start_polling(timeout=20, bootstrap_retries=5)
+        my_bot.idle()
+    try:
+        start()
+    except NetworkError:
+        print('network error!!')
+        sleep(2)
+        start()
+    except ProxyError:
+        print('proxy error!!')
+        sleep(2)
+        start()
 
 
 if __name__ == "__main__":

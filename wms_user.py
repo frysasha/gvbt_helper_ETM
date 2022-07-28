@@ -34,9 +34,9 @@ def get_user_list():
     driver = get_browser_driver()
     driver.minimize_window()
     browser_driver = driver
-    wait = WebDriverWait(driver, 150)
+    wait = WebDriverWait(driver, 30)
     driver.get(WMS_OHE_AUTH_URL)
-    driver.implicitly_wait(150)
+    driver.implicitly_wait(5)
     login = driver.find_element(By.ID, 'USR')
     password = driver.find_element(By.ID, 'PSD')
     login.send_keys(USER_AUTH_LOGIN)
@@ -47,13 +47,19 @@ def get_user_list():
     admin_panel_button.click()
     user_control_button = wait.until(EC.element_to_be_clickable((By.ID, 'ui-id-17')))
     user_control_button.click()
-    elements_usr_list = wait.until(EC.visibility_of_all_elements_located((By.XPATH, '//*[@id="tlnusers"]/tbody/tr')))
-    for id, element in enumerate(elements_usr_list):
-        if id > 0:
-            wms_user_dict[str(id)] = element.get_attribute('id')
-            user_list_str += f"{id}. {element.get_attribute('id')}\n"
+    try:
+        no_users = driver.find_element(By.CSS_SELECTOR, '#tabs-1 > p:nth-child(1)')
+        return 'Нет активных пользователей ТСД'
+    except:
 
-    return user_list_str
+        elements_usr_list = wait.until(EC.visibility_of_all_elements_located((By.XPATH, '//*[@id="tlnusers"]/tbody/tr')))
+        for id, element in enumerate(elements_usr_list):
+            if id > 0:
+                wms_user_dict[str(id)] = element.get_attribute('id')
+                user_list_str += f"{id}. {element.get_attribute('id')}\n"
+
+        return user_list_str
+
 
 
 def del_user_from_wms(user_name):

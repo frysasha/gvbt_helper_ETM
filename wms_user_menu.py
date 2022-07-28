@@ -42,11 +42,16 @@ def wms_user_list_menu(update, context):
     global wms_user_list_query
     wms_user_list_query = query
     query.edit_message_text(text="Загрузка...")
+    user_list = get_user_list()
+    if user_list == 'Нет активных пользователей ТСД':
+        query.edit_message_text(text=user_list)
+        quit_browser_driver()
+        return ConversationHandler.END
     wms_usr_menu_list = [
         InlineKeyboardButton("Выйти", callback_data='exit'),
     ]
     menu_keyboard = InlineKeyboardMarkup(build_menu(wms_usr_menu_list, n_cols=1))
-    query.edit_message_text(text=get_user_list(), reply_markup=menu_keyboard)
+    query.edit_message_text(text=user_list, reply_markup=menu_keyboard)
     #query.edit_message_text(text="Введи номер пользователя")
     return WMS_USER_LIST_MENU
 

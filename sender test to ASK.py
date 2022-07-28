@@ -35,6 +35,6 @@ def send_to_ASK():
     uCliSock.close()
 
 if __name__ == '__main__':
-    #send()
-    send_robot_resolve()
+    send()
+    #send_robot_resolve()
     #send_to_ASK()
