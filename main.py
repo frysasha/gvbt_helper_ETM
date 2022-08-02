@@ -123,7 +123,7 @@ def main():
         fallbacks=[MessageHandler(Filters.user(ADMIN_URERS_ID) & Filters.regex('/WMS'), wms_menu)]
     ))
 
-    # my_bot.dispatcher.add_error_handler(error_hand)
+    my_bot.dispatcher.add_error_handler(error_hand)
     def start():
         my_bot.start_polling(timeout=20, bootstrap_retries=5)
         my_bot.idle()

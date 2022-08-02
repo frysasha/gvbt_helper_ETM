@@ -5,3 +5,5 @@ pathlib>=1.0.1
 PyAutoGUI>=0.9.53
 pyTelegramBotAPI>=4.5.1
 telebot>=0.0.4
+python-telegram-bot>=13.12
+pillow>=9.1.1
