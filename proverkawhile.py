@@ -10,8 +10,7 @@ HOST = ''
 PORT = 3000
 BUFSIZE = 1024
 SOCKADDR = (HOST, PORT)
-# uServSock = socket(AF_INET, SOCK_DGRAM)
-# uServSock.bind(SOCKADDR)
+
 
 
 def proverka():
@@ -72,6 +71,8 @@ def ask_month_stat():
 
 
 def udp_client():
+    uServSock = socket(AF_INET, SOCK_DGRAM)
+    #uServSock.bind(SOCKADDR)
     while True:
         data, addr = uServSock.recvfrom(BUFSIZE)
         loc_data = data.decode('cp1251')
