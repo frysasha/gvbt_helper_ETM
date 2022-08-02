@@ -1,5 +1,5 @@
 from socket import socket, AF_INET, SOCK_DGRAM
-import telebot
+from telebot import types
 import pathlib
 import telebot
 import time
@@ -32,19 +32,19 @@ zabbixcpchannel = '-1001208212827' #заббикс цп
 ask_channel_id = "-713732030" # ASK ETM channel
 frychannelid = "423057805"
 sklad_channel = '-784067672'
-gvbt_replykeyboard = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
-sklad_keyboard = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)#кнопка снизу клавы
+gvbt_replykeyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
+sklad_keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)#кнопка снизу клавы
 gvbt_replykeyboard.row('LAPS 🔐', 'АСК Пауза 🤖', 'АСК в работу 🤖', 'Расписание ГВБТ 📅') # первая строка меню
 gvbt_replykeyboard.row('Статистика поломок общая','Статистика починок общая') # вторая строка меню
 gvbt_replykeyboard.row('Статистика за текущий месяц', '/Admin', '/WMS') # третья строка меню
 sklad_keyboard.row('АСК Пауза 🤖', 'АСК в работу 🤖')
 sklad_keyboard.row('Расписание ГВБТ 📅', '/WMS')
 
-inl_keyboard = telebot.types.InlineKeyboardMarkup() #кнопка в сообщении
-inl_keyboard.row(telebot.types.InlineKeyboardButton('Поправил', callback_data='popravil'))
-inl_keyboard2 = telebot.types.InlineKeyboardMarkup()
-inl_keyboard2.row(telebot.types.InlineKeyboardButton('Поправил', callback_data='popravil'))
-inl_keyboard2.row(telebot.types.InlineKeyboardButton('Решение', callback_data='reshenie'))
+inl_keyboard = types.InlineKeyboardMarkup() #кнопка в сообщении
+inl_keyboard.row(types.InlineKeyboardButton('Поправил', callback_data='popravil'))
+inl_keyboard2 = types.InlineKeyboardMarkup()
+inl_keyboard2.row(types.InlineKeyboardButton('Поправил', callback_data='popravil'))
+inl_keyboard2.row(types.InlineKeyboardButton('Решение', callback_data='reshenie'))
 inl_keyboard3 = InlineKeyboardMarkup([[InlineKeyboardButton('Поправил', callback_data='popravil')]])
 
 
