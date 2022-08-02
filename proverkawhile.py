@@ -10,8 +10,8 @@ HOST = ''
 PORT = 3000
 BUFSIZE = 1024
 SOCKADDR = (HOST, PORT)
-uServSock = socket(AF_INET, SOCK_DGRAM)
-uServSock.bind(SOCKADDR)
+# uServSock = socket(AF_INET, SOCK_DGRAM)
+# uServSock.bind(SOCKADDR)
 
 
 def proverka():
