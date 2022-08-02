@@ -1,9 +1,8 @@
 from socket import socket, AF_INET, SOCK_DGRAM
-from telebot import types
+from telebot import types, TeleBot
 import pathlib
-import telebot
 import time
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+from telegram import InlineKeyboardButton
 
 
 HOST = '172.29.30.2' #для сообщений на Р2Д2
@@ -24,7 +23,7 @@ photopath = 'Z:\\python\\ASK\\screenshots\\' #куда сохраняются с
 
 TG_TOKEN = "1290310178:AAHtDdkZijsIPb3CDvRcYe78cMb4gbPcavk"
 TG_API_URL = 'https://api.telegram.org/bot'
-bot = telebot.TeleBot(TG_TOKEN)
+bot = TeleBot(TG_TOKEN)
 proxy = 'http://83.97.23.90:18080'
 
 testchannelid = "-750457583" # gvbt2021F
@@ -33,19 +32,19 @@ ask_channel_id = "-713732030" # ASK ETM channel
 frychannelid = "423057805"
 sklad_channel = '-784067672'
 gvbt_replykeyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
-sklad_keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)#кнопка снизу клавы
-gvbt_replykeyboard.row('LAPS 🔐', 'АСК Пауза 🤖', 'АСК в работу 🤖', 'Расписание ГВБТ 📅') # первая строка меню
-gvbt_replykeyboard.row('Статистика поломок общая','Статистика починок общая') # вторая строка меню
-gvbt_replykeyboard.row('Статистика за текущий месяц', '/Admin', '/WMS') # третья строка меню
+sklad_keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
+gvbt_replykeyboard.row('LAPS 🔐', 'АСК Пауза 🤖', 'АСК в работу 🤖', 'Расписание ГВБТ 📅')
+gvbt_replykeyboard.row('Статистика поломок общая', 'Статистика починок общая')
+gvbt_replykeyboard.row('Статистика за текущий месяц', '/Admin', '/WMS')
 sklad_keyboard.row('АСК Пауза 🤖', 'АСК в работу 🤖')
 sklad_keyboard.row('Расписание ГВБТ 📅', '/WMS')
 
 inl_keyboard = types.InlineKeyboardMarkup() #кнопка в сообщении
-inl_keyboard.row(types.InlineKeyboardButton('Поправил', callback_data='popravil'))
+inl_keyboard.row(InlineKeyboardButton('Поправил', callback_data='popravil'))
 inl_keyboard2 = types.InlineKeyboardMarkup()
 inl_keyboard2.row(types.InlineKeyboardButton('Поправил', callback_data='popravil'))
 inl_keyboard2.row(types.InlineKeyboardButton('Решение', callback_data='reshenie'))
-inl_keyboard3 = InlineKeyboardMarkup([[InlineKeyboardButton('Поправил', callback_data='popravil')]])
+inl_keyboard3 = types.InlineKeyboardMarkup([[InlineKeyboardButton('Поправил', callback_data='popravil')]])
 
 
 filepathpriem = pathlib.Path('V:\\priem.rps\\logs\\faults.log') #пути до логов
@@ -59,5 +58,5 @@ timeblue = filepathblue.stat().st_mtime
 timeyellow = filepathyellow.stat().st_mtime
 
 ADMIN_URERS_ID = [423057805, 237426192]
-SKLAD_GROUP_ID = None
+
 
