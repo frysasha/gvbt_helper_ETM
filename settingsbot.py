@@ -5,7 +5,7 @@ import time
 from telegram import InlineKeyboardButton
 
 
-HOST = '172.29.30.2' #для сообщений на Р2Д2
+HOST = '172.29.30.62' #для сообщений на Р2Д2
 PORT = 3000
 BUFSIZE = 1024
 SOCKADDR = (HOST, PORT)
