@@ -60,7 +60,7 @@ def are_you_sure_menu(update, context):
 
     if update.callback_query:
         query = update.callback_query
-        query.answer()
+        query.answer(cache_time=5)
         wms_user_name = wms_user_dict[update.callback_query.data]
         del_user_from_wms(wms_user_name)
         query.edit_message_text(text=f'{wms_user_name} Удален', reply_markup='')

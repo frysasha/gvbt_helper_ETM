@@ -72,7 +72,7 @@ def ask_month_stat():
 
 def udp_client():
     uServSock = socket(AF_INET, SOCK_DGRAM)
-    #uServSock.bind(SOCKADDR)
+    uServSock.bind(SOCKADDR)
     while True:
         data, addr = uServSock.recvfrom(BUFSIZE)
         loc_data = data.decode('cp1251')
