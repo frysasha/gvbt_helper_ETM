@@ -1,7 +1,7 @@
 from socket import socket, AF_INET, SOCK_DGRAM
 import telebot
 import pathlib
-from telebot import types
+import telebot
 import time
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 
@@ -40,11 +40,11 @@ gvbt_replykeyboard.row('Статистика за текущий месяц', '/
 sklad_keyboard.row('АСК Пауза 🤖', 'АСК в работу 🤖')
 sklad_keyboard.row('Расписание ГВБТ 📅', '/WMS')
 
-inl_keyboard = types.InlineKeyboardMarkup() #кнопка в сообщении
-inl_keyboard.row(types.InlineKeyboardButton('Поправил', callback_data='popravil'))
-inl_keyboard2 = types.InlineKeyboardMarkup()
-inl_keyboard2.row(types.InlineKeyboardButton('Поправил', callback_data='popravil'))
-inl_keyboard2.row(types.InlineKeyboardButton('Решение', callback_data='reshenie'))
+inl_keyboard = telebot.types.InlineKeyboardMarkup() #кнопка в сообщении
+inl_keyboard.row(telebot.types.InlineKeyboardButton('Поправил', callback_data='popravil'))
+inl_keyboard2 = telebot.types.InlineKeyboardMarkup()
+inl_keyboard2.row(telebot.types.InlineKeyboardButton('Поправил', callback_data='popravil'))
+inl_keyboard2.row(telebot.types.InlineKeyboardButton('Решение', callback_data='reshenie'))
 inl_keyboard3 = InlineKeyboardMarkup([[InlineKeyboardButton('Поправил', callback_data='popravil')]])
 
 
