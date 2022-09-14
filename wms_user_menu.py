@@ -27,7 +27,7 @@ def wms_menu(update, context):
         )
     except:
         query = update.callback_query
-        context.bot.answer_callback_query(update.callback_query.id)
+        #context.bot.answer_callback_query(update.callback_query.id)
         #query.answer()
         query.edit_message_text(
             text="Меню WMS", reply_markup=menu_keyboard
@@ -39,7 +39,7 @@ wms_user_list_query = None
 def wms_user_list_menu(update, context):
     quit_browser_driver()
     query = update.callback_query
-    context.bot.answer_callback_query(callback_query_id=update.callback_query.id, cache_time=50)
+    #context.bot.answer_callback_query(callback_query_id=update.callback_query.id)
     #query.answer()
     global wms_user_list_query
     wms_user_list_query = query
@@ -66,7 +66,7 @@ def are_you_sure_menu(update, context):
 
     if update.callback_query:
         query = update.callback_query
-        context.bot.answer_callback_query(update.callback_query.id)
+        #context.bot.answer_callback_query(update.callback_query.id)
         #query.answer()
         wms_user_name = wms_user_dict[update.callback_query.data]
         del_user_from_wms(wms_user_name)
@@ -96,7 +96,7 @@ def wrong_number(update, context):
 
 def exit_from_wms_menu(update, context):
     query = update.callback_query
-    context.bot.answer_callback_query(update.callback_query.id)
+    #context.bot.answer_callback_query(update.callback_query.id)
     #query.answer()
     query.edit_message_text(text='Выход', reply_markup='')
     quit_browser_driver()
