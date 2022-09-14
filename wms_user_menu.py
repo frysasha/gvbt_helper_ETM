@@ -39,7 +39,7 @@ wms_user_list_query = None
 def wms_user_list_menu(update, context):
     quit_browser_driver()
     query = update.callback_query
-    context.bot.answer_callback_query(update.callback_query.id)
+    context.bot.answer_callback_query(callback_query_id=update.callback_query.id, cache_time=50)
     #query.answer()
     global wms_user_list_query
     wms_user_list_query = query
