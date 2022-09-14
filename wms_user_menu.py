@@ -70,6 +70,7 @@ def are_you_sure_menu(update, context):
         #query.answer()
         wms_user_name = wms_user_dict[update.callback_query.data]
         del_user_from_wms(wms_user_name)
+        quit_browser_driver()
         query.edit_message_text(text=f'{wms_user_name} Удален', reply_markup='')
         return ConversationHandler.END
     else:
@@ -99,6 +100,5 @@ def exit_from_wms_menu(update, context):
     #context.bot.answer_callback_query(update.callback_query.id)
     #query.answer()
     query.edit_message_text(text='Выход', reply_markup='')
-    #quit_browser_driver()
-    browser_driver.quit()
+    quit_browser_driver()
     return ConversationHandler.END

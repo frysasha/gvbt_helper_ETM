@@ -69,14 +69,15 @@ def del_user_from_wms(user_name):
         user_checkbox.click()
         del_button = browser_driver.find_element(By.ID, 'telnetmanage')
         del_button.click()
-        quit_browser_driver()
     else:
         print(f'Не определен driver!')
 
 
 def quit_browser_driver():
+    global browser_driver
     if browser_driver:
         browser_driver.quit()
+        browser_driver = None
         print('Закрываю браузер')
     else:
         print(f'Не определен driver!')
