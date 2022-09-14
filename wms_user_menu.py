@@ -14,7 +14,7 @@ def build_menu(buttons, n_cols, header_buttons=None, footer_buttons=None):
     return menu
 
 
-def wms_menu(update, _):
+def wms_menu(update, context):
     wms_menu_list = [
         InlineKeyboardButton("Список пользователей ТСД", callback_data='WMS_USER_LIST_MENU'),
         InlineKeyboardButton("Выйти", callback_data='exit'),
@@ -27,7 +27,8 @@ def wms_menu(update, _):
         )
     except:
         query = update.callback_query
-        query.answer()
+        context.bot.answer_callback_query(update.callback_query.id)
+        #query.answer()
         query.edit_message_text(
             text="Меню WMS", reply_markup=menu_keyboard
         )
