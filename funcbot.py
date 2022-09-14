@@ -41,9 +41,9 @@ def every_month_statistic_bot(bot, month):
 
 
 def welcome_message(bot):
-    bot.send_message(frychannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
-    bot.send_message(testchannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
-    bot.send_message(ask_channel_id, 'Старт бота', reply_markup=gvbt_replykeyboard)
+    #bot.send_message(frychannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
+    #bot.send_message(testchannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
+    #bot.send_message(ask_channel_id, 'Старт бота', reply_markup=gvbt_replykeyboard)
     bot.send_message(sklad_channel, 'Старт бота', reply_markup=sklad_keyboard)  # вывод нижней клавы
 
 
@@ -75,7 +75,7 @@ class Robot:
                                 reply_markup=inl_keyboard)
         last_mes_id = send.message_id
         uCliSock.sendto(bytes(self.name + ' робот ошибка', 'cp1251'), SOCKADDR)  # отправка текста на сервер спикера
-        uCliSock.sendto(bytes('robot_error', 'utf-8'), SOCKADDR2)  # отправка на сервер АСК
+        uCliSock.sendto(bytes(self.eng_name + 'robot_error', 'utf-8'), SOCKADDR2)  # отправка на сервер АСК
         Robot.resolve_flag = True
         bot.send_message(ask_channel_id, self.send_error_text())
 
@@ -168,7 +168,7 @@ def napominanie_msg(bot):
 
 def wms_day_report_message(bot):
     today = strftime("%d.%m.%Y")
-    report_file = 'S:\\09.ГВБТ\\WMS_Rerort\\' + today + '.xlsx'
+    report_file = 'S:\\09.ГВБТ\\WMS_Report\\' + today + '.xlsx'
     bot.send_message(testchannelid, ('Сформирован ежедневный отчет WMS. Необходимо проверить данные!'))
     wmsreport = open(report_file, 'rb')
     bot.send_document(testchannelid, wmsreport)
@@ -238,7 +238,7 @@ def ask_work_button(update, context):
 
 
 def schedule(update, context):
-    path = 'Z:\\python\\расписание\\'
+    path = 'S:\\09.ГВБТ\\Расписание\\'
     try:
         context.bot.send_photo(chat_id=update.message.chat_id, photo=open(path + strftime('%m') + '.jpg', 'rb'))
 

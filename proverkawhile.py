@@ -74,16 +74,19 @@ def udp_client():
     uServSock = socket(AF_INET, SOCK_DGRAM)
     uServSock.bind(SOCKADDR)
     while True:
-        data, addr = uServSock.recvfrom(BUFSIZE)
-        loc_data = data.decode('cp1251')
-        if loc_data == 'Сформирован ежедневный отчет WMS. Необходимо проверить данные!':
-            print('Сформирован ежедневный отчет WMS. Необходимо проверить данные!')
-            wms_day_report_message(bot)
-        elif loc_data == 'Est reshenie':
-            if Robot.resolve_flag:
-                update_inline_button(bot)
-        else:
-            bot_mes(loc_data)
+        try:
+            data, addr = uServSock.recvfrom(BUFSIZE)
+            loc_data = data.decode('cp1251')
+            if loc_data == 'Сформирован ежедневный отчет WMS. Необходимо проверить данные!':
+                print('Сформирован ежедневный отчет WMS. Необходимо проверить данные!')
+                wms_day_report_message(bot)
+            elif loc_data == 'Est reshenie':
+                if Robot.resolve_flag:
+                    update_inline_button(bot)
+            else:
+                bot_mes(loc_data)
+        except Exception as e:
+            print(f'err thread 4: {e}')
 
 
 thread1 = threading.Timer(1, proverka)

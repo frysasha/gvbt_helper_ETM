@@ -2,11 +2,10 @@ from socket import socket, AF_INET, SOCK_DGRAM
 from telebot import types, TeleBot
 import pathlib
 import time
-from telegram import InlineKeyboardButton
-
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 
 HOST = '172.29.30.62' #для сообщений на Р2Д2
-PORT = 3000
+PORT = 3001
 BUFSIZE = 1024
 SOCKADDR = (HOST, PORT)
 uCliSock = socket(AF_INET, SOCK_DGRAM)
@@ -44,7 +43,9 @@ inl_keyboard.row(InlineKeyboardButton('Поправил', callback_data='popravi
 inl_keyboard2 = types.InlineKeyboardMarkup()
 inl_keyboard2.row(types.InlineKeyboardButton('Поправил', callback_data='popravil'))
 inl_keyboard2.row(types.InlineKeyboardButton('Решение', callback_data='reshenie'))
-inl_keyboard3 = types.InlineKeyboardMarkup([[InlineKeyboardButton('Поправил', callback_data='popravil')]])
+inl_keyboard3 = InlineKeyboardMarkup([[InlineKeyboardButton('Поправил', callback_data='popravil')]])
+
+
 
 
 filepathpriem = pathlib.Path('V:\\priem.rps\\logs\\faults.log') #пути до логов

@@ -36,7 +36,7 @@ def get_user_list():
     browser_driver = driver
     wait = WebDriverWait(driver, 30)
     driver.get(WMS_OHE_AUTH_URL)
-    driver.implicitly_wait(5)
+    driver.implicitly_wait(15)
     login = driver.find_element(By.ID, 'USR')
     password = driver.find_element(By.ID, 'PSD')
     login.send_keys(USER_AUTH_LOGIN)

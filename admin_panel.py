@@ -191,7 +191,7 @@ def schedule_upload(update, context):
     who_upload = update.message.chat.first_name
     file = update.message.photo[-1].file_id
     obj = context.bot.get_file(file)
-    obj.download('Z:\\python\\расписание\\' + selected_month + '.jpg')
+    obj.download('S:\\09.ГВБТ\\Расписание\\' + selected_month + '.jpg')
     update.message.reply_text(text="Расписание загружено")
     bot_mes(f'{who_upload} загрузил новое расписание. Месяц - {selected_month}')
     print(f"{who_upload} загрузил новое расписание. Месяц - {selected_month}")
@@ -201,7 +201,7 @@ def schedule_upload(update, context):
 def schedule_show(update, context):
     query = update.callback_query
     query.answer()
-    path = 'Z:\\python\\расписание\\'
+    path = 'S:\\09.ГВБТ\\Расписание\\'
     try:
         context.bot.send_photo(chat_id=update.effective_chat.id, photo=open(path + time.strftime('%m') + '.jpg', 'rb'))
     except:
