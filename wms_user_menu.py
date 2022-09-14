@@ -27,7 +27,7 @@ def wms_menu(update, context):
         )
     except:
         query = update.callback_query
-        query.answer()
+        #query.answer()
         query.edit_message_text(
             text="Меню WMS", reply_markup=menu_keyboard
         )
@@ -38,7 +38,7 @@ wms_user_list_query = None
 def wms_user_list_menu(update, context):
     quit_browser_driver()
     query = update.callback_query
-    query.answer()
+    #query.answer()
     global wms_user_list_query
     wms_user_list_query = query
     query.edit_message_text(text="Загрузка...")
@@ -94,7 +94,7 @@ def wrong_number(update, context):
 
 def exit_from_wms_menu(update, context):
     query = update.callback_query
-    query.answer()
+    #query.answer()
     query.edit_message_text(text='Выход', reply_markup='')
     quit_browser_driver()
     return ConversationHandler.END
