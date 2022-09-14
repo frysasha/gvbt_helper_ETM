@@ -37,7 +37,7 @@ def wms_menu(update, context):
 wms_user_list_query = None
 
 def wms_user_list_menu(update, context):
-    quit_browser_driver()
+    #quit_browser_driver()
     query = update.callback_query
     #context.bot.answer_callback_query(callback_query_id=update.callback_query.id)
     #query.answer()
@@ -48,11 +48,11 @@ def wms_user_list_menu(update, context):
         user_list = get_user_list()
     except:
         query.edit_message_text(text="Попробуйте позже")
-        quit_browser_driver()
+        #quit_browser_driver()
         return ConversationHandler.END
     if user_list == 'Нет активных пользователей ТСД':
         query.edit_message_text(text=user_list)
-        quit_browser_driver()
+        #quit_browser_driver()
         return ConversationHandler.END
     wms_usr_menu_list = [
         InlineKeyboardButton("Выйти", callback_data='exit'),
@@ -99,5 +99,6 @@ def exit_from_wms_menu(update, context):
     #context.bot.answer_callback_query(update.callback_query.id)
     #query.answer()
     query.edit_message_text(text='Выход', reply_markup='')
-    quit_browser_driver()
+    #quit_browser_driver()
+    browser_driver.quit()
     return ConversationHandler.END
