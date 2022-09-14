@@ -27,8 +27,7 @@ def wms_menu(update, context):
         )
     except:
         query = update.callback_query
-        #context.bot.answer_callback_query(update.callback_query.id)
-        #query.answer()
+        query.answer()
         query.edit_message_text(
             text="Меню WMS", reply_markup=menu_keyboard
         )
@@ -37,10 +36,9 @@ def wms_menu(update, context):
 wms_user_list_query = None
 
 def wms_user_list_menu(update, context):
-    #quit_browser_driver()
+    quit_browser_driver()
     query = update.callback_query
-    #context.bot.answer_callback_query(callback_query_id=update.callback_query.id)
-    #query.answer()
+    query.answer()
     global wms_user_list_query
     wms_user_list_query = query
     query.edit_message_text(text="Загрузка...")
@@ -48,11 +46,11 @@ def wms_user_list_menu(update, context):
         user_list = get_user_list()
     except:
         query.edit_message_text(text="Попробуйте позже")
-        #quit_browser_driver()
+        quit_browser_driver()
         return ConversationHandler.END
     if user_list == 'Нет активных пользователей ТСД':
         query.edit_message_text(text=user_list)
-        #quit_browser_driver()
+        quit_browser_driver()
         return ConversationHandler.END
     wms_usr_menu_list = [
         InlineKeyboardButton("Выйти", callback_data='exit'),
@@ -66,11 +64,10 @@ def are_you_sure_menu(update, context):
 
     if update.callback_query:
         query = update.callback_query
-        #context.bot.answer_callback_query(update.callback_query.id)
-        #query.answer()
         wms_user_name = wms_user_dict[update.callback_query.data]
         del_user_from_wms(wms_user_name)
         quit_browser_driver()
+        query.answer(text=f'{wms_user_name} Удален', show_alert=True)
         query.edit_message_text(text=f'{wms_user_name} Удален', reply_markup='')
         return ConversationHandler.END
     else:
@@ -97,8 +94,7 @@ def wrong_number(update, context):
 
 def exit_from_wms_menu(update, context):
     query = update.callback_query
-    #context.bot.answer_callback_query(update.callback_query.id)
-    #query.answer()
+    query.answer()
     query.edit_message_text(text='Выход', reply_markup='')
     quit_browser_driver()
     return ConversationHandler.END
