@@ -60,7 +60,6 @@ def db_who_is_most_broken_in_current_month(month: str):
             func.strftime('%Y', RobotErrorTable.date) == str(datetime.today().year)).filter(
             func.strftime('%m', RobotErrorTable.date) == month).group_by(RobotErrorTable.robot).order_by(desc("count"))
         night_errors = request.filter(RobotErrorTable.time.between('00:00:00', '07:00:00'))
-        print(request.all())
         res_str = ''
         for i in request.all():
             res_str += f'{i.robot} - {i.count}\n'
