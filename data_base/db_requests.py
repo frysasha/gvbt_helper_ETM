@@ -2,18 +2,9 @@ import sqlite3
 from datetime import date, timedelta, datetime
 from collections import Counter
 import calendar
-from pprint import pprint
-
-import sqlalchemy
 from sqlalchemy import update, func, select, desc
-from sqlalchemy.dialects.sqlite import DATE, TIME
-from db import session
+from data_base.db import session
 from tables.robot_error_table import RobotErrorTable
-
-
-class CustomCuounter(Counter):
-    def __str__(self):
-        return f'{dict(self)}'
 
 
 # cur = db1.cursor()
