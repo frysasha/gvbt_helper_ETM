@@ -1,10 +1,9 @@
 import sqlite3
 from datetime import date, timedelta, datetime
-from collections import Counter
 import calendar
 from sqlalchemy import update, func, select, desc
 from data_base.db import session
-from tables.robot_error_table import RobotErrorTable
+from data_base.tables.robot_error_table import RobotErrorTable
 
 
 # cur = db1.cursor()
