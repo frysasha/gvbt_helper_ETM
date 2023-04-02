@@ -3,7 +3,7 @@ import time
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ConversationHandler
 
-from db import db_get_last_6_months, db_who_is_most_broken_in_current_month, \
+from data_base.db_requests import db_get_last_6_months, db_who_is_most_broken_in_current_month, \
     db_robot_stat_30_days, db_ask_cell_stat
 from funcbot import create_csv_report, bot_mes
 

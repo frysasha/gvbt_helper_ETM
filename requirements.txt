@@ -8,3 +8,4 @@ telebot>=0.0.4
 python-telegram-bot>=13.12
 pillow>=9.1.1
 selenium>=4.3.0
+sqlalchemy>=2.0.8

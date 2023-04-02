@@ -1,12 +1,12 @@
 import csv
 import subprocess
-from datetime import datetime, time
+from datetime import datetime
 from time import sleep, strftime
 from telegram.ext import ConversationHandler
 from telegram.error import BadRequest
 import os
 from PIL import Image
-from db import db_update_who_repair, db_who_is_most_broken_off_all_time, db_who_fixed_the_most_off_all_time, \
+from data_base.db_requests import db_update_who_repair, db_who_is_most_broken_off_all_time, db_who_fixed_the_most_off_all_time, \
     db_who_is_most_broken_in_current_month, db_who_fixed_in_current_month, db_who_win_in_prev_month, \
     db_update_auto_repair, db_error_insert, db_ask_cell_stat
 import websocket
