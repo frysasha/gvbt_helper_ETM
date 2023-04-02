@@ -1,0 +1,6 @@
+/csv_reports/*
+/gvbt_helper_env/*
+__pycache__
+.idea
+robots.db
+geckodriver.log
