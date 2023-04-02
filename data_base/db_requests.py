@@ -55,9 +55,10 @@ def db_update_auto_repair():
 
 
 def db_who_is_most_broken_in_current_month(month: str):
+    now_year = str(datetime.today().year)
     with session:
         request = session.query(RobotErrorTable.robot, func.count('*').label('count')).filter(
-            func.strftime('%Y', RobotErrorTable.date) == str(datetime.today().year)).filter(
+            func.strftime('%Y', RobotErrorTable.date) == now_year).filter(
             func.strftime('%m', RobotErrorTable.date) == month).group_by(RobotErrorTable.robot).order_by(desc("count"))
         night_errors = request.filter(RobotErrorTable.time.between('00:00:00', '07:00:00'))
         res_str = ''
@@ -66,7 +67,7 @@ def db_who_is_most_broken_in_current_month(month: str):
         night_str = ''
         for i in night_errors.all():
             night_str += f'{i.robot} - {i.count}\n'
-        return f'Все ошибки за {calendar.month_name[int(month)]}:\n{res_str}' \
+        return f'Все ошибки за {calendar.month_name[int(month)]} {now_year}:\n{res_str}' \
                f'\nИз них ночные(с 00:00 до 07:00):\n{night_str}'
 
 
