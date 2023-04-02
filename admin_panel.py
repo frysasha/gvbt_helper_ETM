@@ -133,7 +133,7 @@ def ask_robot_choice(update, _):
 
 def ask_commands_menu(update, _):
     query = update.callback_query
-    query.answer()
+    #query.answer()
     ask_commands_menu_list = [
         InlineKeyboardButton("АСК Пауза 🤖", callback_data='ASK_pause'),
         InlineKeyboardButton("АСК в работу 🤖", callback_data='ASK_work'),

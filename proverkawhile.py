@@ -83,8 +83,8 @@ def udp_client():
             elif loc_data == 'Est reshenie':
                 if Robot.resolve_flag:
                     update_inline_button(bot)
-            else:
-                bot_mes(loc_data)
+            elif 'LOOP_PROT' in str(loc_data):
+                bot_mes('Петля в коммутаторе!\n\n' + loc_data)
         except Exception as e:
             print(f'err thread 4: {e}')
 

@@ -25,11 +25,12 @@ TG_API_URL = 'https://api.telegram.org/bot'
 bot = TeleBot(TG_TOKEN)
 proxy = 'http://83.97.23.90:18080'
 
-testchannelid = "-750457583" # gvbt2021F
+testchannelid = "-1001508813774"  #"-750457583" # gvbt2021F
 zabbixcpchannel = '-1001208212827' #заббикс цп
-ask_channel_id = "-713732030" # ASK ETM channel
+ask_channel_id = "-1001598599638"  #"-713732030" # ASK ETM channel
+
 frychannelid = "423057805"
-sklad_channel = '-784067672'
+sklad_channel = "-1001634933123"  #'-784067672'
 gvbt_replykeyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
 sklad_keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
 gvbt_replykeyboard.row('LAPS 🔐', 'АСК Пауза 🤖', 'АСК в работу 🤖', 'Расписание ГВБТ 📅')

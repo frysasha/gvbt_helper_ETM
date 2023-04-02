@@ -4,8 +4,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 WMS_OHE_AUTH_URL = r'http://172.29.2.26/cwms/(S(rfgzla3vve5nxvgbm1kwqx5r))/OheWebReports.aspx'
-USER_AUTH_LOGIN = '09shai'
-USER_AUTH_PASSWORD = '1337'
+USER_AUTH_LOGIN = 'lio1'
+USER_AUTH_PASSWORD = '7418'
 
 wms_user_dict = {}
 browser_driver = None

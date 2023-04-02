@@ -41,9 +41,9 @@ def every_month_statistic_bot(bot, month):
 
 
 def welcome_message(bot):
-    #bot.send_message(frychannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
-    #bot.send_message(testchannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
-    #bot.send_message(ask_channel_id, 'Старт бота', reply_markup=gvbt_replykeyboard)
+    bot.send_message(frychannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
+    bot.send_message(testchannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
+    bot.send_message(ask_channel_id, 'Старт бота', reply_markup=gvbt_replykeyboard)
     bot.send_message(sklad_channel, 'Старт бота', reply_markup=sklad_keyboard)  # вывод нижней клавы
 
 
@@ -75,7 +75,7 @@ class Robot:
                                 reply_markup=inl_keyboard)
         last_mes_id = send.message_id
         uCliSock.sendto(bytes(self.name + ' робот ошибка', 'cp1251'), SOCKADDR)  # отправка текста на сервер спикера
-        uCliSock.sendto(bytes(self.eng_name + 'robot_error', 'utf-8'), SOCKADDR2)  # отправка на сервер АСК
+        uCliSock.sendto(bytes(self.eng_name + ' robot_error', 'utf-8'), SOCKADDR2)  # отправка на сервер АСК
         Robot.resolve_flag = True
         bot.send_message(ask_channel_id, self.send_error_text())
 
@@ -100,10 +100,13 @@ class Robot:
             return last_line
 
     def search_fault_text(self):
-        with open(self.log_file, 'r') as f:
-            last_line = f.readlines()[-2]
-            res = (re.search('faults:\((.+)\)', last_line).group(1))
-            return res
+        try:
+            with open(self.log_file, 'r') as f:
+                last_line = f.readlines()[-2]
+                res = (re.search('faults:\((.+)\)', last_line).group(1))
+                return res
+        except:
+            return 'no fault'
 
     def db_error_insert(self, date, time):
         db_error_insert(robot=self.name, date=date, time=time, cmd=self._check_ws_cmd(), section=self._check_ws_section(),
@@ -163,7 +166,7 @@ def inline_reshenie_button_pressed(bot, update):
 def napominanie_msg(bot):
     uCliSock.sendto(bytes('work_button', 'cp1251'), SOCKADDR2)
     uCliSock.sendto(bytes('restart_televizor', 'cp1251'), SOCKADDR3)
-    bot.send_message(ask_channel_id, ('Будет запущен АСК и включен телик на складе после еженедельной перезагрузки!'))
+    bot.send_message(ask_channel_id, ('Будет запущен АСК и включен телик на складе после еженедельной перезагрузки! Адрес 20.200!!!!'))
 
 
 def wms_day_report_message(bot):
@@ -203,7 +206,7 @@ def laps_zapros(update, context):
         else:
             for i in open('C:\\python\\pass.txt', 'r', encoding='utf-16').readlines():
                 cleantext2.append(i)
-            cleantext2 = cleantext2[-3][-13:].strip()
+            cleantext2 = cleantext2[2][10:].strip()
             print(f'Запрашиваемый пароль: {cleantext2}')
             laps_send_msg(cleantext2, update, context)
         return ConversationHandler.END  # закрывает диалог

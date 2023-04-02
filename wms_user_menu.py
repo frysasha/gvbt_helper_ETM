@@ -38,7 +38,7 @@ wms_user_list_query = None
 def wms_user_list_menu(update, context):
     quit_browser_driver()
     query = update.callback_query
-    #query.answer()
+    query.answer()
     global wms_user_list_query
     wms_user_list_query = query
     query.edit_message_text(text="Загрузка...")
