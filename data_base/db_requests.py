@@ -39,8 +39,7 @@ def db_error_insert(robot, date, time, cmd, section, faults):
 def db_update_who_repair(who_repair):
     with session:
         request = update(RobotErrorTable).values(who_repair=who_repair).where(
-            func.max(RobotErrorTable.ID)
-        )
+            RobotErrorTable.ID.in_(session.query(func.max(RobotErrorTable.ID))))
         session.execute(request)
         session.commit()
 
@@ -48,8 +47,7 @@ def db_update_who_repair(who_repair):
 def db_update_auto_repair():
     with session:
         request = update(RobotErrorTable).values(auto_repair='Да').where(
-            func.max(RobotErrorTable.ID)
-        )
+            RobotErrorTable.ID.in_(session.query(func.max(RobotErrorTable.ID))))
         session.execute(request)
         session.commit()
 
@@ -167,5 +165,6 @@ if __name__ == '__main__':
     # print(db_who_fixed_in_current_month("03"))
     # db_error_insert('Голубой', date=time.strftime("%Y-%m-%d"), time=time.strftime("%H:%M:%S"))
     # print(db_who_fixed_the_most_off_all_time())
-    #print(db_who_win_in_prev_month('02'))
-    print(db_get_last_6_months())
+    # print(db_who_win_in_prev_month('02'))
+    # print(db_get_last_6_months())
+    db_update_who_repair('z1232131111')
