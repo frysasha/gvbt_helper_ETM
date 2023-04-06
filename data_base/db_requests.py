@@ -33,7 +33,6 @@ def db_error_insert(robot, date, time, cmd, section, faults):
             SECTION_error=section,
             faults=faults
         )
-        print(request)
         session.execute(request)
         session.commit()
 
