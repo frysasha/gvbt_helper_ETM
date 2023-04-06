@@ -1,7 +1,8 @@
 import sqlite3
+import time
 from datetime import date, timedelta, datetime
 import calendar
-from sqlalchemy import update, func, select, desc
+from sqlalchemy import update, func, select, desc, insert
 from data_base.db import session
 from data_base.tables.robot_error_table import RobotErrorTable
 
@@ -23,8 +24,8 @@ from data_base.tables.robot_error_table import RobotErrorTable
 
 
 def db_error_insert(robot, date, time, cmd, section, faults):
-    with section:
-        request = RobotErrorTable(
+    with session:
+        request = insert(RobotErrorTable).values(
             robot=robot,
             date=date,
             time=time,
@@ -32,7 +33,8 @@ def db_error_insert(robot, date, time, cmd, section, faults):
             SECTION_error=section,
             faults=faults
         )
-        session.add(request)
+        print(request)
+        session.execute(request)
         session.commit()
 
 
@@ -163,8 +165,9 @@ if __name__ == '__main__':
     # print(db_robot_stat_30_days('Желтый'))
     # print(db_who_is_most_broken_in_current_month("02"))
     # print(db_who_fixed_in_current_month("03"))
-    # db_error_insert('Голубой', date=time.strftime("%Y-%m-%d"), time=time.strftime("%H:%M:%S"))
+    db_error_insert('Голубой', date=time.strftime("%Y-%m-%d"), time=time.strftime("%H:%M:%S"), cmd='sdfsdf',
+                    section=123, faults='123')
     # print(db_who_fixed_the_most_off_all_time())
     # print(db_who_win_in_prev_month('02'))
     # print(db_get_last_6_months())
-    db_update_who_repair('z1232131111')
+    # db_update_who_repair('z1232131111')
