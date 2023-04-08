@@ -1,26 +1,10 @@
 import sqlite3
 import time
-from datetime import date, timedelta, datetime
+from datetime import datetime
 import calendar
-from sqlalchemy import update, func, select, desc, insert
+from sqlalchemy import update, func, desc, insert, distinct
 from data_base.db import session
 from data_base.tables.robot_error_table import RobotErrorTable
-
-
-# cur = db1.cursor()
-#
-# cur.execute("""CREATE TABLE IF NOT EXISTS robot_error(
-#     ID INTEGER PRIMARY KEY AUTOINCREMENT,
-#    robot TEXT,
-#    date DATE,
-#    time TIME,
-#    who_repair TEXT,
-#    auto_repair TEXT,
-#    CMD_error TEXT,
-#    SECTION_error TEXT,
-#    faults TEXT);
-# """)
-# db1.commit()
 
 
 def db_error_insert(robot, date, time, cmd, section, faults):
@@ -53,12 +37,11 @@ def db_update_auto_repair():
         session.commit()
 
 
-def db_who_is_most_broken_in_current_month(month: str):
-    now_year = str(datetime.today().year)
+def db_who_is_most_broken_in_current_month(year_month: str):
     with session:
         request = session.query(RobotErrorTable.robot, func.count('*').label('count')).filter(
-            func.strftime('%Y', RobotErrorTable.date) == now_year).filter(
-            func.strftime('%m', RobotErrorTable.date) == month).group_by(RobotErrorTable.robot).order_by(desc("count"))
+            func.strftime('%Y-%m', RobotErrorTable.date) == year_month).group_by(RobotErrorTable.robot).order_by(
+            desc("count"))
         night_errors = request.filter(RobotErrorTable.time.between('00:00:00', '07:00:00'))
         res_str = ''
         for i in request.all():
@@ -66,7 +49,7 @@ def db_who_is_most_broken_in_current_month(month: str):
         night_str = ''
         for i in night_errors.all():
             night_str += f'{i.robot} - {i.count}\n'
-        return f'Все ошибки за {calendar.month_name[int(month)]} {now_year}:\n{res_str}' \
+        return f'Все ошибки за {calendar.month_name[int(year_month.split("-")[1])]} {year_month.split("-")[0]}:\n{res_str}' \
                f'\nИз них ночные(с 00:00 до 07:00):\n{night_str}'
 
 
@@ -91,23 +74,22 @@ def db_who_fixed_the_most_off_all_time():
         return str_res
 
 
-def db_who_fixed_in_current_month(month):
+def db_who_fixed_in_current_month(year_month):
     with session:
-        request = session.query(RobotErrorTable.who_repair, func.count('*').label('count')).filter(
-            func.strftime('%Y', RobotErrorTable.date) == str(datetime.today().year)).filter(
-            func.strftime('%m', RobotErrorTable.date) == month).group_by(RobotErrorTable.who_repair).order_by(
-            desc("count"))
+        request = session.query(RobotErrorTable.who_repair, func.count("*").label('count')).filter(
+            func.strftime('%Y-%m', RobotErrorTable.date) == year_month).group_by(RobotErrorTable.who_repair).order_by(
+            desc("count")).where(RobotErrorTable.who_repair.isnot(None))
         str_res = ''
         for i in request.all():
-            if i.who_repair is not None:
+            if i.who_repair:
                 str_res += f'{i.who_repair} - {i.count}\n'
         return str_res
 
 
-def db_who_win_in_prev_month(month):
+def db_who_win_in_prev_month(year_month):
     with session:
         request = session.query(RobotErrorTable.who_repair, func.count("*").label('count')).filter(
-            func.strftime('%m', RobotErrorTable.date) == month).group_by(RobotErrorTable.who_repair).order_by(
+            func.strftime('%Y-%m', RobotErrorTable.date) == year_month).group_by(RobotErrorTable.who_repair).order_by(
             desc("count")).where(RobotErrorTable.who_repair.isnot(None))
         res = request.first()
         return f'{res.who_repair} - {res.count}'
@@ -116,9 +98,10 @@ def db_who_win_in_prev_month(month):
 def db_get_last_6_months():
     db = sqlite3.connect('robots.db')
     cur = db.cursor()
-    cur.execute("""Select distinct strftime('%m', date)
+    cur.execute("""Select distinct strftime('%Y-%m', date)
                 from robot_error
-                where date between date('now','-6 month') and date('now')""")
+                where date between date('now','-6 month') and date('now')
+                """)
     res = cur.fetchall()
     res_list = []
     for i in res:
@@ -162,11 +145,11 @@ if __name__ == '__main__':
     # print(datetime.today().year)
     # print(db_ask_cell_stat('section_error'))
     # print(db_robot_stat_30_days('Желтый'))
-    # print(db_who_is_most_broken_in_current_month("02"))
-    # print(db_who_fixed_in_current_month("03"))
-    db_error_insert('Голубой', date=time.strftime("%Y-%m-%d"), time=time.strftime("%H:%M:%S"), cmd='sdfsdf',
-                    section=123, faults='123')
+    # print(db_who_is_most_broken_in_current_month("2023-02"))
+    print(db_who_fixed_in_current_month("2023-02"))
+    # db_error_insert('Голубой', date=time.strftime("%Y-%m-%d"), time=time.strftime("%H:%M:%S"), cmd='sdfsdf',
+    # section=123, faults='123')
     # print(db_who_fixed_the_most_off_all_time())
-    # print(db_who_win_in_prev_month('02'))
-    # print(db_get_last_6_months())
+    #print(db_who_win_in_prev_month('2022-12'))
+    #print(db_get_last_6_months())
     # db_update_who_repair('z1232131111')

@@ -29,15 +29,15 @@ def all_statistic_gvbt(update, context):
 
 
 def month_statistic_bot(update, context):
-    context.bot.send_message(update.message.chat_id, str(db_who_is_most_broken_in_current_month(strftime("%m"))))
+    context.bot.send_message(update.message.chat_id, str(db_who_is_most_broken_in_current_month(strftime("%Y-%m"))))
     context.bot.send_message(update.message.chat_id,
-                             f'Кто чинил:\n{str(db_who_fixed_in_current_month(strftime("%m")))}')
+                             f'Кто чинил:\n{str(db_who_fixed_in_current_month(strftime("%Y-%m")))}')
 
 
-def every_month_statistic_bot(bot, month):
-    bot.send_message(ask_channel_id, str(db_who_is_most_broken_in_current_month(month)))
-    bot.send_message(ask_channel_id, f'Кто чинил:\n{str(db_who_fixed_in_current_month(month))}')
-    bot.send_message(ask_channel_id, f'И выигрывает приз!!!\n{db_who_win_in_prev_month(month)}')
+def every_month_statistic_bot(bot, year_month):
+    bot.send_message(ask_channel_id, str(db_who_is_most_broken_in_current_month(year_month)))
+    bot.send_message(ask_channel_id, f'Кто чинил:\n{str(db_who_fixed_in_current_month(year_month))}')
+    bot.send_message(ask_channel_id, f'И выигрывает приз!!!\n{db_who_win_in_prev_month(year_month)}')
 
 
 def welcome_message(bot):

@@ -1,7 +1,6 @@
 from data_base.db import BaseModel
-from sqlalchemy import Integer, Column, Date, Text, Time, Any, TIME
-from sqlalchemy.dialects.sqlite import DATE, TIME
-from datetime import time
+from sqlalchemy import Integer, Column, Text
+
 
 class RobotErrorTable(BaseModel):
     __tablename__ = 'robot_error'
