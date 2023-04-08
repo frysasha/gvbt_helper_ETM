@@ -1,10 +1,12 @@
+from datetime import datetime, timedelta
+from dateutil.relativedelta import relativedelta
 from socket import socket, AF_INET, SOCK_DGRAM
 import time
 from time import sleep
 import threading
 from funcbot import priem_robot, blue_robot, yellow_robot, napominanie_msg, every_month_statistic_bot, \
     wms_day_report_message, Robot, update_inline_button, bot_mes
-from settingsbot import filepathpriem, filepathblue, filepathyellow, bot, timeblue, timepriem, timeyellow
+from settings import filepathpriem, filepathblue, filepathyellow, bot, timeblue, timepriem, timeyellow
 
 HOST = ''
 PORT = 3000
@@ -59,12 +61,10 @@ def ask_month_stat():
     while True:
         nowtime = time.strftime("%d %H:%M:%S")
         if (time.strftime("01 10:00:00")) == nowtime:
-            prev_month = str('0' + str(int(time.strftime("%m")) - 1)) if int(time.strftime("%m")) < 10 else int(
-                time.strftime("%m")) - 1
-            if prev_month == '00':
-                prev_month = '12'
+            delta_month = relativedelta(months=1)
+            prev_year_month = (datetime.now() - delta_month).strftime('%Y-%m')
             try:
-                every_month_statistic_bot(bot, prev_month)
+                every_month_statistic_bot(bot, prev_year_month)
             except:
                 print(' every_month_statistic_bot error')
         sleep(1)

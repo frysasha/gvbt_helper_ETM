@@ -6,13 +6,14 @@ from telegram.ext import ConversationHandler
 from telegram.error import BadRequest
 import os
 from PIL import Image
-from data_base.db_requests import db_update_who_repair, db_who_is_most_broken_off_all_time, db_who_fixed_the_most_off_all_time, \
+from data_base.db_requests import db_update_who_repair, db_who_is_most_broken_off_all_time, \
+    db_who_fixed_the_most_off_all_time, \
     db_who_is_most_broken_in_current_month, db_who_fixed_in_current_month, db_who_win_in_prev_month, \
     db_update_auto_repair, db_error_insert, db_ask_cell_stat
 import websocket
 import re
 from contextlib import closing
-from settingsbot import bot, testchannelid, ask_channel_id, frychannelid, sklad_channel, gvbt_replykeyboard, \
+from settings import bot, testchannelid, ask_channel_id, frychannelid, sklad_channel, gvbt_replykeyboard, \
     sklad_keyboard, inl_keyboard, uCliSock, SOCKADDR2, SOCKADDR, inl_keyboard2, inl_keyboard3, SOCKADDR3, photopath
 
 
@@ -51,7 +52,8 @@ def error_hand(update, context):
     print('Ошибка error handler')
     if isinstance(context.error, BadRequest):
         pass
-    else: print(context.error)
+    else:
+        print(context.error)
 
 
 class Robot:
@@ -109,7 +111,8 @@ class Robot:
             return 'no fault'
 
     def db_error_insert(self, date, time):
-        db_error_insert(robot=self.name, date=date, time=time, cmd=self._check_ws_cmd(), section=self._check_ws_section(),
+        db_error_insert(robot=self.name, date=date, time=time, cmd=self._check_ws_cmd(),
+                        section=self._check_ws_section(),
                         faults=self.search_fault_text())
 
 
@@ -166,7 +169,8 @@ def inline_reshenie_button_pressed(bot, update):
 def napominanie_msg(bot):
     uCliSock.sendto(bytes('work_button', 'cp1251'), SOCKADDR2)
     uCliSock.sendto(bytes('restart_televizor', 'cp1251'), SOCKADDR3)
-    bot.send_message(ask_channel_id, ('Будет запущен АСК и включен телик на складе после еженедельной перезагрузки! Адрес 20.200!!!!'))
+    bot.send_message(ask_channel_id,
+                     ('Будет запущен АСК и включен телик на складе после еженедельной перезагрузки! Адрес 20.200!!!!'))
 
 
 def wms_day_report_message(bot):

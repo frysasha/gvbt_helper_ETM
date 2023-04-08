@@ -100,7 +100,7 @@ def db_get_last_6_months():
     cur = db.cursor()
     cur.execute("""Select distinct strftime('%Y-%m', date)
                 from robot_error
-                where date between date('now','-6 month') and date('now')
+                where date between date('now','-5 month') and date('now')
                 """)
     res = cur.fetchall()
     res_list = []
@@ -151,5 +151,5 @@ if __name__ == '__main__':
     # section=123, faults='123')
     # print(db_who_fixed_the_most_off_all_time())
     #print(db_who_win_in_prev_month('2022-12'))
-    #print(db_get_last_6_months())
+    print(db_get_last_6_months())
     # db_update_who_repair('z1232131111')

@@ -1,18 +1,17 @@
 import telebot
 from telegram.ext import CallbackQueryHandler, MessageHandler, Updater, Filters, ConversationHandler
 
-from admin_panel import ask_stat_menu, ask_commands_menu, schedule_menu, home_menu, HOME_MENU, STAT_MENU, COMMANDS_MENU, \
+from telegram_bot.panels.admin_menu import ask_stat_menu, ask_commands_menu, schedule_menu, home_menu, HOME_MENU, STAT_MENU, COMMANDS_MENU, \
     SCHEDULE_MENU, ask_month_stat_menu, ASK_STAT_MONTH_MENU, ask_month_choice, ask_robot_menu, ROBOT_MENU, \
     ask_robot_choice, \
     SCHEDULE_UPLOAD_MENU, schedule_month_menu, SCHEDULE_MONTH_MENU, schedule_month_choice, schedule_upload, \
     schedule_show, CELL_STAT_MENU, ask_cell_stat_choice, ask_cell_stat_menu, wrong_content_file
-from wms_user_menu import wms_menu, wms_user_list_menu, are_you_sure_menu, WMS_MENU, WMS_USER_LIST_MENU, \
+from telegram_bot.panels.wms_user_menu import wms_menu, wms_user_list_menu, are_you_sure_menu, WMS_MENU, WMS_USER_LIST_MENU, \
     ARE_YOU_SURE_MENU, exit_from_wms_menu, wrong_number
 from funcbot import laps_start, laps_zapros, ask_pause_button, schedule, ask_work_button, all_statistic_bot, \
-    all_statistic_gvbt, month_statistic_bot, inline_popravil_button_pressed, inline_reshenie_button_pressed, error_hand, \
-    welcome_message
+    all_statistic_gvbt, month_statistic_bot, inline_popravil_button_pressed, inline_reshenie_button_pressed
 from proverkawhile import main_threads
-from settingsbot import TG_TOKEN, nowtimedate, ADMIN_URERS_ID
+from settings import TG_TOKEN, nowtimedate, ADMIN_URERS_ID
 from telegram.utils.request import NetworkError
 from requests.adapters import ProxyError
 from time import sleep
