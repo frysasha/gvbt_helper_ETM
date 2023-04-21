@@ -34,10 +34,11 @@ sklad_channel = "-1001634933123"  #'-784067672'
 gvbt_replykeyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
 sklad_keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
 gvbt_replykeyboard.row('LAPS 🔐', 'АСК Пауза 🤖', 'АСК в работу 🤖', 'Расписание ГВБТ 📅')
-gvbt_replykeyboard.row('Статистика поломок общая', 'Статистика починок общая')
-gvbt_replykeyboard.row('Статистика за текущий месяц', '/Admin', '/WMS')
+gvbt_replykeyboard.row('Статистика поломок общая', 'Статистика починок общая','Картриджи по принтерам')
+gvbt_replykeyboard.row('Статистика за текущий месяц', '/Admin', '/WMS',)
 sklad_keyboard.row('АСК Пауза 🤖', 'АСК в работу 🤖')
 sklad_keyboard.row('Расписание ГВБТ 📅', '/WMS')
+sklad_keyboard.row('Картриджи по принтерам')
 
 inl_keyboard = types.InlineKeyboardMarkup() #кнопка в сообщении
 inl_keyboard.row(InlineKeyboardButton('Поправил', callback_data='popravil'))

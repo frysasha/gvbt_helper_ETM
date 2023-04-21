@@ -253,6 +253,15 @@ def schedule(update, context):
         context.bot.send_message(update.message.chat_id, 'Нет расписания на текущий месяц')
 
 
+def cartridge(update,context):
+     context.bot.send_message(update.message.chat_id, ' L1 Диспетчерская - Картридж 237\
+    \nL2 Комплектация - Картидж 237\nL3 Приемка - Картридж 280\nL4 КПП середина - Картридж 280\
+    \nL5 АСК - Картридж 280\nL6 Зона У - Картридж 280\nL7 Зона К - Картридж 3160\
+    \nL9 Учеб.класс - Картридж 226\nL10 Доставка - Картридж 226\nL12 КПП начало - Картридж 226\
+    \nL13 ГОК - Картридж 237\nL16 ГОК2 - Картридж 259\nL18 Железо - Картридж 226 \
+    \nL19 СВК - Картридж 1200 \nL21 КПП конец - Картридж 226\nL22 Зона С - Картридж 237 ')
+      
+
 def create_csv_report(db_sql_request, order_by):
     unic_file_name = 'csv_reports\\' + str(datetime.now().strftime('%y%m%d.%H%M%S') + '.csv')
     with open(unic_file_name, 'w') as fp:
