@@ -25,17 +25,17 @@ TG_API_URL = 'https://api.telegram.org/bot'
 bot = TeleBot(TG_TOKEN)
 proxy = 'http://83.97.23.90:18080'
 
-testchannelid = "-1001508813774"  #"-750457583" # gvbt2021F
-zabbixcpchannel = '-1001208212827' #заббикс цп
-ask_channel_id = "-1001598599638"  #"-713732030" # ASK ETM channel
+GVBT_CHANNEL = "-1001508813774"  #"-750457583" # gvbt2021F
+ZABBIX_CP_CHANNEL = '-1001208212827' #заббикс цп
+ASK_CHANNEL_ID = "-1001598599638"  #"-713732030" # ASK ETM channel
+FRYCHANNELID = "423057805"
+SKLAD_CHANNEL = "-1001634933123"  #'-784067672'
 
-frychannelid = "423057805"
-sklad_channel = "-1001634933123"  #'-784067672'
-gvbt_replykeyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
+gvbt_reply_keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
 sklad_keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
-gvbt_replykeyboard.row('LAPS 🔐', 'АСК Пауза 🤖', 'АСК в работу 🤖', 'Расписание ГВБТ 📅')
-gvbt_replykeyboard.row('Статистика поломок общая', 'Статистика починок общая','Картриджи по принтерам')
-gvbt_replykeyboard.row('Статистика за текущий месяц', '/Admin', '/WMS',)
+gvbt_reply_keyboard.row('LAPS 🔐', 'АСК Пауза 🤖', 'АСК в работу 🤖', 'Расписание ГВБТ 📅')
+gvbt_reply_keyboard.row('Статистика поломок общая', 'Статистика починок общая', 'Картриджи по принтерам')
+gvbt_reply_keyboard.row('Статистика за текущий месяц', '/Admin', '/WMS', )
 sklad_keyboard.row('АСК Пауза 🤖', 'АСК в работу 🤖')
 sklad_keyboard.row('Расписание ГВБТ 📅', '/WMS')
 sklad_keyboard.row('Картриджи по принтерам')
@@ -60,6 +60,6 @@ timepriem = filepathpriem.stat().st_mtime #время в секундах
 timeblue = filepathblue.stat().st_mtime
 timeyellow = filepathyellow.stat().st_mtime
 
-ADMIN_URERS_ID = [423057805, 237426192]
+ADMIN_USERS_ID = [423057805, 237426192]
 
 

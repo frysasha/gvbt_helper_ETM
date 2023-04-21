@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from socket import socket, AF_INET, SOCK_DGRAM
 import time

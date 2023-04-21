@@ -1,6 +1,6 @@
 csv_reports/*
 gvbt_helper_env/*
-__pycache__
+*/__pycache__
 .idea
 
 geckodriver.log

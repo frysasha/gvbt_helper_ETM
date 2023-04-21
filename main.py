@@ -9,9 +9,10 @@ from telegram_bot.panels.admin_menu import ask_stat_menu, ask_commands_menu, sch
 from telegram_bot.panels.wms_user_menu import wms_menu, wms_user_list_menu, are_you_sure_menu, WMS_MENU, WMS_USER_LIST_MENU, \
     ARE_YOU_SURE_MENU, exit_from_wms_menu, wrong_number
 from funcbot import laps_start, laps_zapros, ask_pause_button, schedule, ask_work_button, all_statistic_bot, \
-    all_statistic_gvbt, month_statistic_bot, inline_popravil_button_pressed, inline_reshenie_button_pressed, cartridge
+    all_statistic_gvbt, month_statistic_bot, inline_popravil_button_pressed, inline_reshenie_button_pressed, cartridge, \
+    welcome_message
 from proverkawhile import main_threads
-from settings import TG_TOKEN, nowtimedate, ADMIN_URERS_ID
+from settings import TG_TOKEN, nowtimedate, ADMIN_USERS_ID
 from telegram.utils.request import NetworkError
 from requests.adapters import ProxyError
 from time import sleep
@@ -38,7 +39,7 @@ def main():
                                                        pattern='popravil'))  # реакция на нажатую кнопку "поправил"
     my_bot.dispatcher.add_handler(CallbackQueryHandler(inline_reshenie_button_pressed, pattern='reshenie'))
     my_bot.dispatcher.add_handler(ConversationHandler(
-        entry_points=[MessageHandler(Filters.user(ADMIN_URERS_ID) & Filters.regex('/Admin'), home_menu)],
+        entry_points=[MessageHandler(Filters.user(ADMIN_USERS_ID) & Filters.regex('/Admin'), home_menu)],
         states={
             HOME_MENU:
                 [
@@ -96,7 +97,7 @@ def main():
                     CallbackQueryHandler(home_menu, pattern='home_menu')
                 ],
         },
-        fallbacks=[MessageHandler(Filters.user(ADMIN_URERS_ID) & Filters.regex('/Admin'), home_menu)]))
+        fallbacks=[MessageHandler(Filters.user(ADMIN_USERS_ID) & Filters.regex('/Admin'), home_menu)]))
 
     my_bot.dispatcher.add_handler(ConversationHandler(
         entry_points=[MessageHandler(Filters.regex('/WMS'), wms_menu)],
@@ -120,7 +121,7 @@ def main():
 
                 ],
         },
-        fallbacks=[MessageHandler(Filters.user(ADMIN_URERS_ID) & Filters.regex('/WMS'), wms_menu)]
+        fallbacks=[MessageHandler(Filters.user(ADMIN_USERS_ID) & Filters.regex('/WMS'), wms_menu)]
     ))
 
     #my_bot.dispatcher.add_error_handler(error_hand)
@@ -140,7 +141,7 @@ def main():
 
 
 if __name__ == "__main__":
-    #welcome_message(bot)
+    welcome_message(bot)
     main_threads()
     main()
 

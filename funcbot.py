@@ -13,7 +13,7 @@ from data_base.db_requests import db_update_who_repair, db_who_is_most_broken_of
 import websocket
 import re
 from contextlib import closing
-from settings import bot, testchannelid, ask_channel_id, frychannelid, sklad_channel, gvbt_replykeyboard, \
+from settings import bot, GVBT_CHANNEL, ASK_CHANNEL_ID, FRYCHANNELID, SKLAD_CHANNEL, gvbt_reply_keyboard, \
     sklad_keyboard, inl_keyboard, uCliSock, SOCKADDR2, SOCKADDR, inl_keyboard2, inl_keyboard3, SOCKADDR3, photopath
 
 
@@ -22,7 +22,7 @@ def all_statistic_bot(update, context):
 
 
 def bot_mes(mes):
-    bot.send_message(testchannelid, mes)
+    bot.send_message(GVBT_CHANNEL, mes)
 
 
 def all_statistic_gvbt(update, context):
@@ -36,16 +36,16 @@ def month_statistic_bot(update, context):
 
 
 def every_month_statistic_bot(bot, year_month):
-    bot.send_message(ask_channel_id, str(db_who_is_most_broken_in_current_month(year_month)))
-    bot.send_message(ask_channel_id, f'Кто чинил:\n{str(db_who_fixed_in_current_month(year_month))}')
-    bot.send_message(ask_channel_id, f'И выигрывает приз!!!\n{db_who_win_in_prev_month(year_month)}')
+    bot.send_message(ASK_CHANNEL_ID, str(db_who_is_most_broken_in_current_month(year_month)))
+    bot.send_message(ASK_CHANNEL_ID, f'Кто чинил:\n{str(db_who_fixed_in_current_month(year_month))}')
+    bot.send_message(ASK_CHANNEL_ID, f'И выигрывает приз!!!\n{db_who_win_in_prev_month(year_month)}')
 
 
 def welcome_message(bot):
-    bot.send_message(frychannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
-    bot.send_message(testchannelid, 'Старт бота', reply_markup=gvbt_replykeyboard)
-    bot.send_message(ask_channel_id, 'Старт бота', reply_markup=gvbt_replykeyboard)
-    bot.send_message(sklad_channel, 'Старт бота', reply_markup=sklad_keyboard)  # вывод нижней клавы
+    bot.send_message(FRYCHANNELID, 'Старт бота', reply_markup=gvbt_reply_keyboard)
+    bot.send_message(GVBT_CHANNEL, 'Старт бота', reply_markup=gvbt_reply_keyboard)
+    bot.send_message(ASK_CHANNEL_ID, 'Старт бота', reply_markup=gvbt_reply_keyboard)
+    bot.send_message(SKLAD_CHANNEL, 'Старт бота', reply_markup=sklad_keyboard)  # вывод нижней клавы
 
 
 def error_hand(update, context):
@@ -72,14 +72,14 @@ class Robot:
         global last_broken_robot
         global last_mes_id
         last_broken_robot = self
-        bot.send_sticker(ask_channel_id, self.sticker)
-        send = bot.send_message(ask_channel_id, str(self.name + ' робот ошибка в ' + str(time)),
+        bot.send_sticker(ASK_CHANNEL_ID, self.sticker)
+        send = bot.send_message(ASK_CHANNEL_ID, str(self.name + ' робот ошибка в ' + str(time)),
                                 reply_markup=inl_keyboard)
         last_mes_id = send.message_id
         uCliSock.sendto(bytes(self.name + ' робот ошибка', 'cp1251'), SOCKADDR)  # отправка текста на сервер спикера
         uCliSock.sendto(bytes(self.eng_name + ' robot_error', 'utf-8'), SOCKADDR2)  # отправка на сервер АСК
         Robot.resolve_flag = True
-        bot.send_message(ask_channel_id, self.send_error_text())
+        bot.send_message(ASK_CHANNEL_ID, self.send_error_text())
 
     def check_ws_state(self):
         with closing(websocket.create_connection('ws://172.29.2.125:' + self.ws_port + '/wscChannel')) as wd:
@@ -118,7 +118,7 @@ class Robot:
 
 def update_inline_button(bot):
     try:
-        bot.edit_message_reply_markup(ask_channel_id, message_id=last_mes_id, reply_markup=inl_keyboard2)
+        bot.edit_message_reply_markup(ASK_CHANNEL_ID, message_id=last_mes_id, reply_markup=inl_keyboard2)
         Robot.resolve_flag = False
     except:
         print('Не удалось найти последнее сообщение')
@@ -138,7 +138,7 @@ def inline_popravil_button_pressed(bot, update):
     update.bot.edit_message_reply_markup(
         chat_id=query.message.chat.id,
         message_id=query.message.message_id, reply_markup='')  # убирает кнопку в сообщении
-    update.bot.send_message(ask_channel_id, f'Робота поправил {query.from_user.first_name} спасибо!')
+    update.bot.send_message(ASK_CHANNEL_ID, f'Робота поправил {query.from_user.first_name} спасибо!')
     print(f'Робота поправил {query.from_user.first_name} в {strftime("%d.%m.%Y %H:%M:%S")}')
     uCliSock.sendto(bytes(f'{query.from_user.first_name} поправил робота', 'cp1251'), SOCKADDR)
     db_update_who_repair(query.from_user.first_name)
@@ -154,31 +154,31 @@ def inline_reshenie_button_pressed(bot, update):
     try:
         cmd_state_now = last_broken_robot.check_ws_state()
         if cmd_state_now == 'FAILURE':
-            update.bot.send_message(ask_channel_id, f'{query.from_user.first_name} нажал кнопку Решение')
+            update.bot.send_message(ASK_CHANNEL_ID, f'{query.from_user.first_name} нажал кнопку Решение')
             uCliSock.sendto(bytes('Resolve problem', 'utf-8'), SOCKADDR2)
             print(f'{query.from_user.first_name} в {strftime("%d.%m.%Y %H:%M:%S")} нажал кнопку "Решение"')
             uCliSock.sendto(bytes(f'{query.from_user.first_name} нажал кнопку Решение', 'cp1251'), SOCKADDR)
             db_update_auto_repair()
         else:
-            update.bot.send_message(ask_channel_id, 'Нет ошибки у робота в данный момент')
+            update.bot.send_message(ASK_CHANNEL_ID, 'Нет ошибки у робота в данный момент')
     except:
         print('last_broken_robot не определен')
-        update.bot.send_message(ask_channel_id, 'last_broken_robot не определен')
+        update.bot.send_message(ASK_CHANNEL_ID, 'last_broken_robot не определен')
 
 
 def napominanie_msg(bot):
     uCliSock.sendto(bytes('work_button', 'cp1251'), SOCKADDR2)
     uCliSock.sendto(bytes('restart_televizor', 'cp1251'), SOCKADDR3)
-    bot.send_message(ask_channel_id,
+    bot.send_message(ASK_CHANNEL_ID,
                      ('Будет запущен АСК и включен телик на складе после еженедельной перезагрузки! Адрес 20.200!!!!'))
 
 
 def wms_day_report_message(bot):
     today = strftime("%d.%m.%Y")
     report_file = 'S:\\09.ГВБТ\\WMS_Report\\' + today + '.xlsx'
-    bot.send_message(testchannelid, ('Сформирован ежедневный отчет WMS. Необходимо проверить данные!'))
+    bot.send_message(GVBT_CHANNEL, ('Сформирован ежедневный отчет WMS. Необходимо проверить данные!'))
     wmsreport = open(report_file, 'rb')
-    bot.send_document(testchannelid, wmsreport)
+    bot.send_document(GVBT_CHANNEL, wmsreport)
     wmsreport.close()
 
 
@@ -253,14 +253,14 @@ def schedule(update, context):
         context.bot.send_message(update.message.chat_id, 'Нет расписания на текущий месяц')
 
 
-def cartridge(update,context):
-     context.bot.send_message(update.message.chat_id, ' L1 Диспетчерская - Картридж 237\
+def cartridge(update, context):
+    context.bot.send_message(update.message.chat_id, 'L1 Диспетчерская - Картридж 237\
     \nL2 Комплектация - Картидж 237\nL3 Приемка - Картридж 280\nL4 КПП середина - Картридж 280\
     \nL5 АСК - Картридж 280\nL6 Зона У - Картридж 280\nL7 Зона К - Картридж 3160\
     \nL9 Учеб.класс - Картридж 226\nL10 Доставка - Картридж 226\nL12 КПП начало - Картридж 226\
     \nL13 ГОК - Картридж 237\nL16 ГОК2 - Картридж 259\nL18 Железо - Картридж 226 \
     \nL19 СВК - Картридж 1200 \nL21 КПП конец - Картридж 226\nL22 Зона С - Картридж 237 ')
-      
+
 
 def create_csv_report(db_sql_request, order_by):
     unic_file_name = 'csv_reports\\' + str(datetime.now().strftime('%y%m%d.%H%M%S') + '.csv')
