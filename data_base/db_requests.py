@@ -2,7 +2,8 @@ import sqlite3
 import time
 from datetime import datetime
 import calendar
-from sqlalchemy import update, func, desc, insert, distinct
+from sqlalchemy import update, func, desc, insert, distinct, select
+from sqlalchemy.orm import aliased
 from data_base.db import session
 from data_base.tables.robot_error_table import RobotErrorTable
 
@@ -39,18 +40,25 @@ def db_update_auto_repair():
 
 def db_who_is_most_broken_in_current_month(year_month: str):
     with session:
-        request = session.query(RobotErrorTable.robot, func.count('*').label('count')).filter(
+        request = session.query(RobotErrorTable.robot, func.count(RobotErrorTable.robot).label('robot_count'),
+                                func.count(RobotErrorTable.auto_repair).label('auto_repair_count')).filter(
             func.strftime('%Y-%m', RobotErrorTable.date) == year_month).group_by(RobotErrorTable.robot).order_by(
-            desc("count"))
+            desc("robot_count"))
         night_errors = request.filter(RobotErrorTable.time.between('00:00:00', '07:00:00'))
+        auto_repair_count = request.filter(
+            RobotErrorTable.auto_repair == 'Да')
         res_str = ''
         for i in request.all():
-            res_str += f'{i.robot} - {i.count}\n'
+            res_str += f'{i.robot} - {i.robot_count}\n'
         night_str = ''
         for i in night_errors.all():
-            night_str += f'{i.robot} - {i.count}\n'
-        return f'Все ошибки за {calendar.month_name[int(year_month.split("-")[1])]} {year_month.split("-")[0]}:\n{res_str}' \
-               f'\nИз них ночные(с 00:00 до 07:00):\n{night_str}'
+            night_str += f'{i.robot} - {i.robot_count}\n'
+        auto_repair_str = ''
+        for i in auto_repair_count.all():
+            auto_repair_str += f'{i.robot} - {i.auto_repair_count}\n'
+        return f'Все ошибки за {calendar.month_name[int(year_month.split("-")[1])]} {year_month.split("-")[0]}:\n{res_str}\n' \
+               f'Из них ночные(с 00:00 до 07:00):\n{night_str}\n' \
+               f'Починены автоматически:\n{auto_repair_str}'
 
 
 def db_who_is_most_broken_off_all_time():
@@ -145,11 +153,11 @@ if __name__ == '__main__':
     # print(datetime.today().year)
     # print(db_ask_cell_stat('section_error'))
     # print(db_robot_stat_30_days('Желтый'))
-    # print(db_who_is_most_broken_in_current_month("2023-02"))
-    print(db_who_fixed_in_current_month("2023-02"))
+    # print(db_who_is_most_broken_in_current_month("2023-03"))
+    # print(db_who_fixed_in_current_month("2023-02"))
     # db_error_insert('Голубой', date=time.strftime("%Y-%m-%d"), time=time.strftime("%H:%M:%S"), cmd='sdfsdf',
     # section=123, faults='123')
-    # print(db_who_fixed_the_most_off_all_time())
-    #print(db_who_win_in_prev_month('2022-12'))
-    print(db_get_last_6_months())
+    print(db_who_fixed_the_most_off_all_time())
+    # print(db_who_win_in_prev_month('2022-12'))
+    # print(db_get_last_6_months())
     # db_update_who_repair('z1232131111')

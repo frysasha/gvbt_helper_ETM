@@ -41,7 +41,7 @@ def every_month_statistic_bot(bot, year_month):
     bot.send_message(ASK_CHANNEL_ID, f'И выигрывает приз!!!\n{db_who_win_in_prev_month(year_month)}')
 
 
-def welcome_message(bot):
+def start_bot_message_with_keyboards(bot):
     bot.send_message(FRYCHANNELID, 'Старт бота', reply_markup=gvbt_reply_keyboard)
     bot.send_message(GVBT_CHANNEL, 'Старт бота', reply_markup=gvbt_reply_keyboard)
     bot.send_message(ASK_CHANNEL_ID, 'Старт бота', reply_markup=gvbt_reply_keyboard)
@@ -253,7 +253,7 @@ def schedule(update, context):
         context.bot.send_message(update.message.chat_id, 'Нет расписания на текущий месяц')
 
 
-def cartridge(update, context):
+def show_cartridges(update, context):
     context.bot.send_message(update.message.chat_id, 'L1 Диспетчерская - Картридж 237\
     \nL2 Комплектация - Картидж 237\nL3 Приемка - Картридж 280\nL4 КПП середина - Картридж 280\
     \nL5 АСК - Картридж 280\nL6 Зона У - Картридж 280\nL7 Зона К - Картридж 3160\
