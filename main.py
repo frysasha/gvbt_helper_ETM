@@ -141,7 +141,7 @@ def main():
 
 
 if __name__ == "__main__":
-    start_bot_message_with_keyboards(bot)
+    #start_bot_message_with_keyboards(bot)
     main_threads()
     main()
 
