@@ -6,7 +6,7 @@ from time import sleep
 import threading
 from funcbot import priem_robot, blue_robot, yellow_robot, napominanie_msg, every_month_statistic_bot, \
     wms_day_report_message, Robot, update_inline_button, bot_mes
-from settings import filepathpriem, filepathblue, filepathyellow, bot
+from settings import filepathpriem, filepathblue, filepathyellow, bot, timeblue, timepriem, timeyellow
 
 HOST = ''
 PORT = 3000
