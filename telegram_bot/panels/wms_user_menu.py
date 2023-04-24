@@ -1,6 +1,6 @@
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ConversationHandler
-from wms_user import get_user_list, wms_user_dict, del_user_from_wms, quit_browser_driver, browser_driver
+from wms_user import get_user_list, wms_user_dict, del_user_from_wms, quit_browser_driver
 
 HOME_MENU, WMS_MENU, WMS_USER_LIST_MENU, ARE_YOU_SURE_MENU = range(4)
 
@@ -14,7 +14,7 @@ def build_menu(buttons, n_cols, header_buttons=None, footer_buttons=None):
     return menu
 
 
-def wms_menu(update, context):
+def wms_menu(update):
     wms_menu_list = [
         InlineKeyboardButton("Список пользователей ТСД", callback_data='WMS_USER_LIST_MENU'),
         InlineKeyboardButton("Выйти", callback_data='exit'),
@@ -27,7 +27,7 @@ def wms_menu(update, context):
         )
     except:
         query = update.callback_query
-        #query.answer()
+
         query.edit_message_text(
             text="Меню WMS", reply_markup=menu_keyboard
         )
@@ -35,7 +35,7 @@ def wms_menu(update, context):
 
 wms_user_list_query = None
 
-def wms_user_list_menu(update, context):
+def wms_user_list_menu(update):
     quit_browser_driver()
     query = update.callback_query
     query.answer()
@@ -92,9 +92,8 @@ def wrong_number(update, context):
     return WMS_USER_LIST_MENU
 
 
-def exit_from_wms_menu(update, context):
+def exit_from_wms_menu(update):
     query = update.callback_query
-    #query.answer()
     query.edit_message_text(text='Выход', reply_markup='')
     quit_browser_driver()
     return ConversationHandler.END

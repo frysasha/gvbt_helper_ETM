@@ -1,9 +1,8 @@
 import sqlite3
-import time
-from datetime import datetime
 import calendar
-from sqlalchemy import update, func, desc, insert, distinct, select, column, text
-from sqlalchemy.orm import aliased
+
+from sqlalchemy import update, func, desc, insert, text
+
 from data_base.db import session
 from data_base.tables.robot_error_table import RobotErrorTable
 

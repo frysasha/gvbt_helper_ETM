@@ -9,9 +9,9 @@ from telegram_bot.panels.admin_menu import ask_stat_menu, ask_commands_menu, sch
 from telegram_bot.panels.wms_user_menu import wms_menu, wms_user_list_menu, are_you_sure_menu, WMS_MENU, WMS_USER_LIST_MENU, \
     ARE_YOU_SURE_MENU, exit_from_wms_menu, wrong_number
 from funcbot import laps_start, laps_zapros, ask_pause_button, schedule, ask_work_button, all_statistic_bot, \
-    all_statistic_gvbt, month_statistic_bot, inline_popravil_button_pressed, inline_reshenie_button_pressed, show_cartridges, \
+    all_time_resolve_statistic, month_statistic_bot, inline_popravil_button_pressed, inline_reshenie_button_pressed, show_cartridges, \
     start_bot_message_with_keyboards
-from proverkawhile import main_threads
+from timer import main_threads
 from settings import TG_TOKEN, nowtimedate, ADMIN_USERS_ID
 from telegram.utils.request import NetworkError
 from requests.adapters import ProxyError
@@ -33,7 +33,7 @@ def main():
     my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('АСК в работу'), ask_work_button))
     my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('Картриджи по принтерам'), show_cartridges))
     my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('Статистика поломок общая'), all_statistic_bot))
-    my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('Статистика починок'), all_statistic_gvbt))
+    my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('Статистика починок'), all_time_resolve_statistic))
     my_bot.dispatcher.add_handler(MessageHandler(Filters.regex('Статистика за текущий месяц'), month_statistic_bot))
     my_bot.dispatcher.add_handler(CallbackQueryHandler(inline_popravil_button_pressed,
                                                        pattern='popravil'))  # реакция на нажатую кнопку "поправил"

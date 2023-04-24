@@ -6,7 +6,7 @@ from time import sleep
 import threading
 from funcbot import priem_robot, blue_robot, yellow_robot, napominanie_msg, every_month_statistic_bot, \
     wms_day_report_message, Robot, update_inline_button, bot_mes
-from settings import filepathpriem, filepathblue, filepathyellow, bot, timeblue, timepriem, timeyellow
+from settings import filepathpriem, filepathblue, filepathyellow, bot
 
 HOST = ''
 PORT = 3000
@@ -14,8 +14,7 @@ BUFSIZE = 1024
 SOCKADDR = (HOST, PORT)
 
 
-
-def proverka():
+def check_robot_error():
     global last_modpriem, last_modblue, last_modyellow, timepriem, timeblue, timeyellow
     while True:
         nowtime = time.strftime("%H:%M:%S")  # текущее время
@@ -49,7 +48,7 @@ def proverka():
         sleep(1)
 
 
-def napominanie():
+def ask_reminder():
     while True:
         nowdatetime = time.strftime("%a:%H:%M:%S")
         if (time.strftime("Sun:22:35:00")) == nowdatetime:
@@ -71,11 +70,11 @@ def ask_month_stat():
 
 
 def udp_client():
-    uServSock = socket(AF_INET, SOCK_DGRAM)
-    uServSock.bind(SOCKADDR)
+    uservsock = socket(AF_INET, SOCK_DGRAM)
+    uservsock.bind(SOCKADDR)
     while True:
         try:
-            data, addr = uServSock.recvfrom(BUFSIZE)
+            data, addr = uservsock.recvfrom(BUFSIZE)
             loc_data = data.decode('cp1251')
             if loc_data == 'Сформирован ежедневный отчет WMS. Необходимо проверить данные!':
                 print('Сформирован ежедневный отчет WMS. Необходимо проверить данные!')
@@ -89,10 +88,12 @@ def udp_client():
             print(f'err thread 4: {e}')
 
 
-thread1 = threading.Timer(1, proverka)
-thread2 = threading.Timer(1, napominanie)
+thread1 = threading.Timer(1, check_robot_error)
+thread2 = threading.Timer(1, ask_reminder)
 thread3 = threading.Timer(1, ask_month_stat)
 thread4 = threading.Timer(1, udp_client)
+
+
 def main_threads():
     try:
         thread1.start()
@@ -100,8 +101,8 @@ def main_threads():
         thread3.start()
         thread4.start()
 
-    except Exception:
-        print(Exception)
+    except Exception as e:
+        print(e)
 
 
 if __name__ == '__main__':

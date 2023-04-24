@@ -48,7 +48,7 @@ def get_user_list():
     user_control_button = wait.until(EC.element_to_be_clickable((By.ID, 'ui-id-17')))
     user_control_button.click()
     try:
-        no_users = driver.find_element(By.CSS_SELECTOR, '#tabs-1 > p:nth-child(1)')
+        driver.find_element(By.CSS_SELECTOR, '#tabs-1 > p:nth-child(1)')
         return 'Нет активных пользователей ТСД'
     except:
 

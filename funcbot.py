@@ -3,7 +3,6 @@ import subprocess
 from datetime import datetime
 from time import sleep, strftime
 from telegram.ext import ConversationHandler
-from telegram.error import BadRequest
 import os
 from PIL import Image
 from data_base.db_requests import db_update_who_repair, db_who_is_most_broken_off_all_time, \
@@ -25,7 +24,7 @@ def bot_mes(mes):
     bot.send_message(GVBT_CHANNEL, mes)
 
 
-def all_statistic_gvbt(update, context):
+def all_time_resolve_statistic(update, context):
     context.bot.send_message(update.message.chat_id, str(db_who_fixed_the_most_off_all_time()))
 
 
@@ -46,14 +45,6 @@ def start_bot_message_with_keyboards(bot):
     bot.send_message(GVBT_CHANNEL, 'Старт бота', reply_markup=gvbt_reply_keyboard)
     bot.send_message(ASK_CHANNEL_ID, 'Старт бота', reply_markup=gvbt_reply_keyboard)
     bot.send_message(SKLAD_CHANNEL, 'Старт бота', reply_markup=sklad_keyboard)  # вывод нижней клавы
-
-
-def error_hand(update, context):
-    print('Ошибка error handler')
-    if isinstance(context.error, BadRequest):
-        pass
-    else:
-        print(context.error)
 
 
 class Robot:
@@ -182,7 +173,7 @@ def wms_day_report_message(bot):
     wmsreport.close()
 
 
-def laps_start(bot, update):
+def laps_start(bot):
     bot.message.reply_text('Веедите имя компьютера')
     return "user_name"  # возвращает тому, кто прислал сообщение
 
@@ -195,7 +186,7 @@ def writetofile(message):
 
 
 def startbat():
-    p = subprocess.Popen('C:\\python\\start.start.bat')
+    subprocess.Popen('C:\\python\\start.start.bat')
 
 
 def laps_zapros(update, context):
