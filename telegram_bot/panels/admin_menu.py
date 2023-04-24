@@ -82,7 +82,7 @@ def ask_month_stat_menu(update, _):
         InlineKeyboardButton(i, callback_data=i) for i in db_get_last_6_months()
     ]
     ask_month_stat_menu_list.append(InlineKeyboardButton("Домой", callback_data='home_menu'))
-    ask_month_stat_menu_keyboard = InlineKeyboardMarkup(build_menu(ask_month_stat_menu_list, n_cols=6))
+    ask_month_stat_menu_keyboard = InlineKeyboardMarkup(build_menu(ask_month_stat_menu_list, n_cols=3))
     query.edit_message_text(
         text="Выбери месяц", reply_markup=ask_month_stat_menu_keyboard
     )
