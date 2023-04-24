@@ -2,7 +2,7 @@ import sqlite3
 import time
 from datetime import datetime
 import calendar
-from sqlalchemy import update, func, desc, insert, distinct, select
+from sqlalchemy import update, func, desc, insert, distinct, select, column, text
 from sqlalchemy.orm import aliased
 from data_base.db import session
 from data_base.tables.robot_error_table import RobotErrorTable
@@ -73,13 +73,19 @@ def db_who_is_most_broken_off_all_time():
 
 def db_who_fixed_the_most_off_all_time():
     with session:
-        request = session.query(RobotErrorTable.who_repair, func.count('*').label('count')).group_by(
-            RobotErrorTable.who_repair).order_by(desc('count'))
+        sql = text("""SELECT t1.who_repair, count(*) as count, t2.cnt as auto_repair_count
+                    from robot_error as t1
+                    left outer join (select who_repair, count(auto_repair) as cnt 
+                    from robot_error 
+                    where auto_repair = 'Да'
+                    group by who_repair) as t2 on t1.who_repair = t2.who_repair
+                    where t1.who_repair is not null
+                    group by t1.who_repair""")
+        result = session.execute(sql)
         str_res = ''
-        for i in request.all():
-            if i.who_repair is not None:
-                str_res += f'{i.who_repair} - {i.count}\n'
-        return str_res
+        for row in result:
+            str_res += f'{row.who_repair} - {row.count} (Автопочинка - {row.auto_repair_count})\n'
+        return f'{str_res}'
 
 
 def db_who_fixed_in_current_month(year_month):
