@@ -96,7 +96,7 @@ def ask_month_choice(update, _):
         InlineKeyboardButton(i, callback_data=i) for i in db_get_last_6_months()
     ]
     ask_month_stat_menu_list.append(InlineKeyboardButton("Домой", callback_data='home_menu'))
-    ask_month_stat_menu_keyboard = InlineKeyboardMarkup(build_menu(ask_month_stat_menu_list, n_cols=6))
+    ask_month_stat_menu_keyboard = InlineKeyboardMarkup(build_menu(ask_month_stat_menu_list, n_cols=3))
     query.edit_message_text(str(db_who_is_most_broken_in_current_month(query.data)),
                             reply_markup=ask_month_stat_menu_keyboard)
     return ASK_STAT_MONTH_MENU
