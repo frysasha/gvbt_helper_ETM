@@ -188,13 +188,14 @@ def schedule_month_choice(update, _):
 
 
 def schedule_upload(update, context):
-    who_upload = update.message.chat.first_name
+    user_name = update.message.chat.first_name
     file = update.message.photo[-1].file_id
-    obj = context.bot.get_file(file)
-    obj.download('S:\\09.ГВБТ\\Расписание\\' + selected_month + '.jpg')
+    schedule_file = context.bot.get_file(file)
+    schedule_file.download('S:\\09.ГВБТ\\Расписание\\' + selected_month + '.jpg')
     update.message.reply_text(text="Расписание загружено")
-    bot_mes(f'{who_upload} загрузил новое расписание. Месяц - {selected_month}')
-    print(f"{who_upload} загрузил новое расписание. Месяц - {selected_month}")
+    upload_message = f'{user_name} загрузил новое расписание. Месяц - {selected_month}'
+    bot_mes(upload_message)
+    print(upload_message)
     return ConversationHandler.END
 
 
