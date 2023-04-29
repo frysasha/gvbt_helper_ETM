@@ -1,5 +1,6 @@
 import time
-
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ConversationHandler
 
@@ -163,12 +164,11 @@ def schedule_menu(update, _):
 def schedule_month_menu(update, _):
     query = update.callback_query
     query.answer()
-    current_month = time.strftime("%m")
-    second_month = str('0' + str(int(time.strftime("%m")) + 1)) if int(time.strftime("%m")) < 10 else int(
-        time.strftime("%m")) + 1
+    current_month = datetime.today()
+    second_month = current_month + relativedelta(months=1)
     schedule_month_menu_list = [
-        InlineKeyboardButton(current_month, callback_data=time.strftime("%m")),
-        InlineKeyboardButton(second_month, callback_data=second_month),
+        InlineKeyboardButton(current_month.strftime('%m'), callback_data=time.strftime("%m")),
+        InlineKeyboardButton(second_month.strftime('%m'), callback_data=second_month),
         InlineKeyboardButton("Домой", callback_data='home_menu'),
     ]
     schedule_month_menu_keyboard = InlineKeyboardMarkup(build_menu(schedule_month_menu_list, n_cols=2))
