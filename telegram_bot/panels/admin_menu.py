@@ -168,7 +168,7 @@ def schedule_month_menu(update, _):
     second_month = current_month + relativedelta(months=1)
     schedule_month_menu_list = [
         InlineKeyboardButton(current_month.strftime('%m'), callback_data=time.strftime("%m")),
-        InlineKeyboardButton(second_month.strftime('%m'), callback_data=second_month),
+        InlineKeyboardButton(second_month.strftime('%m'), callback_data=second_month.strftime('%m')),
         InlineKeyboardButton("Домой", callback_data='home_menu'),
     ]
     schedule_month_menu_keyboard = InlineKeyboardMarkup(build_menu(schedule_month_menu_list, n_cols=2))
