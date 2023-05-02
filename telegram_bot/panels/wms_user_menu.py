@@ -14,7 +14,7 @@ def build_menu(buttons, n_cols, header_buttons=None, footer_buttons=None):
     return menu
 
 
-def wms_menu(update):
+def wms_menu(update, context):
     wms_menu_list = [
         InlineKeyboardButton("Список пользователей ТСД", callback_data='WMS_USER_LIST_MENU'),
         InlineKeyboardButton("Выйти", callback_data='exit'),
@@ -35,7 +35,7 @@ def wms_menu(update):
 
 wms_user_list_query = None
 
-def wms_user_list_menu(update):
+def wms_user_list_menu(update, context):
     quit_browser_driver()
     query = update.callback_query
     query.answer()
@@ -92,7 +92,7 @@ def wrong_number(update, context):
     return WMS_USER_LIST_MENU
 
 
-def exit_from_wms_menu(update):
+def exit_from_wms_menu(update, context):
     query = update.callback_query
     query.edit_message_text(text='Выход', reply_markup='')
     quit_browser_driver()
